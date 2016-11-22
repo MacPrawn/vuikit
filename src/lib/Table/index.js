@@ -1,3 +1,4 @@
+import searchField from './searchField'
 import selectField from './selectField'
 import Header from './Header'
 import Row from './Row'
@@ -56,12 +57,7 @@ export default {
   render (h) {
     return (
       <div staticClass="nibnut-datagrid">
-        <form staticClass="uk-form uk-text-right" v-if="this.searchable">
-          <div class="uk-form-icon">
-              <i class="uk-icon-search"></i>
-              <input v-model="filterKey" type="text"/>
-          </div>
-        </form>
+        { this.searchable && h(searchField, { props: {} }) }
         <table staticClass="uk-table" class={{
           'uk-table-striped': this.striped,
           'uk-table-condensed': this.condensed,
