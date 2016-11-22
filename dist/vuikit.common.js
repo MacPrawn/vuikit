@@ -5059,7 +5059,7 @@ module.exports =
 	  },
 	  data: function data() {
 	    return {
-	      search: ''
+	      filterKey: ''
 	    };
 	  },
 	  render: function render(h) {
@@ -5120,11 +5120,11 @@ module.exports =
 	    filteredRows: function filteredRows() {
 	      var _this3 = this;
 
-	      if (!this.search) return this.rows;
-	      this.search = this.search.toLowerCase();
+	      if (!this.filterKey) return this.rows;
+	      this.filterKey = this.filterKey.toLowerCase();
 	      return this.rows.filter(function (row) {
 	        return (0, _keys2.default)(row).some(function (key) {
-	          return String(row[key]).toLowerCase().indexOf(_this3.search) > -1;
+	          return String(row[key]).toLowerCase().indexOf(_this3.filterKey) > -1;
 	        });
 	      });
 	    }
@@ -5132,6 +5132,7 @@ module.exports =
 	  methods: {
 	    search: function search(query) {
 	      console.log('SEARCH FOR:', query);
+	      this.filterKey = query;
 	    },
 	    isSelected: function isSelected(row) {
 	      return this.selection[this.getRowId(row)];

@@ -46,7 +46,7 @@ export default {
   },
   data () {
     return {
-      search: ''
+      filterKey: ''
     }
   },
   render (h) {
@@ -91,11 +91,11 @@ export default {
       return fields
     },
     filteredRows () {
-      if (!this.search) return this.rows
-      this.search = this.search.toLowerCase()
+      if (!this.filterKey) return this.rows
+      this.filterKey = this.filterKey.toLowerCase()
       return this.rows.filter((row) => {
         return Object.keys(row).some((key) => {
-          return String(row[key]).toLowerCase().indexOf(this.search) > -1
+          return String(row[key]).toLowerCase().indexOf(this.filterKey) > -1
         })
       })
     }
@@ -103,6 +103,7 @@ export default {
   methods: {
     search (query) {
       console.log('SEARCH FOR:', query)
+      this.filterKey = query
     },
     isSelected (row) {
       return this.selection[this.getRowId(row)]
