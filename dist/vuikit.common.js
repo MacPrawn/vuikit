@@ -5191,7 +5191,8 @@ module.exports =
 	            type: 'text'
 	          },
 	          on: {
-	            change: function change(e) {
+	            keyUp: function keyUp(e) {
+	              console.log('search field value changed', _this.value);
 	              vm.search(_this.value);
 	            }
 	          }
