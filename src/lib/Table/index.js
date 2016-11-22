@@ -22,7 +22,7 @@ export default {
     },
     noSearch: {
       type: Boolean,
-      default: true
+      default: false
     },
     selectable: {
       type: Boolean,
