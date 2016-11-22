@@ -62,7 +62,7 @@ export default {
           </tr>
         </thead>
         <tbody>
-          { this.filteredRows().map(row => h(Row, { props: { row } })) }
+          { this.filteredRows.map(row => h(Row, { props: { row } })) }
         </tbody>
       </table>
     )

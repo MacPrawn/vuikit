@@ -5083,7 +5083,7 @@ module.exports =
 	      ), h(
 	        'tbody',
 	        null,
-	        [this.filteredRows().map(function (row) {
+	        [this.filteredRows.map(function (row) {
 	          return h(_Row2.default, { props: { row: row } });
 	        })]
 	      )]
