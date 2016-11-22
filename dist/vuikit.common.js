@@ -5029,6 +5029,10 @@ module.exports =
 	      type: String,
 	      default: 'id'
 	    },
+	    searchable: {
+	      type: Boolean,
+	      default: true
+	    },
 	    selectable: {
 	      type: Boolean,
 	      default: false
@@ -5064,28 +5068,58 @@ module.exports =
 	  },
 	  render: function render(h) {
 	    return h(
-	      'table',
-	      { staticClass: 'uk-table', 'class': {
-	          'uk-table-striped': this.striped,
-	          'uk-table-condensed': this.condensed,
-	          'uk-table-hover': this.hover
-	        } },
+	      'div',
+	      { staticClass: 'nibnut-datagrid' },
 	      [h(
-	        'thead',
-	        null,
+	        'form',
+	        { staticClass: 'uk-grid uk-text-right', directives: [{
+	            name: 'if',
+	            value: 'searchable'
+	          }]
+	        },
 	        [h(
-	          'tr',
-	          null,
-	          [this.fieldsDef.map(function (field) {
-	            return h(_Header2.default, { props: { field: field } });
-	          })]
+	          'div',
+	          { 'class': 'uk-form-icon' },
+	          [h(
+	            'i',
+	            { 'class': 'uk-icon-search' },
+	            []
+	          ), h(
+	            'input',
+	            {
+	              directives: [{
+	                name: 'model',
+	                value: 'search'
+	              }],
+	              attrs: { type: 'text' }
+	            },
+	            []
+	          )]
 	        )]
 	      ), h(
-	        'tbody',
-	        null,
-	        [this.filteredRows.map(function (row) {
-	          return h(_Row2.default, { props: { row: row } });
-	        })]
+	        'table',
+	        { staticClass: 'uk-table', 'class': {
+	            'uk-table-striped': this.striped,
+	            'uk-table-condensed': this.condensed,
+	            'uk-table-hover': this.hover
+	          } },
+	        [h(
+	          'thead',
+	          null,
+	          [h(
+	            'tr',
+	            null,
+	            [this.fieldsDef.map(function (field) {
+	              return h(_Header2.default, { props: { field: field } });
+	            })]
+	          )]
+	        ), h(
+	          'tbody',
+	          null,
+	          [this.filteredRows.map(function (row) {
+	            return h(_Row2.default, { props: { row: row } });
+	          })]
+	        )]
 	      )]
 	    );
 	  },

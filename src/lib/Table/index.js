@@ -19,6 +19,10 @@ export default {
       type: String,
       default: 'id'
     },
+    searchable: {
+      type: Boolean,
+      default: true
+    },
     selectable: {
       type: Boolean,
       default: false
@@ -51,20 +55,28 @@ export default {
   },
   render (h) {
     return (
-      <table staticClass="uk-table" class={{
-        'uk-table-striped': this.striped,
-        'uk-table-condensed': this.condensed,
-        'uk-table-hover': this.hover
-      }}>
-        <thead>
-          <tr>
-            { this.fieldsDef.map(field => h(Header, { props: { field } })) }
-          </tr>
-        </thead>
-        <tbody>
-          { this.filteredRows.map(row => h(Row, { props: { row } })) }
-        </tbody>
-      </table>
+      <div staticClass="nibnut-datagrid">
+        <form staticClass="uk-grid uk-text-right" v-if="searchable">
+          <div class="uk-form-icon">
+              <i class="uk-icon-search"></i>
+              <input v-model="search" type="text"/>
+          </div>
+        </form>
+        <table staticClass="uk-table" class={{
+          'uk-table-striped': this.striped,
+          'uk-table-condensed': this.condensed,
+          'uk-table-hover': this.hover
+        }}>
+          <thead>
+            <tr>
+              { this.fieldsDef.map(field => h(Header, { props: { field } })) }
+            </tr>
+          </thead>
+          <tbody>
+            { this.filteredRows.map(row => h(Row, { props: { row } })) }
+          </tbody>
+        </table>
+      </div>
     )
   },
   created () {
