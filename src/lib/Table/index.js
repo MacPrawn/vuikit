@@ -46,10 +46,11 @@ export default {
   },
   render (h) {
     return (
-      <table staticClass="uk-table jean" class={{
+      <table staticClass="uk-table" class={{
         'uk-table-striped': this.striped,
         'uk-table-condensed': this.condensed,
-        'uk-table-hover': this.hover
+        'uk-table-hover': this.hover,
+        'uk-jean': true
       }}>
         <thead>
           <tr>
