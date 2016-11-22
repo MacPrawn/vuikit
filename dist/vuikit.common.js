@@ -5171,8 +5171,6 @@ module.exports =
 	  functional: true,
 	  props: [],
 	  render: function render(h, _ref) {
-	    var _this = this;
-
 	    var vm = _ref.parent,
 	        props = _ref.props;
 
@@ -5192,8 +5190,8 @@ module.exports =
 	            attrs: { type: "text" },
 	            on: {
 	              "keyup": function keyup(e) {
-	                console.log('search field value changed', _this.value);
-	                vm.search(_this.value);
+	                console.log('search field value changed', e.target.value);
+	                vm.search(e.target.value);
 	              }
 	            }
 	          },
