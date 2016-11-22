@@ -77,7 +77,6 @@ export default {
   },
   created () {
     // check for rows id if selectable enabled
-    warn(this.searchable)
     if (warn && this.selectable) {
       this.rows.forEach(row => {
         if (row[this.trackBy] === undefined) {
