@@ -5033,7 +5033,7 @@ module.exports =
 	      type: String,
 	      default: 'id'
 	    },
-	    searchable: {
+	    noSearch: {
 	      type: Boolean,
 	      default: true
 	    },
@@ -5074,7 +5074,7 @@ module.exports =
 	    return h(
 	      'div',
 	      { staticClass: 'nibnut-datagrid' },
-	      [this.searchable && h(_searchField2.default, { props: {} }), h(
+	      [!this.noSearch && h(_searchField2.default, { props: {} }), h(
 	        'table',
 	        { staticClass: 'uk-table', 'class': {
 	            'uk-table-striped': this.striped,
@@ -5169,8 +5169,10 @@ module.exports =
 	});
 	var searchField = {
 	  functional: true,
-	  props: ['row'],
+	  props: [],
 	  render: function render(h, _ref) {
+	    var _this = this;
+
 	    var vm = _ref.parent,
 	        props = _ref.props;
 
@@ -5184,17 +5186,16 @@ module.exports =
 	          "i",
 	          { "class": "uk-icon-search" },
 	          []
-	        ), h(
-	          "input",
-	          {
-	            directives: [{
-	              name: "model",
-	              value: "vm.filterKey"
-	            }],
-	            attrs: { type: "text" }
+	        ), h('input', {
+	          attrs: {
+	            type: 'text'
 	          },
-	          []
-	        )]
+	          on: {
+	            change: function change(e) {
+	              vm.search(_this.value);
+	            }
+	          }
+	        })]
 	      )]
 	    );
 	  }
