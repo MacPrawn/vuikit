@@ -1,5 +1,5 @@
 /*!
- * Vuikit v0.6.0 (https://github.com/vuikit/vuikit)
+ * Vuikit v0.6.2 (https://github.com/vuikit/vuikit)
  * (c) 2016 ZOOlanders
  * Released under the MIT License.
  */
@@ -52,99 +52,103 @@ module.exports =
 
 	'use strict';
 
-	var _keys = __webpack_require__(97);
+	var _keys = __webpack_require__(95);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
-	var _Breadcrumb = __webpack_require__(55);
+	var _Breadcrumb = __webpack_require__(51);
 
 	var _Breadcrumb2 = _interopRequireDefault(_Breadcrumb);
 
-	var _BreadcrumbItem = __webpack_require__(56);
+	var _BreadcrumbItem = __webpack_require__(52);
 
 	var _BreadcrumbItem2 = _interopRequireDefault(_BreadcrumbItem);
 
-	var _Button = __webpack_require__(57);
+	var _Button = __webpack_require__(53);
 
 	var _Button2 = _interopRequireDefault(_Button);
 
-	var _ButtonCheckbox = __webpack_require__(58);
+	var _ButtonCheckbox = __webpack_require__(54);
 
 	var _ButtonCheckbox2 = _interopRequireDefault(_ButtonCheckbox);
 
-	var _ButtonRadio = __webpack_require__(59);
+	var _ButtonRadio = __webpack_require__(55);
 
 	var _ButtonRadio2 = _interopRequireDefault(_ButtonRadio);
 
-	var _Calendar = __webpack_require__(62);
+	var _Calendar = __webpack_require__(58);
 
 	var _Calendar2 = _interopRequireDefault(_Calendar);
 
-	var _Datepicker = __webpack_require__(37);
+	var _Datepicker = __webpack_require__(60);
 
 	var _Datepicker2 = _interopRequireDefault(_Datepicker);
 
-	var _DatepickerDrop = __webpack_require__(65);
+	var _Notify = __webpack_require__(66);
 
-	var _DatepickerDrop2 = _interopRequireDefault(_DatepickerDrop);
+	var _Notify2 = _interopRequireDefault(_Notify);
 
-	var _Dropdown = __webpack_require__(66);
+	var _NotifyMessage = __webpack_require__(67);
+
+	var _NotifyMessage2 = _interopRequireDefault(_NotifyMessage);
+
+	var _Dropdown = __webpack_require__(62);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
 
-	var _Modal = __webpack_require__(69);
+	var _Modal = __webpack_require__(64);
 
 	var _Modal2 = _interopRequireDefault(_Modal);
 
-	var _Offcanvas = __webpack_require__(72);
+	var _Offcanvas = __webpack_require__(69);
 
 	var _Offcanvas2 = _interopRequireDefault(_Offcanvas);
 
-	var _Pagination = __webpack_require__(76);
+	var _Pagination = __webpack_require__(73);
 
 	var _Pagination2 = _interopRequireDefault(_Pagination);
 
-	var _Picker = __webpack_require__(38);
+	var _Picker = __webpack_require__(75);
 
 	var _Picker2 = _interopRequireDefault(_Picker);
 
-	var _PickerDrop = __webpack_require__(78);
-
-	var _PickerDrop2 = _interopRequireDefault(_PickerDrop);
-
-	var _Subnav = __webpack_require__(79);
+	var _Subnav = __webpack_require__(76);
 
 	var _Subnav2 = _interopRequireDefault(_Subnav);
 
-	var _SubnavItem = __webpack_require__(80);
+	var _SubnavItem = __webpack_require__(77);
 
 	var _SubnavItem2 = _interopRequireDefault(_SubnavItem);
 
-	var _Switcher = __webpack_require__(81);
+	var _Switcher = __webpack_require__(78);
 
 	var _Switcher2 = _interopRequireDefault(_Switcher);
 
-	var _SwitcherItem = __webpack_require__(82);
+	var _SwitcherItem = __webpack_require__(79);
 
 	var _SwitcherItem2 = _interopRequireDefault(_SwitcherItem);
 
-	var _Table = __webpack_require__(86);
+	var _Table = __webpack_require__(84);
 
 	var _Table2 = _interopRequireDefault(_Table);
 
-	var _Tabs = __webpack_require__(88);
+	var _Tabs = __webpack_require__(86);
 
 	var _Tabs2 = _interopRequireDefault(_Tabs);
 
-	var _TabsItem = __webpack_require__(89);
+	var _TabsItem = __webpack_require__(87);
 
 	var _TabsItem2 = _interopRequireDefault(_TabsItem);
 
-	var _TabsVertical = __webpack_require__(90);
+	var _TabsVertical = __webpack_require__(88);
 
 	var _TabsVertical2 = _interopRequireDefault(_TabsVertical);
 
-	var _Upload = __webpack_require__(91);
+	var _Tooltip = __webpack_require__(89);
+
+	var _Tooltip2 = _interopRequireDefault(_Tooltip);
+
+	var _Upload = __webpack_require__(90);
 
 	var _Upload2 = _interopRequireDefault(_Upload);
 
@@ -158,13 +162,13 @@ module.exports =
 	  ButtonRadio: _ButtonRadio2.default,
 	  Calendar: _Calendar2.default,
 	  Datepicker: _Datepicker2.default,
-	  DatepickerDrop: _DatepickerDrop2.default,
+	  Notify: _Notify2.default,
+	  NotifyMessage: _NotifyMessage2.default,
 	  Dropdown: _Dropdown2.default,
 	  Modal: _Modal2.default,
 	  Offcanvas: _Offcanvas2.default,
 	  Pagination: _Pagination2.default,
 	  Picker: _Picker2.default,
-	  PickerDrop: _PickerDrop2.default,
 	  Subnav: _Subnav2.default,
 	  SubnavItem: _SubnavItem2.default,
 	  Switcher: _Switcher2.default,
@@ -173,6 +177,7 @@ module.exports =
 	  Tabs: _Tabs2.default,
 	  TabsItem: _TabsItem2.default,
 	  TabsVertical: _TabsVertical2.default,
+	  Tooltip: _Tooltip2.default,
 	  Upload: _Upload2.default,
 	  install: function install(Vue) {
 	    var keys = (0, _keys2.default)(this);
@@ -201,31 +206,6 @@ module.exports =
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var store      = __webpack_require__(29)('wks')
-	  , uid        = __webpack_require__(20)
-	  , Symbol     = __webpack_require__(3).Symbol
-	  , USE_SYMBOL = typeof Symbol == 'function';
-
-	var $exports = module.exports = function(name){
-	  return store[name] || (store[name] =
-	    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-	};
-
-	$exports.store = store;
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-	var global = module.exports = typeof window != 'undefined' && window.Math == Math
-	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
-	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
-
-/***/ },
-/* 4 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -233,17 +213,18 @@ module.exports =
 	});
 	exports.warn = exports.isArray = undefined;
 
-	var _getPrototypeOf = __webpack_require__(96);
+	var _getPrototypeOf = __webpack_require__(94);
 
 	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-	var _typeof2 = __webpack_require__(101);
+	var _typeof2 = __webpack_require__(98);
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
 	exports.isObject = isObject;
 	exports.isPlainObject = isPlainObject;
 	exports.isString = isString;
+	exports.isFunction = isFunction;
 	exports.inArray = inArray;
 	exports.each = each;
 	exports.merge = merge;
@@ -260,6 +241,10 @@ module.exports =
 
 	function isString(val) {
 	  return typeof val === 'string';
+	}
+
+	function isFunction(val) {
+	  return typeof val === 'function';
 	}
 
 	var isArray = exports.isArray = Array.isArray;
@@ -322,19 +307,28 @@ module.exports =
 	}
 
 	exports.warn = warn;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(151)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(147)))
 
 /***/ },
-/* 5 */
+/* 3 */
+/***/ function(module, exports) {
+
+	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+	var global = module.exports = typeof window != 'undefined' && window.Math == Math
+	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(14)(function(){
+	module.exports = !__webpack_require__(11)(function(){
 	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
@@ -343,15 +337,15 @@ module.exports =
 	};
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var anObject       = __webpack_require__(12)
-	  , IE8_DOM_DEFINE = __webpack_require__(43)
+	var anObject       = __webpack_require__(18)
+	  , IE8_DOM_DEFINE = __webpack_require__(39)
 	  , toPrimitive    = __webpack_require__(32)
 	  , dP             = Object.defineProperty;
 
-	exports.f = __webpack_require__(5) ? Object.defineProperty : function defineProperty(O, P, Attributes){
+	exports.f = __webpack_require__(4) ? Object.defineProperty : function defineProperty(O, P, Attributes){
 	  anObject(O);
 	  P = toPrimitive(P, true);
 	  anObject(Attributes);
@@ -364,42 +358,42 @@ module.exports =
 	};
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(116)
+	var IObject = __webpack_require__(40)
 	  , defined = __webpack_require__(23);
 	module.exports = function(it){
 	  return IObject(defined(it));
 	};
 
 /***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var dP         = __webpack_require__(7)
-	  , createDesc = __webpack_require__(19);
-	module.exports = __webpack_require__(5) ? function(object, key, value){
-	  return dP.f(object, key, createDesc(1, value));
-	} : function(object, key, value){
-	  object[key] = value;
-	  return object;
-	};
-
-/***/ },
-/* 10 */
+/* 8 */
 /***/ function(module, exports) {
 
 	var nestRE = /^(attrs|props|on|nativeOn|class|style|hook)$/
 
 	module.exports = function mergeJSXProps (objs) {
 	  return objs.reduce(function (a, b) {
-	    var aa, bb, key, nestedKey
+	    var aa, bb, key, nestedKey, temp
 	    for (key in b) {
 	      aa = a[key]
 	      bb = b[key]
 	      if (aa && nestRE.test(key)) {
+	        // normalize class
+	        if (key === 'class') {
+	          if (typeof aa === 'string') {
+	            temp = aa
+	            a[key] = aa = {}
+	            aa[temp] = true
+	          }
+	          if (typeof bb === 'string') {
+	            temp = bb
+	            b[key] = bb = {}
+	            bb[temp] = true
+	          }
+	        }
 	        if (key === 'on' || key === 'nativeOn' || key === 'hook') {
 	          // merge functions
 	          for (nestedKey in bb) {
@@ -431,7 +425,7 @@ module.exports =
 
 
 /***/ },
-/* 11 */
+/* 9 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -454,14 +448,18 @@ module.exports =
 	  el.addEventListener(event, handler);
 	}
 
-	function offAll(namespace) {
-	  for (var i = 0; i < boundEvents[namespace].length; ++i) {
-	    var _boundEvents$namespac = boundEvents[namespace][i];
-	    var el = _boundEvents$namespac.el;
-	    var event = _boundEvents$namespac.event;
-	    var handler = _boundEvents$namespac.handler;
+	function offAll() {
+	  var namespace = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'def';
 
-	    el.removeEventListener(event, handler);
+	  if (boundEvents[namespace] !== undefined) {
+	    for (var i = 0; i < boundEvents[namespace].length; ++i) {
+	      var _boundEvents$namespac = boundEvents[namespace][i],
+	          el = _boundEvents$namespac.el,
+	          event = _boundEvents$namespac.event,
+	          handler = _boundEvents$namespac.handler;
+
+	      el.removeEventListener(event, handler);
+	    }
 	  }
 	}
 
@@ -485,24 +483,33 @@ module.exports =
 	  return window.getComputedStyle(el)[style];
 	}
 
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
+	var UA = window.navigator.userAgent.toLowerCase();
+	var isIE9 = UA && UA.indexOf('msie 9.0') > 0;
 
-	var isObject = __webpack_require__(15);
-	module.exports = function(it){
-	  if(!isObject(it))throw TypeError(it + ' is not an object!');
-	  return it;
-	};
+	var transitionProp = exports.transitionProp = 'transition';
+	var transitionEndEvent = exports.transitionEndEvent = 'transitionend';
+	var animationProp = exports.animationProp = 'animation';
+	var animationEndEvent = exports.animationEndEvent = 'animationend';
+
+	if (!isIE9) {
+	  if (window.ontransitionend === undefined && window.onwebkittransitionend !== undefined) {
+	    exports.transitionProp = transitionProp = 'WebkitTransition';
+	    exports.transitionEndEvent = transitionEndEvent = 'webkitTransitionEnd';
+	  }
+	  if (window.onanimationend === undefined && window.onwebkitanimationend !== undefined) {
+	    exports.animationProp = animationProp = 'WebkitAnimation';
+	    exports.animationEndEvent = animationEndEvent = 'webkitAnimationEnd';
+	  }
+	}
 
 /***/ },
-/* 13 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global    = __webpack_require__(3)
 	  , core      = __webpack_require__(1)
-	  , ctx       = __webpack_require__(113)
-	  , hide      = __webpack_require__(9)
+	  , ctx       = __webpack_require__(109)
+	  , hide      = __webpack_require__(12)
 	  , PROTOTYPE = 'prototype';
 
 	var $export = function(type, name, source){
@@ -562,7 +569,7 @@ module.exports =
 	module.exports = $export;
 
 /***/ },
-/* 14 */
+/* 11 */
 /***/ function(module, exports) {
 
 	module.exports = function(exec){
@@ -574,25 +581,24 @@ module.exports =
 	};
 
 /***/ },
-/* 15 */
-/***/ function(module, exports) {
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = function(it){
-	  return typeof it === 'object' ? it !== null : typeof it === 'function';
+	var dP         = __webpack_require__(6)
+	  , createDesc = __webpack_require__(20);
+	module.exports = __webpack_require__(4) ? function(object, key, value){
+	  return dP.f(object, key, createDesc(1, value));
+	} : function(object, key, value){
+	  object[key] = value;
+	  return object;
 	};
 
 /***/ },
-/* 16 */
-/***/ function(module, exports) {
-
-	module.exports = {};
-
-/***/ },
-/* 17 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(49)
+	var $keys       = __webpack_require__(45)
 	  , enumBugKeys = __webpack_require__(24);
 
 	module.exports = Object.keys || function keys(O){
@@ -600,43 +606,30 @@ module.exports =
 	};
 
 /***/ },
-/* 18 */
-/***/ function(module, exports) {
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = require("moment");
+	var store      = __webpack_require__(30)('wks')
+	  , uid        = __webpack_require__(22)
+	  , Symbol     = __webpack_require__(3).Symbol
+	  , USE_SYMBOL = typeof Symbol == 'function';
 
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	module.exports = function(bitmap, value){
-	  return {
-	    enumerable  : !(bitmap & 1),
-	    configurable: !(bitmap & 2),
-	    writable    : !(bitmap & 4),
-	    value       : value
-	  };
+	var $exports = module.exports = function(name){
+	  return store[name] || (store[name] =
+	    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
 	};
 
-/***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	var id = 0
-	  , px = Math.random();
-	module.exports = function(key){
-	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-	};
+	$exports.store = store;
 
 /***/ },
-/* 21 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-	var _defineProperty = __webpack_require__(95);
+	var _defineProperty = __webpack_require__(93);
 
 	var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -658,13 +651,66 @@ module.exports =
 	};
 
 /***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	module.exports = function(it){
+	  return typeof it === 'object' ? it !== null : typeof it === 'function';
+	};
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	module.exports = require("moment");
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var isObject = __webpack_require__(16);
+	module.exports = function(it){
+	  if(!isObject(it))throw TypeError(it + ' is not an object!');
+	  return it;
+	};
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	exports.f = {}.propertyIsEnumerable;
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
+	module.exports = function(bitmap, value){
+	  return {
+	    enumerable  : !(bitmap & 1),
+	    configurable: !(bitmap & 2),
+	    writable    : !(bitmap & 4),
+	    value       : value
+	  };
+	};
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 7.1.13 ToObject(argument)
+	var defined = __webpack_require__(23);
+	module.exports = function(it){
+	  return Object(defined(it));
+	};
+
+/***/ },
 /* 22 */
 /***/ function(module, exports) {
 
-	var toString = {}.toString;
-
-	module.exports = function(it){
-	  return toString.call(it).slice(8, -1);
+	var id = 0
+	  , px = Math.random();
+	module.exports = function(key){
+	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 	};
 
 /***/ },
@@ -690,38 +736,44 @@ module.exports =
 /* 25 */
 /***/ function(module, exports) {
 
-	module.exports = true;
+	module.exports = {};
 
 /***/ },
 /* 26 */
 /***/ function(module, exports) {
 
-	exports.f = {}.propertyIsEnumerable;
+	module.exports = true;
 
 /***/ },
 /* 27 */
+/***/ function(module, exports) {
+
+	exports.f = Object.getOwnPropertySymbols;
+
+/***/ },
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var def = __webpack_require__(7).f
-	  , has = __webpack_require__(6)
-	  , TAG = __webpack_require__(2)('toStringTag');
+	var def = __webpack_require__(6).f
+	  , has = __webpack_require__(5)
+	  , TAG = __webpack_require__(14)('toStringTag');
 
 	module.exports = function(it, tag, stat){
 	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 	};
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var shared = __webpack_require__(29)('keys')
-	  , uid    = __webpack_require__(20);
+	var shared = __webpack_require__(30)('keys')
+	  , uid    = __webpack_require__(22);
 	module.exports = function(key){
 	  return shared[key] || (shared[key] = uid(key));
 	};
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(3)
@@ -732,7 +784,7 @@ module.exports =
 	};
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
@@ -743,21 +795,11 @@ module.exports =
 	};
 
 /***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(23);
-	module.exports = function(it){
-	  return Object(defined(it));
-	};
-
-/***/ },
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.1 ToPrimitive(input [, PreferredType])
-	var isObject = __webpack_require__(15);
+	var isObject = __webpack_require__(16);
 	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
 	// and the second argument - flag - preferred type is a string
 	module.exports = function(it, S){
@@ -775,9 +817,9 @@ module.exports =
 
 	var global         = __webpack_require__(3)
 	  , core           = __webpack_require__(1)
-	  , LIBRARY        = __webpack_require__(25)
+	  , LIBRARY        = __webpack_require__(26)
 	  , wksExt         = __webpack_require__(34)
-	  , defineProperty = __webpack_require__(7).f;
+	  , defineProperty = __webpack_require__(6).f;
 	module.exports = function(name){
 	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
 	  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
@@ -787,291 +829,57 @@ module.exports =
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.f = __webpack_require__(2);
+	exports.f = __webpack_require__(14);
 
 /***/ },
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	var $at  = __webpack_require__(126)(true);
-
-	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(44)(String, 'String', function(iterated){
-	  this._t = String(iterated); // target
-	  this._i = 0;                // next index
-	// 21.1.5.2.1 %StringIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , index = this._i
-	    , point;
-	  if(index >= O.length)return {value: undefined, done: true};
-	  point = $at(O, index);
-	  this._i += point.length;
-	  return {value: point, done: false};
-	});
+	module.exports = { "default": __webpack_require__(99), __esModule: true };
 
 /***/ },
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(132);
-	var global        = __webpack_require__(3)
-	  , hide          = __webpack_require__(9)
-	  , Iterators     = __webpack_require__(16)
-	  , TO_STRING_TAG = __webpack_require__(2)('toStringTag');
+	"use strict";
 
-	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
-	  var NAME       = collections[i]
-	    , Collection = global[NAME]
-	    , proto      = Collection && Collection.prototype;
-	  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
-	  Iterators[NAME] = Iterators.Array;
-	}
+	exports.__esModule = true;
 
-/***/ },
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
+	var _assign = __webpack_require__(92);
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _isInteger = __webpack_require__(40);
-
-	var _isInteger2 = _interopRequireDefault(_isInteger);
-
-	var _moment = __webpack_require__(18);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	var _render = __webpack_require__(64);
-
-	var _render2 = _interopRequireDefault(_render);
+	var _assign2 = _interopRequireDefault(_assign);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = {
-	  name: 'VkDatepicker',
-	  render: _render2.default,
-	  props: {
-	    year: {},
-	    month: {},
-	    dates: {
-	      type: Array,
-	      default: function _default() {
-	        return [];
+	exports.default = _assign2.default || function (target) {
+	  for (var i = 1; i < arguments.length; i++) {
+	    var source = arguments[i];
+
+	    for (var key in source) {
+	      if (Object.prototype.hasOwnProperty.call(source, key)) {
+	        target[key] = source[key];
 	      }
-	    },
-	    disabledDates: {
-	      type: Array,
-	      default: function _default() {
-	        return [];
-	      }
-	    },
-
-	    min: {
-	      type: [String, Number],
-	      default: '1980-01-01'
-	    },
-
-	    max: {
-	      type: [String, Number],
-	      default: '2050-12-31'
-	    }
-	  },
-	  computed: {
-	    datesMoments: function datesMoments() {
-	      return this.dates.map(function (d) {
-	        return (0, _moment2.default)(d);
-	      });
-	    },
-	    disabledDatesMoments: function disabledDatesMoments() {
-	      return this.disabledDates.map(function (d) {
-	        return (0, _moment2.default)(d);
-	      });
-	    },
-	    minMoment: function minMoment() {
-	      return (0, _isInteger2.default)(this.min) ? (0, _moment2.default)().add(-this.min - 1, 'days') : (0, _moment2.default)(this.min || this.$options.props.min.default);
-	    },
-	    maxMoment: function maxMoment() {
-	      return (0, _isInteger2.default)(this.max) ? (0, _moment2.default)().add(this.max, 'days') : (0, _moment2.default)(this.max || this.$options.props.max.default);
-	    }
-	  },
-	  methods: {
-	    isPicked: function isPicked(date) {
-	      return this.datesMoments.some(function (d) {
-	        return d.format('YYYY-MM-DD') === date.format('YYYY-MM-DD');
-	      });
-	    },
-	    isDisabled: function isDisabled(date) {
-	      var _this = this;
-
-	      return this.disabledDatesMoments.some(function (d) {
-	        return d.format('YYYY-MM-DD') === date.format('YYYY-MM-DD') || !date.isBetween(_this.minMoment, _this.maxMoment);
-	      });
-	    },
-	    toggle: function toggle(date) {
-	      this.isPicked(date) ? this.$emit('unpick', date) : this.$emit('pick', date);
 	    }
 	  }
+
+	  return target;
+	};
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	var toString = {}.toString;
+
+	module.exports = function(it){
+	  return toString.call(it).slice(8, -1);
 	};
 
 /***/ },
 /* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _util = __webpack_require__(4);
-
-	exports.default = {
-	  name: 'VkPicker',
-	  render: function render(h) {
-	    return h(
-	      'vk-table',
-	      {
-	        attrs: {
-	          'track-by': 'id',
-	          fields: this.tableFields,
-	          rows: this.rows }
-	      },
-	      []
-	    );
-	  },
-	  props: {
-	    fields: {
-	      type: Array,
-	      required: true
-	    },
-	    rows: {
-	      type: Array,
-	      required: true
-	    }
-	  },
-	  computed: {
-	    tableFields: function tableFields() {
-	      return this.fields.map(function (field) {
-	        if (field.pickable) {
-	          field.render = pickableRender;
-	        }
-	        return field;
-	      });
-	    },
-	    pickables: function pickables() {
-	      var pickables = {};
-	      (0, _util.each)(this.fields, function (field) {
-	        if (field.pickable && (0, _util.isString)(field.pickable)) {
-	          pickables[field.name] = field.pickable;
-	        } else if (field.pickable) {
-	          pickables[field.name] = field.name;
-	        }
-	      });
-	      return pickables;
-	    }
-	  }
-	};
-
-
-	var pickableRender = function pickableRender(h, _ref) {
-	  var props = _ref.props;
-	  var parent = _ref.parent;
-
-	  var vm = parent.$parent;
-	  return h(
-	    'a',
-	    {
-	      on: {
-	        click: function click(e) {
-	          var field = props.field.name;
-	          var data = props.row[vm.pickables[field]];
-	          e.preventDefault();
-	          vm.$emit('pick', data, field);
-	        }
-	      }
-	    },
-	    [props.row[props.field.name]]
-	  );
-	};
-
-/***/ },
-/* 39 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = {
-	  functional: true,
-	  props: ['checked', 'onClick'],
-	  render: function render(h, _ref) {
-	    var parent = _ref.parent;
-	    var props = _ref.props;
-
-	    return h('input', {
-	      attrs: {
-	        type: 'checkbox'
-	      },
-	      domProps: {
-	        checked: props.checked
-	      },
-	      on: {
-	        click: function click(e) {
-	          e.target.checked = props.checked;
-	          props.onClick();
-	        }
-	      }
-	    });
-	  }
-	};
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(104), __esModule: true };
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// getting tag from 19.1.3.6 Object.prototype.toString()
-	var cof = __webpack_require__(22)
-	  , TAG = __webpack_require__(2)('toStringTag')
-	  // ES3 wrong here
-	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
-
-	// fallback for IE11 Script Access Denied error
-	var tryGet = function(it, key){
-	  try {
-	    return it[key];
-	  } catch(e){ /* empty */ }
-	};
-
-	module.exports = function(it){
-	  var O, T, B;
-	  return it === undefined ? 'Undefined' : it === null ? 'Null'
-	    // @@toStringTag case
-	    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
-	    // builtinTag case
-	    : ARG ? cof(O)
-	    // ES3 arguments fallback
-	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-	};
-
-/***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(15)
+	var isObject = __webpack_require__(16)
 	  , document = __webpack_require__(3).document
 	  // in old IE typeof document.createElement is 'object'
 	  , is = isObject(document) && isObject(document.createElement);
@@ -1080,28 +888,38 @@ module.exports =
 	};
 
 /***/ },
-/* 43 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = !__webpack_require__(5) && !__webpack_require__(14)(function(){
-	  return Object.defineProperty(__webpack_require__(42)('div'), 'a', {get: function(){ return 7; }}).a != 7;
+	module.exports = !__webpack_require__(4) && !__webpack_require__(11)(function(){
+	  return Object.defineProperty(__webpack_require__(38)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
 /***/ },
-/* 44 */
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// fallback for non-array-like ES3 and non-enumerable old V8 strings
+	var cof = __webpack_require__(37);
+	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
+	  return cof(it) == 'String' ? it.split('') : Object(it);
+	};
+
+/***/ },
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var LIBRARY        = __webpack_require__(25)
-	  , $export        = __webpack_require__(13)
-	  , redefine       = __webpack_require__(51)
-	  , hide           = __webpack_require__(9)
-	  , has            = __webpack_require__(6)
-	  , Iterators      = __webpack_require__(16)
-	  , $iterCreate    = __webpack_require__(119)
-	  , setToStringTag = __webpack_require__(27)
-	  , getPrototypeOf = __webpack_require__(48)
-	  , ITERATOR       = __webpack_require__(2)('iterator')
+	var LIBRARY        = __webpack_require__(26)
+	  , $export        = __webpack_require__(10)
+	  , redefine       = __webpack_require__(47)
+	  , hide           = __webpack_require__(12)
+	  , has            = __webpack_require__(5)
+	  , Iterators      = __webpack_require__(25)
+	  , $iterCreate    = __webpack_require__(114)
+	  , setToStringTag = __webpack_require__(28)
+	  , getPrototypeOf = __webpack_require__(44)
+	  , ITERATOR       = __webpack_require__(14)('iterator')
 	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
 	  , FF_ITERATOR    = '@@iterator'
 	  , KEYS           = 'keys'
@@ -1163,27 +981,27 @@ module.exports =
 	};
 
 /***/ },
-/* 45 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	var anObject    = __webpack_require__(12)
-	  , dPs         = __webpack_require__(123)
+	var anObject    = __webpack_require__(18)
+	  , dPs         = __webpack_require__(119)
 	  , enumBugKeys = __webpack_require__(24)
-	  , IE_PROTO    = __webpack_require__(28)('IE_PROTO')
+	  , IE_PROTO    = __webpack_require__(29)('IE_PROTO')
 	  , Empty       = function(){ /* empty */ }
 	  , PROTOTYPE   = 'prototype';
 
 	// Create object with fake `null` prototype: use iframe Object with cleared prototype
 	var createDict = function(){
 	  // Thrash, waste and sodomy: IE GC bug
-	  var iframe = __webpack_require__(42)('iframe')
+	  var iframe = __webpack_require__(38)('iframe')
 	    , i      = enumBugKeys.length
 	    , lt     = '<'
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
-	  __webpack_require__(115).appendChild(iframe);
+	  __webpack_require__(111).appendChild(iframe);
 	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
 	  // createDict = iframe.contentWindow.Object;
 	  // html.removeChild(iframe);
@@ -1210,11 +1028,11 @@ module.exports =
 
 
 /***/ },
-/* 46 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	var $keys      = __webpack_require__(49)
+	var $keys      = __webpack_require__(45)
 	  , hiddenKeys = __webpack_require__(24).concat('length', 'prototype');
 
 	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
@@ -1222,19 +1040,13 @@ module.exports =
 	};
 
 /***/ },
-/* 47 */
-/***/ function(module, exports) {
-
-	exports.f = Object.getOwnPropertySymbols;
-
-/***/ },
-/* 48 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(6)
-	  , toObject    = __webpack_require__(31)
-	  , IE_PROTO    = __webpack_require__(28)('IE_PROTO')
+	var has         = __webpack_require__(5)
+	  , toObject    = __webpack_require__(21)
+	  , IE_PROTO    = __webpack_require__(29)('IE_PROTO')
 	  , ObjectProto = Object.prototype;
 
 	module.exports = Object.getPrototypeOf || function(O){
@@ -1246,13 +1058,13 @@ module.exports =
 	};
 
 /***/ },
-/* 49 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var has          = __webpack_require__(6)
-	  , toIObject    = __webpack_require__(8)
-	  , arrayIndexOf = __webpack_require__(112)(false)
-	  , IE_PROTO     = __webpack_require__(28)('IE_PROTO');
+	var has          = __webpack_require__(5)
+	  , toIObject    = __webpack_require__(7)
+	  , arrayIndexOf = __webpack_require__(108)(false)
+	  , IE_PROTO     = __webpack_require__(29)('IE_PROTO');
 
 	module.exports = function(object, names){
 	  var O      = toIObject(object)
@@ -1268,13 +1080,13 @@ module.exports =
 	};
 
 /***/ },
-/* 50 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// most Object methods by ES6 should accept primitives
-	var $export = __webpack_require__(13)
+	var $export = __webpack_require__(10)
 	  , core    = __webpack_require__(1)
-	  , fails   = __webpack_require__(14);
+	  , fails   = __webpack_require__(11);
 	module.exports = function(KEY, exec){
 	  var fn  = (core.Object || {})[KEY] || Object[KEY]
 	    , exp = {};
@@ -1283,16 +1095,16 @@ module.exports =
 	};
 
 /***/ },
-/* 51 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(9);
+	module.exports = __webpack_require__(12);
 
 /***/ },
-/* 52 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var createRange = __webpack_require__(142);
+	var createRange = __webpack_require__(138);
 
 	/**
 	 * Creates an array of numbers (positive and/or negative) progressing from
@@ -1341,7 +1153,1623 @@ module.exports =
 
 
 /***/ },
-/* 53 */
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/*
+	* @fileOverview Kickass library to create and place poppers near their reference elements.
+	* @version 1.0.0-alpha.3
+	* @license
+	* Copyright (c) 2016 Federico Zivolo and contributors
+	*
+	* Permission is hereby granted, free of charge, to any person obtaining a copy
+	* of this software and associated documentation files (the "Software"), to deal
+	* in the Software without restriction, including without limitation the rights
+	* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	* copies of the Software, and to permit persons to whom the Software is
+	* furnished to do so, subject to the following conditions:
+	*
+	* The above copyright notice and this permission notice shall be included in all
+	* copies or substantial portions of the Software.
+	*
+	* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	* SOFTWARE.
+	*/
+	                    
+	(function (global, factory) {
+	   true ? module.exports = factory() :
+	  typeof define === 'function' && define.amd ? define(factory) :
+	  (global.Popper = factory());
+	}(this, function () { 'use strict';
+
+	  /**
+	   * The Object.assign() method is used to copy the values of all enumerable own properties from one or more source
+	   * objects to a target object. It will return the target object.
+	   * This polyfill doesn't support symbol properties, since ES5 doesn't have symbols anyway
+	   * Source: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+	   * @function
+	   * @ignore
+	   */
+	  if (!Object.assign) {
+	      Object.defineProperty(Object, 'assign', {
+	          enumerable: false,
+	          configurable: true,
+	          writable: true,
+	          value: function value(target) {
+	              if (target === undefined || target === null) {
+	                  throw new TypeError('Cannot convert first argument to object');
+	              }
+
+	              var to = Object(target);
+	              for (var i = 1; i < arguments.length; i++) {
+	                  var nextSource = arguments[i];
+	                  if (nextSource === undefined || nextSource === null) {
+	                      continue;
+	                  }
+	                  nextSource = Object(nextSource);
+
+	                  var keysArray = Object.keys(nextSource);
+	                  for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+	                      var nextKey = keysArray[nextIndex];
+	                      var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+	                      if (desc !== undefined && desc.enumerable) {
+	                          to[nextKey] = nextSource[nextKey];
+	                      }
+	                  }
+	              }
+	              return to;
+	          }
+	      });
+	  }
+
+	  /**
+	   * Polyfill for requestAnimationFrame
+	   * @function
+	   * @ignore
+	   */
+	  if (!window.requestAnimationFrame) {
+	      var lastTime = 0;
+	      var vendors = ['ms', 'moz', 'webkit', 'o'];
+	      for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+	          window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+	          window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+	      }
+
+	      if (!window.requestAnimationFrame) {
+	          window.requestAnimationFrame = function (callback) {
+	              var currTime = new Date().getTime();
+	              var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+	              var id = window.setTimeout(function () {
+	                  callback(currTime + timeToCall);
+	              }, timeToCall);
+	              lastTime = currTime + timeToCall;
+	              return id;
+	          };
+	      }
+
+	      if (!window.cancelAnimationFrame) {
+	          window.cancelAnimationFrame = function (id) {
+	              clearTimeout(id);
+	          };
+	      }
+	  }
+
+	  /**
+	   * Return the index of the matching object
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Array} arr
+	   * @argument prop
+	   * @argument value
+	   * @returns index or -1
+	   */
+	  function findIndex(arr, prop, value) {
+	    // use filter instead of find because find has less cross-browser support
+	    var match = arr.filter(function (obj) {
+	      return obj[prop] === value;
+	    })[0];
+	    return arr.indexOf(match);
+	  }
+
+	  /**
+	   * Returns the offset parent of the given element
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Element} element
+	   * @returns {Element} offset parent
+	   */
+	  function getOffsetParent(element) {
+	    // NOTE: 1 DOM access here
+	    var offsetParent = element.offsetParent;
+	    return !offsetParent || offsetParent.nodeName === 'BODY' ? window.document.documentElement : offsetParent;
+	  }
+
+	  /**
+	   * Get CSS computed property of the given element
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Eement} element
+	   * @argument {String} property
+	   */
+	  function getStyleComputedProperty(element, property) {
+	      if (element.nodeType !== 1) {
+	          return [];
+	      }
+	      // NOTE: 1 DOM access here
+	      var css = window.getComputedStyle(element, null);
+	      return css[property];
+	  }
+
+	  /**
+	   * Returns the parentNode or the host of the element
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Element} element
+	   * @returns {Element} parent
+	   */
+	  function getParentNode(element) {
+	    return element.parentNode || element.host;
+	  }
+
+	  /**
+	   * Returns the scrolling parent of the given element
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Element} element
+	   * @returns {Element} offset parent
+	   */
+	  function getScrollParent(element) {
+	      if (element === window.document) {
+	          // Firefox puts the scrollTOp value on `documentElement` instead of `body`, we then check which of them is
+	          // greater than 0 and return the proper element
+	          if (window.document.body.scrollTop) {
+	              return window.document.body;
+	          } else {
+	              return window.document.documentElement;
+	          }
+	      }
+
+	      // Firefox want us to check `-x` and `-y` variations as well
+	      if (['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-x')) !== -1 || ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-y')) !== -1) {
+	          // If the detected scrollParent is body, we perform an additional check on its parentNode
+	          // in this way we'll get body if the browser is Chrome-ish, or documentElement otherwise
+	          // fixes issue #65
+	          return element === window.document.body ? getScrollParent(getParentNode(element)) : element;
+	      }
+	      return getParentNode(element) ? getScrollParent(getParentNode(element)) : element;
+	  }
+
+	  /**
+	   * Get the position of the given element, relative to its offset parent
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param {Element} element
+	   * @return {Object} position - Coordinates of the element and its `scrollTop`
+	   */
+	  function getOffsetRect(element) {
+	      var elementRect = {
+	          width: element.offsetWidth,
+	          height: element.offsetHeight,
+	          left: element.offsetLeft,
+	          top: element.offsetTop
+	      };
+
+	      elementRect.right = elementRect.left + elementRect.width;
+	      elementRect.bottom = elementRect.top + elementRect.height;
+
+	      // position
+	      return elementRect;
+	  }
+
+	  /**
+	   * Computed the boundaries limits and return them
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param {Object} data - Object containing the property "offsets" generated by `_getOffsets`
+	   * @param {Number} padding - Boundaries padding
+	   * @param {Element} boundariesElement - Element used to define the boundaries
+	   * @returns {Object} Coordinates of the boundaries
+	   */
+	  function getBoundaries(popper, data, padding, boundariesElement) {
+	      // NOTE: 1 DOM access here
+	      var boundaries = {};
+	      if (boundariesElement === 'window') {
+	          var body = window.document.body;
+	          var html = window.document.documentElement;
+	          var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+	          var width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
+
+	          boundaries = {
+	              top: 0,
+	              right: width,
+	              bottom: height,
+	              left: 0
+	          };
+	      } else if (boundariesElement === 'viewport') {
+	          var offsetParent = getOffsetParent(popper);
+	          var scrollParent = getScrollParent(popper);
+	          var offsetParentRect = getOffsetRect(offsetParent);
+
+	          // if the popper is fixed we don't have to substract scrolling from the boundaries
+	          var scrollTop = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollTop;
+	          var scrollLeft = data.offsets.popper.position === 'fixed' ? 0 : scrollParent.scrollLeft;
+
+	          boundaries = {
+	              top: 0 - (offsetParentRect.top - scrollTop),
+	              right: window.document.documentElement.clientWidth - (offsetParentRect.left - scrollLeft),
+	              bottom: window.document.documentElement.clientHeight - (offsetParentRect.top - scrollTop),
+	              left: 0 - (offsetParentRect.left - scrollLeft)
+	          };
+	      } else {
+	          if (getOffsetParent(popper) === boundariesElement) {
+	              boundaries = {
+	                  top: 0,
+	                  left: 0,
+	                  right: boundariesElement.clientWidth,
+	                  bottom: boundariesElement.clientHeight
+	              };
+	          } else {
+	              boundaries = getOffsetRect(boundariesElement);
+	          }
+	      }
+	      boundaries.left += padding;
+	      boundaries.right -= padding;
+	      boundaries.top = boundaries.top + padding;
+	      boundaries.bottom = boundaries.bottom - padding;
+	      return boundaries;
+	  }
+
+	  /**
+	   * Get bounding client rect of given element
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param {HTMLElement} element
+	   * @return {Object} client rect
+	   */
+	  function getBoundingClientRect(element) {
+	      var rect = element.getBoundingClientRect();
+	      return {
+	          left: rect.left,
+	          top: rect.top,
+	          right: rect.right,
+	          bottom: rect.bottom,
+	          width: rect.right - rect.left,
+	          height: rect.bottom - rect.top
+	      };
+	  }
+
+	  /**
+	   * Given an element and one of its parents, return the offset
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param {HTMLElement} element
+	   * @param {HTMLElement} parent
+	   * @return {Object} rect
+	   */
+	  function getOffsetRectRelativeToCustomParent(element, parent, fixed, transformed) {
+	      var elementRect = getBoundingClientRect(element);
+	      var parentRect = getBoundingClientRect(parent);
+
+	      if (fixed && !transformed) {
+	          var scrollParent = getScrollParent(parent);
+	          parentRect.top += scrollParent.scrollTop;
+	          parentRect.bottom += scrollParent.scrollTop;
+	          parentRect.left += scrollParent.scrollLeft;
+	          parentRect.right += scrollParent.scrollLeft;
+	      }
+
+	      var rect = {
+	          top: elementRect.top - parentRect.top,
+	          left: elementRect.left - parentRect.left,
+	          bottom: elementRect.top - parentRect.top + elementRect.height,
+	          right: elementRect.left - parentRect.left + elementRect.width,
+	          width: elementRect.width,
+	          height: elementRect.height
+	      };
+	      return rect;
+	  }
+
+	  /**
+	   * Get the outer sizes of the given element (offset size + margins)
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Element} element
+	   * @returns {Object} object containing width and height properties
+	   */
+	  function getOuterSizes(element) {
+	      // NOTE: 1 DOM access here
+	      var display = element.style.display;
+	      var visibility = element.style.visibility;
+
+	      element.style.display = 'block';
+	      element.style.visibility = 'hidden';
+
+	      // original method
+	      var styles = window.getComputedStyle(element);
+	      var x = parseFloat(styles.marginTop) + parseFloat(styles.marginBottom);
+	      var y = parseFloat(styles.marginLeft) + parseFloat(styles.marginRight);
+	      var result = {
+	          width: element.offsetWidth + y,
+	          height: element.offsetHeight + x
+	      };
+
+	      // reset element styles
+	      element.style.display = display;
+	      element.style.visibility = visibility;
+
+	      return result;
+	  }
+
+	  /**
+	   * Given the popper offsets, generate an output similar to getBoundingClientRect
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Object} popperOffsets
+	   * @returns {Object} ClientRect like output
+	   */
+	  function getPopperClientRect(popperOffsets) {
+	      return Object.assign({}, popperOffsets, {
+	          right: popperOffsets.left + popperOffsets.width,
+	          bottom: popperOffsets.top + popperOffsets.height
+	      });
+	  }
+
+	  /**
+	   * Check if the given element is fixed or is inside a fixed parent
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Element} element
+	   * @argument {Element} customContainer
+	   * @returns {Boolean} answer to "isFixed?"
+	   */
+	  function isFixed(element) {
+	      if (element === window.document.body) {
+	          return false;
+	      }
+	      if (getStyleComputedProperty(element, 'position') === 'fixed') {
+	          return true;
+	      }
+	      return getParentNode(element) ? isFixed(getParentNode(element)) : element;
+	  }
+
+	  /**
+	   * Helper used to get the position which will be applied to the popper
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param config {HTMLElement} popper element
+	   * @returns {HTMLElement} reference element
+	   */
+	  function getPosition(popper, reference) {
+	    var container = getOffsetParent(reference);
+
+	    // Decide if the popper will be fixed
+	    // If the reference element is inside a fixed context, the popper will be fixed as well to allow them to scroll together
+	    var isParentFixed = isFixed(container);
+	    return isParentFixed ? 'fixed' : 'absolute';
+	  }
+
+	  /**
+	   * Get the prefixed supported property name
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {String} property (camelCase)
+	   * @returns {String} prefixed property (camelCase)
+	   */
+	  function getSupportedPropertyName(property) {
+	      var prefixes = ['', 'ms', 'webkit', 'moz', 'o'];
+
+	      for (var i = 0; i < prefixes.length; i++) {
+	          var toCheck = prefixes[i] ? prefixes[i] + property.charAt(0).toUpperCase() + property.slice(1) : property;
+	          if (typeof window.document.body.style[toCheck] !== 'undefined') {
+	              return toCheck;
+	          }
+	      }
+	      return null;
+	  }
+
+	  /**
+	   * Check if the given variable is a function
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Element} element - Element to check
+	   * @returns {Boolean} answer to: is a function?
+	   */
+	  function isFunction(functionToCheck) {
+	    var getType = {};
+	    return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+	  }
+
+	  /**
+	   * Helper used to know if the given modifier depends from another one.
+	   * @method
+	   * @memberof Popper.Utils
+	   * @returns {Boolean}
+	   */
+	  function isModifierRequired(modifiers, requesting, requested) {
+	      return !!modifiers.filter(function (modifier) {
+	          if (modifier.name === requested) {
+	              return true;
+	          } else if (modifier.name === requesting) {
+	              return false;
+	          }
+	          return false;
+	      }).length;
+	  }
+
+	  /**
+	   * Tells if a given input is a number
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param {*} input to check
+	   * @return {Boolean}
+	   */
+	  function isNumeric(n) {
+	    return n !== '' && !isNaN(parseFloat(n)) && isFinite(n);
+	  }
+
+	  /**
+	   * Check if the given element has transforms applied to itself or a parent
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param  {Element} element
+	   * @return {Boolean} answer to "isTransformed?"
+	   */
+	  function isTransformed(element) {
+	      if (element === window.document.body) {
+	          return false;
+	      }
+	      if (getStyleComputedProperty(element, 'transform') !== 'none') {
+	          return true;
+	      }
+	      return getParentNode(element) ? isTransformed(getParentNode(element)) : element;
+	  }
+
+	  /**
+	   * Loop trough the list of modifiers and run them in order, each of them will then edit the data object
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param {Object} data
+	   * @param {Array} modifiers
+	   * @param {Function} ends
+	   */
+	  function runModifiers(modifiers, options, data, ends) {
+	      var modifiersToRun = ends === undefined ? modifiers : modifiers.slice(0, findIndex(modifiers, 'name', ends));
+
+	      modifiersToRun.forEach(function (modifier) {
+	          if (modifier.enabled && isFunction(modifier.function)) {
+	              data = modifier.function(data, modifier);
+	          }
+	      });
+
+	      return data;
+	  }
+
+	  /**
+	   * Set the style to the given popper
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {Element} element - Element to apply the style to
+	   * @argument {Object} styles - Object with a list of properties and values which will be applied to the element
+	   */
+	  function setStyle(element, styles) {
+	      Object.keys(styles).forEach(function (prop) {
+	          var unit = '';
+	          // add unit if the value is numeric and is one of the following
+	          if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && isNumeric(styles[prop])) {
+	              unit = 'px';
+	          }
+	          element.style[prop] = styles[prop] + unit;
+	      });
+	  }
+
+	  /** @namespace Popper.Utils */
+	  var Utils = {
+	      findIndex: findIndex,
+	      getBoundaries: getBoundaries,
+	      getBoundingClientRect: getBoundingClientRect,
+	      getOffsetParent: getOffsetParent,
+	      getOffsetRectRelativeToCustomParent: getOffsetRectRelativeToCustomParent,
+	      getOuterSizes: getOuterSizes,
+	      getPopperClientRect: getPopperClientRect,
+	      getPosition: getPosition,
+	      getScrollParent: getScrollParent,
+	      getStyleComputedProperty: getStyleComputedProperty,
+	      getSupportedPropertyName: getSupportedPropertyName,
+	      isFixed: isFixed,
+	      isFunction: isFunction,
+	      isModifierRequired: isModifierRequired,
+	      isNumeric: isNumeric,
+	      isTransformed: isTransformed,
+	      runModifiers: runModifiers,
+	      setStyle: setStyle
+	  };
+
+	  /**
+	   * Get offsets to the popper
+	   * @method
+	   * @memberof Popper.Utils
+	   * @param {Element} popper - the popper element
+	   * @param {Element} reference - the reference element (the popper will be relative to this)
+	   * @returns {Object} An object containing the offsets which will be applied to the popper
+	   */
+	  function getOffsets(state, popper, reference, placement) {
+	      placement = placement.split('-')[0];
+
+	      var popperOffsets = {};
+	      popperOffsets.position = state.position;
+
+	      var isParentFixed = popperOffsets.position === 'fixed';
+	      var isParentTransformed = state.isParentTransformed;
+
+	      //
+	      // Get reference element position
+	      //
+	      var offsetParent = getOffsetParent(isParentFixed && isParentTransformed ? reference : popper);
+	      var referenceOffsets = getOffsetRectRelativeToCustomParent(reference, offsetParent, isParentFixed, isParentTransformed);
+
+	      //
+	      // Get popper sizes
+	      //
+	      var popperRect = getOuterSizes(popper);
+
+	      //
+	      // Compute offsets of popper
+	      //
+
+	      // depending by the popper placement we have to compute its offsets slightly differently
+	      if (['right', 'left'].indexOf(placement) !== -1) {
+	          popperOffsets.top = referenceOffsets.top + referenceOffsets.height / 2 - popperRect.height / 2;
+	          if (placement === 'left') {
+	              popperOffsets.left = referenceOffsets.left - popperRect.width;
+	          } else {
+	              popperOffsets.left = referenceOffsets.right;
+	          }
+	      } else {
+	          popperOffsets.left = referenceOffsets.left + referenceOffsets.width / 2 - popperRect.width / 2;
+	          if (placement === 'top') {
+	              popperOffsets.top = referenceOffsets.top - popperRect.height;
+	          } else {
+	              popperOffsets.top = referenceOffsets.bottom;
+	          }
+	      }
+
+	      // Add width and height to our offsets object
+	      popperOffsets.width = popperRect.width;
+	      popperOffsets.height = popperRect.height;
+
+	      return {
+	          popper: popperOffsets,
+	          reference: referenceOffsets
+	      };
+	  }
+
+	  /**
+	   * Setup needed event listeners used to update the popper position
+	   * @method
+	   * @memberof Popper.Utils
+	   * @private
+	   */
+	  function setupEventListeners(reference, options, state, updateBound) {
+	      // NOTE: 1 DOM access here
+	      state.updateBound = updateBound;
+	      window.addEventListener('resize', state.updateBound, { passive: true });
+	      // if the boundariesElement is window we don't need to listen for the scroll event
+	      if (options.boundariesElement !== 'window') {
+	          var target = getScrollParent(reference);
+	          // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
+	          if (target === window.document.body || target === window.document.documentElement) {
+	              target = window;
+	          }
+	          target.addEventListener('scroll', state.updateBound, { passive: true });
+	      }
+	  }
+
+	  /**
+	   * Remove event listeners used to update the popper position
+	   * @method
+	   * @memberof Popper.Utils
+	   * @private
+	   */
+	  function removeEventListeners(reference, state, options) {
+	      // NOTE: 1 DOM access here
+	      window.removeEventListener('resize', state.updateBound);
+	      if (options.boundariesElement !== 'window') {
+	          var target = getScrollParent(reference);
+	          // here it could be both `body` or `documentElement` thanks to Firefox, we then check both
+	          if (target === window.document.body || target === window.document.documentElement) {
+	              target = window;
+	          }
+	          target.removeEventListener('scroll', state.updateBound);
+	      }
+	      state.updateBound = null;
+	      return state;
+	  }
+
+	  /**
+	   * Sorts the modifiers based on their `order` property
+	   * @method
+	   * @memberof Popper.Utils
+	   */
+	  function sortModifiers(a, b) {
+	      if (a.order < b.order) {
+	          return -1;
+	      } else if (a.order > b.order) {
+	          return 1;
+	      }
+	      return 0;
+	  }
+
+	  /**
+	   * Apply the computed styles to the popper element
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by `update` method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @returns {Object} The same data object
+	   */
+	  function applyStyle(data) {
+	      // apply the final offsets to the popper
+	      // NOTE: 1 DOM access here
+	      var styles = {
+	          position: data.offsets.popper.position
+	      };
+
+	      // round top and left to avoid blurry text
+	      var left = Math.round(data.offsets.popper.left);
+	      var top = Math.round(data.offsets.popper.top);
+
+	      // if gpuAcceleration is set to true and transform is supported, we use `translate3d` to apply the position to the popper
+	      // we automatically use the supported prefixed version if needed
+	      var prefixedProperty = getSupportedPropertyName('transform');
+	      if (data.instance.options.gpuAcceleration && prefixedProperty) {
+	          styles[prefixedProperty] = 'translate3d(' + left + 'px, ' + top + 'px, 0)';
+	          styles.top = 0;
+	          styles.left = 0;
+	      }
+	      // othwerise, we use the standard `left` and `top` properties
+	      else {
+	              styles.left = left;
+	              styles.top = top;
+	          }
+
+	      // any property present in `data.styles` will be applied to the popper,
+	      // in this way we can make the 3rd party modifiers add custom styles to it
+	      // Be aware, modifiers could override the properties defined in the previous
+	      // lines of this modifier!
+	      Object.assign(styles, data.styles);
+
+	      setStyle(data.instance.popper, styles);
+
+	      // set an attribute which will be useful to style the tooltip (use it to properly position its arrow)
+	      // NOTE: 1 DOM access here
+	      data.instance.popper.setAttribute('x-placement', data.placement);
+
+	      // if the arrow style has been computed, apply the arrow style
+	      if (data.offsets.arrow) {
+	          setStyle(data.arrowElement, data.offsets.arrow);
+	      }
+
+	      return data;
+	  }
+
+	  /**
+	   * Set the x-placement attribute before everything else because it could be used to add margins to the popper
+	   * margins needs to be calculated to get the correct popper offsets
+	   * @method
+	   * @memberof Popper.modifiers
+	   * @param {HTMLElement} reference - The reference element used to position the popper
+	   * @param {HTMLElement} popper - The HTML element used as popper.
+	   * @param {Object} options - Popper.js options
+	   */
+	  function applyStyleOnLoad(reference, popper, options) {
+	      popper.setAttribute('x-placement', options.placement);
+	  }
+
+	  /**
+	   * Modifier used to move the arrows on the edge of the popper to make sure them are always between the popper and the reference element
+	   * It will use the CSS outer size of the arrow element to know how many pixels of conjuction are needed
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by update method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @returns {Object} The data object, properly modified
+	   */
+	  function arrow(data, options) {
+	      var arrow = options.element;
+
+	      // if the arrowElement is a string, suppose it's a CSS selector
+	      if (typeof arrow === 'string') {
+	          arrow = data.instance.popper.querySelector(arrow);
+	      }
+
+	      // if arrow element is not found, don't run the modifier
+	      if (!arrow) {
+	          return data;
+	      }
+
+	      // the arrow element must be child of its popper
+	      if (!data.instance.popper.contains(arrow)) {
+	          console.warn('WARNING: `arrowElement` must be child of its popper element!');
+	          return data;
+	      }
+
+	      // arrow depends on keepTogether in order to work
+	      if (!isModifierRequired(data.instance.modifiers, 'arrow', 'keepTogether')) {
+	          console.warn('WARNING: keepTogether modifier is required by arrow modifier in order to work, be sure to include it before arrow!');
+	          return data;
+	      }
+
+	      var arrowStyle = {};
+	      var placement = data.placement.split('-')[0];
+	      var popper = getPopperClientRect(data.offsets.popper);
+	      var reference = data.offsets.reference;
+	      var isVertical = ['left', 'right'].indexOf(placement) !== -1;
+
+	      var len = isVertical ? 'height' : 'width';
+	      var side = isVertical ? 'top' : 'left';
+	      var altSide = isVertical ? 'left' : 'top';
+	      var opSide = isVertical ? 'bottom' : 'right';
+	      var arrowSize = getOuterSizes(arrow)[len];
+
+	      //
+	      // extends keepTogether behavior making sure the popper and its reference have enough pixels in conjuction
+	      //
+
+	      // top/left side
+	      if (reference[opSide] - arrowSize < popper[side]) {
+	          data.offsets.popper[side] -= popper[side] - (reference[opSide] - arrowSize);
+	      }
+	      // bottom/right side
+	      if (reference[side] + arrowSize > popper[opSide]) {
+	          data.offsets.popper[side] += reference[side] + arrowSize - popper[opSide];
+	      }
+
+	      // compute center of the popper
+	      var center = reference[side] + reference[len] / 2 - arrowSize / 2;
+
+	      // Compute the sideValue using the updated popper offsets
+	      var sideValue = center - getPopperClientRect(data.offsets.popper)[side];
+
+	      // prevent arrow from being placed not contiguously to its popper
+	      sideValue = Math.max(Math.min(popper[len] - arrowSize, sideValue), 0);
+	      arrowStyle[side] = sideValue;
+	      arrowStyle[altSide] = ''; // make sure to remove any old style from the arrow
+
+	      data.offsets.arrow = arrowStyle;
+	      data.arrowElement = arrow;
+
+	      return data;
+	  }
+
+	  /**
+	   * Get the opposite placement of the given one/
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {String} placement
+	   * @returns {String} flipped placement
+	   */
+	  function getOppositePlacement(placement) {
+	    var hash = { left: 'right', right: 'left', bottom: 'top', top: 'bottom' };
+	    return placement.replace(/left|right|bottom|top/g, function (matched) {
+	      return hash[matched];
+	    });
+	  }
+
+	  /**
+	   * Get the opposite placement variation of the given one/
+	   * @method
+	   * @memberof Popper.Utils
+	   * @argument {String} placement variation
+	   * @returns {String} flipped placement variation
+	   */
+	  function getOppositeVariation(variation) {
+	      if (variation === 'end') {
+	          return 'start';
+	      } else if (variation === 'start') {
+	          return 'end';
+	      }
+	      return variation;
+	  }
+
+	  /**
+	   * Modifier used to flip the placement of the popper when the latter is starting overlapping its reference element.
+	   * Requires the `preventOverflow` modifier before it in order to work.
+	   * **NOTE:** data.instance modifier will run all its previous modifiers everytime it tries to flip the popper!
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by update method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @returns {Object} The data object, properly modified
+	   */
+	  function flip(data, options) {
+	      // check if preventOverflow is in the list of modifiers before the flip modifier.
+	      // otherwise flip would not work as expected.
+	      if (!isModifierRequired(data.instance.modifiers, 'flip', 'preventOverflow')) {
+	          console.warn('WARNING: preventOverflow modifier is required by flip modifier in order to work, be sure to include it before flip!');
+	          return data;
+	      }
+
+	      if (data.flipped && data.placement === data.originalPlacement) {
+	          // seems like flip is trying to loop, probably there's not enough space on any of the flippable sides
+	          return data;
+	      }
+
+	      var placement = data.placement.split('-')[0];
+	      var placementOpposite = getOppositePlacement(placement);
+	      var variation = data.placement.split('-')[1] || '';
+
+	      var flipOrder = [];
+
+	      if (options.behavior === 'flip') {
+	          flipOrder = [placement, placementOpposite];
+	      } else {
+	          flipOrder = options.behavior;
+	      }
+
+	      flipOrder.forEach(function (step, index) {
+	          if (placement !== step || flipOrder.length === index + 1) {
+	              return data;
+	          }
+
+	          placement = data.placement.split('-')[0];
+	          placementOpposite = getOppositePlacement(placement);
+
+	          var popperOffsets = getPopperClientRect(data.offsets.popper);
+
+	          // this boolean is used to distinguish right and bottom from top and left
+	          // they need different computations to get flipped
+	          var a = ['right', 'bottom'].indexOf(placement) !== -1;
+	          var b = ['top', 'bottom'].indexOf(placement) !== -1;
+
+	          // using Math.floor because the reference offsets may contain decimals we are not going to consider here
+	          var flippedPosition = a && Math.floor(data.offsets.reference[placement]) > Math.floor(popperOffsets[placementOpposite]) || !a && Math.floor(data.offsets.reference[placement]) < Math.floor(popperOffsets[placementOpposite]);
+
+	          var flippedVariation = options.flipVariations && (b && variation === 'start' && Math.floor(popperOffsets.left) < Math.floor(data.boundaries.left) || b && variation === 'end' && Math.floor(popperOffsets.right) > Math.floor(data.boundaries.right) || !b && variation === 'start' && Math.floor(popperOffsets.top) < Math.floor(data.boundaries.top) || !b && variation === 'end' && Math.floor(popperOffsets.bottom) > Math.floor(data.boundaries.bottom));
+
+	          if (flippedPosition || flippedVariation) {
+	              // this boolean to detect any flip loop
+	              data.flipped = true;
+
+	              if (flippedPosition) {
+	                  placement = flipOrder[index + 1];
+	              }
+	              if (flippedVariation) {
+	                  variation = getOppositeVariation(variation);
+	              }
+
+	              data.placement = placement + (variation ? '-' + variation : '');
+	              data.offsets.popper = getOffsets(data.instance.state, data.instance.popper, data.instance.reference, data.placement).popper;
+
+	              data = runModifiers(data.instance.modifiers, data.instance.options, data, 'flip');
+	          }
+	      });
+	      return data;
+	  }
+
+	  /**
+	   * Modifier used to make sure the popper is always near its reference element
+	   * It cares only about the first axis, you can still have poppers with margin
+	   * between the popper and its reference element.
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by update method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @returns {Object} The data object, properly modified
+	   */
+	  function keepTogether(data) {
+	      var popper = getPopperClientRect(data.offsets.popper);
+	      var reference = data.offsets.reference;
+	      var f = Math.floor;
+	      var placement = data.placement.split('-')[0];
+
+	      if (['top', 'bottom'].indexOf(placement) !== -1) {
+	          if (popper.right < f(reference.left)) {
+	              data.offsets.popper.left = f(reference.left) - popper.width;
+	          }
+	          if (popper.left > f(reference.right)) {
+	              data.offsets.popper.left = f(reference.right);
+	          }
+	      } else {
+	          if (popper.bottom < f(reference.top)) {
+	              data.offsets.popper.top = f(reference.top) - popper.height;
+	          }
+	          if (popper.top > f(reference.bottom)) {
+	              data.offsets.popper.top = f(reference.bottom);
+	          }
+	      }
+
+	      return data;
+	  }
+
+	  /**
+	   * Modifier used to add an offset to the popper, useful if you more granularity positioning your popper.
+	   * The offsets will shift the popper on the side of its reference element.
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by update method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @argument {Number|String} options.offset=0
+	   *      Basic usage allows a number used to nudge the popper by the given amount of pixels.
+	   *      You can pass a percentage value as string (eg. `20%`) to nudge by the given percentage (relative to reference element size)
+	   *      Other supported units are `vh` and `vw` (relative to viewport)
+	   *      Additionally, you can pass a pair of values (eg. `10 20` or `2vh 20%`) to nudge the popper
+	   *      on both axis.
+	   *      A note about percentage values, if you want to refer a percentage to the popper size instead of the reference element size,
+	   *      use `%p` instead of `%` (eg: `20%p`). To make it clearer, you can replace `%` with `%r` and use eg.`10%p 25%r`.
+	   *      > **Heads up!** The order of the axis is relative to the popper placement: `bottom` or `top` are `X,Y`, the other are `Y,X`
+	   * @returns {Object} The data object, properly modified
+	   */
+	  function offset(data, options) {
+	      var placement = data.placement;
+	      var popper = data.offsets.popper;
+
+	      var offsets = void 0;
+	      if (isNumeric(options.offset)) {
+	          offsets = [options.offset, 0];
+	      } else {
+	          // split the offset in case we are providing a pair of offsets separated
+	          // by a blank space
+	          offsets = options.offset.split(' ');
+
+	          // itherate through each offset to compute them in case they are percentages
+	          offsets = offsets.map(function (offset, index) {
+	              // separate value from unit
+	              var split = offset.match(/(\d*\.?\d*)(.*)/);
+	              var value = +split[1];
+	              var unit = split[2];
+
+	              // use height if placement is left or right and index is 0
+	              // otherwise use height
+	              // in this way the first offset will use an axis and the second one
+	              // will use the other one
+	              var useHeight = placement.indexOf('right') !== -1 || placement.indexOf('left') !== -1;
+
+	              if (index === 1) {
+	                  useHeight = !useHeight;
+	              }
+
+	              // if is a percentage, we calculate the value of it using as base the
+	              // sizes of the reference element
+	              if (unit === '%' || unit === '%r') {
+	                  var referenceRect = getPopperClientRect(data.offsets.reference);
+	                  var len = void 0;
+	                  if (useHeight) {
+	                      len = referenceRect.height;
+	                  } else {
+	                      len = referenceRect.width;
+	                  }
+	                  return len / 100 * value;
+	              }
+	              // if is a percentage relative to the popper, we calculate the value of it using
+	              // as base the sizes of the popper
+	              else if (unit === '%p') {
+	                      var popperRect = getPopperClientRect(data.offsets.popper);
+	                      var _len = void 0;
+	                      if (useHeight) {
+	                          _len = popperRect.height;
+	                      } else {
+	                          _len = popperRect.width;
+	                      }
+	                      return _len / 100 * value;
+	                  }
+	                  // if is a vh or vw, we calculate the size based on the viewport
+	                  else if (unit === 'vh' || unit === 'vw') {
+	                          var size = void 0;
+	                          if (unit === 'vh') {
+	                              size = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	                          } else {
+	                              size = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	                          }
+	                          return size / 100 * value;
+	                      }
+	                      // if is an explicit pixel unit, we get rid of the unit and keep the value
+	                      else if (unit === 'px') {
+	                              return +value;
+	                          }
+	                          // if is an implicit unit, it's px, and we return just the value
+	                          else {
+	                                  return +offset;
+	                              }
+	          });
+	      }
+
+	      if (data.placement.indexOf('left') !== -1) {
+	          popper.top += offsets[0];
+	          popper.left -= offsets[1] || 0;
+	      } else if (data.placement.indexOf('right') !== -1) {
+	          popper.top += offsets[0];
+	          popper.left += offsets[1] || 0;
+	      } else if (data.placement.indexOf('top') !== -1) {
+	          popper.left += offsets[0];
+	          popper.top -= offsets[1] || 0;
+	      } else if (data.placement.indexOf('bottom') !== -1) {
+	          popper.left += offsets[0];
+	          popper.top += offsets[1] || 0;
+	      }
+	      return data;
+	  }
+
+	  /**
+	   * Modifier used to make sure the popper does not overflows from it's boundaries
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by `update` method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @returns {Object} The data object, properly modified
+	   */
+	  function preventOverflow(data, options) {
+	      function shouldMoveWithTarget(direction) {
+	          if (!options.moveWithTarget) {
+	              return false;
+	          }
+	          var placement = data.originalPlacement.split('-')[0];
+
+	          if (data.flipped && placement === direction || placement === getOppositePlacement(direction)) {
+	              return true;
+	          }
+	          if (placement !== direction && placement !== getOppositePlacement(direction)) {
+	              return true;
+	          }
+
+	          return false;
+	      }
+	      var order = options.priority;
+	      var popper = getPopperClientRect(data.offsets.popper);
+
+	      var check = {
+	          left: function left() {
+	              var left = popper.left;
+	              if (popper.left < data.boundaries.left && !shouldMoveWithTarget('left')) {
+	                  left = Math.max(popper.left, data.boundaries.left);
+	              }
+	              return { left: left };
+	          },
+	          right: function right() {
+	              var left = popper.left;
+	              if (popper.right > data.boundaries.right && !shouldMoveWithTarget('right')) {
+	                  left = Math.min(popper.left, data.boundaries.right - popper.width);
+	              }
+	              return { left: left };
+	          },
+	          top: function top() {
+	              var top = popper.top;
+	              if (popper.top < data.boundaries.top && !shouldMoveWithTarget('top')) {
+	                  top = Math.max(popper.top, data.boundaries.top);
+	              }
+	              return { top: top };
+	          },
+	          bottom: function bottom() {
+	              var top = popper.top;
+	              if (popper.bottom > data.boundaries.bottom && !shouldMoveWithTarget('bottom')) {
+	                  top = Math.min(popper.top, data.boundaries.bottom - popper.height);
+	              }
+	              return { top: top };
+	          }
+	      };
+
+	      order.forEach(function (direction) {
+	          data.offsets.popper = Object.assign(popper, check[direction]());
+	      });
+
+	      return data;
+	  }
+
+	  /**
+	   * Modifier used to shift the popper on the start or end of its reference element side
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by `update` method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @returns {Object} The data object, properly modified
+	   */
+	  function shift(data) {
+	      var placement = data.placement;
+	      var basePlacement = placement.split('-')[0];
+	      var shiftvariation = placement.split('-')[1];
+
+	      // if shift shiftvariation is specified, run the modifier
+	      if (shiftvariation) {
+	          var reference = data.offsets.reference;
+	          var popper = getPopperClientRect(data.offsets.popper);
+
+	          var shiftOffsets = {
+	              y: {
+	                  start: { top: reference.top },
+	                  end: { top: reference.top + reference.height - popper.height }
+	              },
+	              x: {
+	                  start: { left: reference.left },
+	                  end: { left: reference.left + reference.width - popper.width }
+	              }
+	          };
+
+	          var axis = ['bottom', 'top'].indexOf(basePlacement) !== -1 ? 'x' : 'y';
+
+	          data.offsets.popper = Object.assign(popper, shiftOffsets[axis][shiftvariation]);
+	      }
+
+	      return data;
+	  }
+
+	  /**
+	   * Modifier used to hide the popper when its reference element is outside of the
+	   * popper boundaries. It will set an x-hidden attribute which can be used to hide
+	   * the popper when its reference is out of boundaries.
+	   * @method
+	   * @memberof Modifiers
+	   * @argument {Object} data - The data object generated by update method
+	   * @argument {Object} options - Modifiers configuration and options
+	   * @returns {Object} The data object, properly modified
+	   */
+	  function hide(data) {
+	      var refRect = data.offsets.reference;
+	      var bound = data.boundaries;
+
+	      if (refRect.bottom < bound.top || refRect.left > bound.right || refRect.top > bound.bottom || refRect.right < bound.left) {
+	          data.hide = true;
+	          data.instance.popper.setAttribute('x-out-of-boundaries', '');
+	      } else {
+	          data.hide = false;
+	          data.instance.popper.removeAttribute('x-out-of-boundaries');
+	      }
+
+	      return data;
+	  }
+
+	  /**
+	   * Modifiers are plugins used to alter the behavior of your poppers.
+	   * Popper.js uses a set of 7 modifiers to provide all the basic functionalities
+	   * needed by the library.
+	   *
+	   * Each modifier is an object containing several properties listed below.
+	   * @namespace Modifiers
+	   * @param {Object} modifier - Modifier descriptor
+	   * @param {Integer} modifier.order
+	   *      The `order` property defines the execution order of the modifiers.
+	   *      The built-in modifiers have orders with a gap of 100 units in between,
+	   *      this allows you to inject additional modifiers between the existing ones
+	   *      without having to redefine the order of all of them.
+	   *      The modifiers are executed starting from the one with the lowest order.
+	   * @param {Boolean} modifier.enabled - When `true`, the modifier will be used.
+	   * @param {Modifiers~modifier} modifier.function - Modifier function.
+	   * @param {Modifiers~onLoad} modifier.onLoad - Function executed on popper initalization
+	   * @return {Object} data - Each modifier must return the modified `data` object.
+	   */
+
+	  var modifiersFunctions = {
+	    applyStyle: applyStyle,
+	    arrow: arrow,
+	    flip: flip,
+	    keepTogether: keepTogether,
+	    offset: offset,
+	    preventOverflow: preventOverflow,
+	    shift: shift,
+	    hide: hide
+	  };
+
+	  var modifiersOnLoad = {
+	    applyStyleOnLoad: applyStyleOnLoad
+	  };
+
+	  /**
+	   * Modifiers can edit the `data` object to change the beheavior of the popper.
+	   * This object contains all the informations used by Popper.js to compute the
+	   * popper position.
+	   * The modifier can edit the data as needed, and then `return` it as result.
+	   *
+	   * @callback Modifiers~modifier
+	   * @param {dataObject} data
+	   * @return {dataObject} modified data
+	   */
+
+	  /**
+	   * The `dataObject` is an object containing all the informations used by Popper.js
+	   * this object get passed to modifiers and to the `onCreate` and `onUpdate` callbacks.
+	   * @name dataObject
+	   * @property {Object} data.instance The Popper.js instance
+	   * @property {String} data.placement Placement applied to popper
+	   * @property {String} data.originalPlacement Placement originally defined on init
+	   * @property {Boolean} data.flipped True if popper has been flipped by flip modifier
+	   * @property {Boolean} data.hide True if the reference element is out of boundaries, useful to know when to hide the popper.
+	   * @property {HTMLElement} data.arrowElement Node used as arrow by arrow modifier
+	   * @property {Object} data.styles Any CSS property defined here will be applied to the popper, it expects the JavaScript nomenclature (eg. `marginBottom`)
+	   * @property {Object} data.boundaries Offsets of the popper boundaries
+	   * @property {Object} data.offsets The measurements of popper, reference and arrow elements.
+	   * @property {Object} data.offsets.popper `top`, `left`, `width`, `height` values
+	   * @property {Object} data.offsets.reference `top`, `left`, `width`, `height` values
+	   * @property {Object} data.offsets.arro] `top` and `left` offsets, only one of them will be different from 0
+	   */
+
+	  var classCallCheck = function (instance, Constructor) {
+	    if (!(instance instanceof Constructor)) {
+	      throw new TypeError("Cannot call a class as a function");
+	    }
+	  };
+
+	  var createClass = function () {
+	    function defineProperties(target, props) {
+	      for (var i = 0; i < props.length; i++) {
+	        var descriptor = props[i];
+	        descriptor.enumerable = descriptor.enumerable || false;
+	        descriptor.configurable = true;
+	        if ("value" in descriptor) descriptor.writable = true;
+	        Object.defineProperty(target, descriptor.key, descriptor);
+	      }
+	    }
+
+	    return function (Constructor, protoProps, staticProps) {
+	      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+	      if (staticProps) defineProperties(Constructor, staticProps);
+	      return Constructor;
+	    };
+	  }();
+
+	  // default options
+	  var DEFAULTS = {
+	      // placement of the popper
+	      placement: 'bottom',
+
+	      // if true, it uses the CSS 3d transformation to position the popper
+	      gpuAcceleration: true,
+
+	      // the element which will act as boundary of the popper
+	      boundariesElement: 'viewport',
+
+	      // amount of pixel used to define a minimum distance between the boundaries and the popper
+	      boundariesPadding: 5,
+
+	      // list of functions used to modify the offsets before they are applied to the popper
+	      modifiers: {
+	          shift: {
+	              order: 100,
+	              enabled: true,
+	              function: modifiersFunctions.shift
+	          },
+	          offset: {
+	              order: 200,
+	              enabled: true,
+	              function: modifiersFunctions.offset,
+	              // nudges popper from its origin by the given amount of pixels (can be negative)
+	              offset: 0
+	          },
+	          preventOverflow: {
+	              order: 300,
+	              enabled: true,
+	              function: modifiersFunctions.preventOverflow,
+	              // popper will try to prevent overflow following these priorities
+	              //  by default, then, it could overflow on the left and on top of the boundariesElement
+	              priority: ['left', 'right', 'top', 'bottom']
+	          },
+	          keepTogether: {
+	              order: 400,
+	              enabled: true,
+	              function: modifiersFunctions.keepTogether
+	          },
+	          arrow: {
+	              order: 500,
+	              enabled: true,
+	              function: modifiersFunctions.arrow,
+	              // selector or node used as arrow
+	              element: '[x-arrow]'
+	          },
+	          flip: {
+	              order: 600,
+	              enabled: true,
+	              function: modifiersFunctions.flip,
+	              // the behavior used to change the popper's placement
+	              behavior: 'flip'
+	          },
+	          hide: {
+	              order: 700,
+	              enabled: true,
+	              function: modifiersFunctions.hide
+	          },
+	          applyStyle: {
+	              order: 800,
+	              enabled: true,
+	              function: modifiersFunctions.applyStyle,
+	              onLoad: modifiersOnLoad.applyStyleOnLoad
+	          }
+	      }
+	  };
+
+	  /**
+	   * Create a new Popper.js instance
+	   * @class Popper
+	   * @param {HTMLElement} reference - The reference element used to position the popper
+	   * @param {HTMLElement} popper - The HTML element used as popper.
+	   * @param {Object} options
+	   * @param {String} options.placement=bottom
+	   *      Placement of the popper accepted values: `top(-start, -end), right(-start, -end), bottom(-start, -right),
+	   *      left(-start, -end)`
+	   *
+	   * @param {Boolean} options.gpuAcceleration=true
+	   *      When this property is set to true, the popper position will be applied using CSS3 translate3d, allowing the
+	   *      browser to use the GPU to accelerate the rendering.
+	   *      If set to false, the popper will be placed using `top` and `left` properties, not using the GPU.
+	   *
+	   * @param {String|Element} options.boundariesElement='viewport'
+	   *      The element which will define the boundaries of the popper position, the popper will never be placed outside
+	   *      of the defined boundaries (except if `keepTogether` is enabled)
+	   *
+	   * @param {Number} options.boundariesPadding=5
+	   *      Additional padding for the boundaries
+	   *
+	   * @param {Boolean} options.removeOnDestroy=false
+	   *      Set to true if you want to automatically remove the popper when you call the `destroy` method.
+	   *
+	   * @param {Object} options.modifiers
+	   *      List of functions used to modify the data before they are applied to the popper (see source code for default values)
+	   *
+	   * @param {Object} options.modifiers.arrow - Arrow modifier configuration
+	   * @param {HTMLElement|String} options.modifiers.arrow.element='[x-arrow]'
+	   *      The DOM Node used as arrow for the popper, or a CSS selector used to get the DOM node. It must be child of
+	   *      its parent Popper. Popper.js will apply to the given element the style required to align the arrow with its
+	   *      reference element.
+	   *      By default, it will look for a child node of the popper with the `x-arrow` attribute.
+	   *
+	   * @param {Object} options.modifiers.offset - Offset modifier configuration
+	   * @param {Number} options.modifiers.offset.offset=0
+	   *      Amount of pixels the popper will be shifted (can be negative).
+	   *
+	   * @param {Object} options.modifiers.preventOverflow - PreventOverflow modifier configuration
+	   * @param {Array} [options.modifiers.preventOverflow.priority=['left', 'right', 'top', 'bottom']]
+	   *      Priority used when Popper.js tries to avoid overflows from the boundaries, they will be checked in order,
+	   *      this means that the last one will never overflow
+	   *
+	   * @param {Object} options.modifiers.flip - Flip modifier configuration
+	   * @param {String|Array} options.modifiers.flip.behavior='flip'
+	   *      The behavior used by the `flip` modifier to change the placement of the popper when the latter is trying to
+	   *      overlap its reference element. Defining `flip` as value, the placement will be flipped on
+	   *      its axis (`right - left`, `top - bottom`).
+	   *      You can even pass an array of placements (eg: `['right', 'left', 'top']` ) to manually specify
+	   *      how alter the placement when a flip is needed. (eg. in the above example, it would first flip from right to left,
+	   *      then, if even in its new placement, the popper is overlapping its reference element, it will be moved to top)
+	   *
+	   * @return {Object} instance - The generated Popper.js instance
+	   */
+
+	  var Popper = function () {
+	      function Popper(reference, popper) {
+	          var _this = this;
+
+	          var options = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+	          classCallCheck(this, Popper);
+	          this.Defaults = DEFAULTS;
+
+	          // init state
+	          this.state = {
+	              isDestroyed: false
+	          };
+
+	          // get reference and popper elements (allow jQuery wrappers)
+	          this.reference = reference.jquery ? reference[0] : reference;
+	          this.popper = popper.jquery ? popper[0] : popper;
+
+	          // with {} we create a new object with the options inside it
+	          this.options = Object.assign({}, DEFAULTS, options);
+
+	          // refactoring modifiers' list (Object => Array)
+	          this.modifiers = Object.keys(DEFAULTS.modifiers).map(function (name) {
+	              return Object.assign({ name: name }, DEFAULTS.modifiers[name]);
+	          });
+
+	          // assign default values to modifiers, making sure to override them with
+	          // the ones defined by user
+	          this.modifiers = this.modifiers.map(function (defaultConfig) {
+	              var userConfig = options.modifiers && options.modifiers[defaultConfig.name] || {};
+	              var finalConfig = Object.assign({}, defaultConfig, userConfig);
+	              return finalConfig;
+	          });
+
+	          // add custom modifiers to the modifiers list
+	          if (options.modifiers) {
+	              Object.keys(options.modifiers).forEach(function (name) {
+	                  // take in account only custom modifiers
+	                  if (DEFAULTS.modifiers[name] === undefined) {
+	                      var modifier = options.modifiers[name];
+	                      modifier.name = name;
+	                      _this.modifiers.push(modifier);
+	                  }
+	              });
+	          }
+
+	          // sort the modifiers by order
+	          this.modifiers = this.modifiers.sort(sortModifiers);
+
+	          // modifiers have the ability to execute arbitrary code when Popper.js get inited
+	          // such code is executed in the same order of its modifier
+	          this.modifiers.forEach(function (modifier) {
+	              if (modifier.enabled && isFunction(modifier.onLoad)) {
+	                  modifier.onLoad(_this.reference, _this.popper, _this.options);
+	              }
+	          });
+
+	          // get the popper position type
+	          this.state.position = getPosition(this.popper, this.reference);
+
+	          // determine how we should set the origin of offsets
+	          this.state.isParentTransformed = isTransformed(this.popper.parentNode);
+
+	          // fire the first update to position the popper in the right place
+	          this.update(true);
+
+	          // setup event listeners, they will take care of update the position in specific situations
+	          setupEventListeners(this.reference, this.options, this.state, function () {
+	              return _this.update();
+	          });
+
+	          // make it chainable
+	          return this;
+	      }
+
+	      //
+	      // Methods
+	      //
+
+	      /**
+	       * Updates the position of the popper, computing the new offsets and applying the new style
+	       * @method
+	       * @param {Boolean} isFirstCall
+	       *      When true, the onCreate callback is called, otherwise it calls the onUpdate callback
+	       * @memberof Popper
+	       */
+
+
+	      createClass(Popper, [{
+	          key: 'update',
+	          value: function update(isFirstCall) {
+	              var _this2 = this;
+
+	              var data = { instance: this, styles: {} };
+
+	              // make sure to apply the popper position before any computation
+	              this.state.position = getPosition(this.popper, this.reference);
+	              setStyle(this.popper, { position: this.state.position });
+
+	              // to avoid useless computations we throttle the popper position refresh to 60fps
+	              window.requestAnimationFrame(function () {
+	                  // if popper is destroyed, don't perform any further update
+	                  if (_this2.state.isDestroyed) {
+	                      return;
+	                  }
+
+	                  var now = window.performance.now();
+	                  if (now - _this2.state.lastFrame <= 16) {
+	                      // this update fired to early! drop it
+	                      // but schedule a new one that will be ran at the end of the updates
+	                      // chain to make sure everything is proper updated
+	                      return _this2.update();
+	                  }
+	                  _this2.state.lastFrame = now;
+
+	                  // store placement inside the data object, modifiers will be able to edit `placement` if needed
+	                  // and refer to originalPlacement to know the original value
+	                  data.placement = _this2.options.placement;
+	                  data.originalPlacement = _this2.options.placement;
+
+	                  // compute the popper and reference offsets and put them inside data.offsets
+	                  data.offsets = getOffsets(_this2.state, _this2.popper, _this2.reference, data.placement);
+
+	                  // get boundaries
+	                  data.boundaries = getBoundaries(_this2.popper, data, _this2.options.boundariesPadding, _this2.options.boundariesElement);
+
+	                  // run the modifiers
+	                  data = runModifiers(_this2.modifiers, _this2.options, data);
+
+	                  // the first `update` will call `onCreate` callback
+	                  // the other ones will call `onUpdate` callback
+	                  if (isFirstCall && isFunction(_this2.state.createCalback)) {
+	                      _this2.state.createCalback(data);
+	                  } else if (!isFirstCall && isFunction(_this2.state.updateCallback)) {
+	                      _this2.state.updateCallback(data);
+	                  }
+	              });
+	          }
+
+	          /**
+	           * If a function is passed, it will be executed after the initialization of popper with as first argument the Popper instance.
+	           * @method
+	           * @memberof Popper
+	           * @param {createCallback} callback
+	           */
+
+	      }, {
+	          key: 'onCreate',
+	          value: function onCreate(callback) {
+	              // the createCallbacks return as first argument the popper instance
+	              this.state.createCalback = callback;
+	              return this;
+	          }
+
+	          /**
+	           * Callback called when the popper is created.
+	           * Access Popper.js instance with `data.instance`.
+	           * @callback createCallback
+	           * @static
+	           * @param {dataObject} data
+	           */
+
+	          /**
+	           * If a function is passed, it will be executed after each update of popper with as first argument the set of coordinates and informations
+	           * used to style popper and its arrow.
+	           * NOTE: it doesn't get fired on the first call of the `Popper.update()` method inside the `Popper` constructor!
+	           * @method
+	           * @memberof Popper
+	           * @param {updateCallback} callback
+	           */
+
+	      }, {
+	          key: 'onUpdate',
+	          value: function onUpdate(callback) {
+	              this.state.updateCallback = callback;
+	              return this;
+	          }
+
+	          /**
+	           * Callback called when the popper is updated, this callback is not called
+	           * on the initialization/creation of the popper, but only on subsequent
+	           * updates.
+	           * Access Popper.js instance with `data.instance`.
+	           * @callback updateCallback
+	           * @static
+	           * @param {dataObject} data
+	           */
+
+	          /**
+	           * Destroy the popper
+	           * @method
+	           * @memberof Popper
+	           */
+
+	      }, {
+	          key: 'destroy',
+	          value: function destroy() {
+	              this.state.isDestroyed = true;
+	              this.popper.removeAttribute('x-placement');
+	              this.popper.style.left = '';
+	              this.popper.style.position = '';
+	              this.popper.style.top = '';
+	              this.popper.style[getSupportedPropertyName('transform')] = '';
+	              this.state = removeEventListeners(this.reference, this.state, this.options);
+
+	              // remove the popper if user explicity asked for the deletion on destroy
+	              // do not use `remove` because IE11 doesn't support it
+	              if (this.options.removeOnDestroy) {
+	                  this.popper.parentNode.removeChild(this.popper);
+	              }
+	              return this;
+	          }
+
+	          /**
+	           * Collection of utilities useful when writing custom modifiers
+	           * @memberof Popper
+	           */
+
+
+	          /**
+	           * Default Popper.js options
+	           * @memberof Popper
+	           */
+
+	      }]);
+	      return Popper;
+	  }();
+
+	  Popper.Utils = Utils;
+
+	  return Popper;
+
+	}));
+
+/***/ },
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1353,7 +2781,7 @@ module.exports =
 	exports.isToday = isToday;
 	exports.getCalendarMatrix = getCalendarMatrix;
 
-	var _moment = __webpack_require__(18);
+	var _moment = __webpack_require__(17);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -1411,99 +2839,7 @@ module.exports =
 	}
 
 /***/ },
-/* 54 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _slicedToArray2 = __webpack_require__(100);
-
-	var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
-
-	exports.init = init;
-
-	var _tether = __webpack_require__(152);
-
-	var _tether2 = _interopRequireDefault(_tether);
-
-	var _util = __webpack_require__(4);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var MIRROR_ATTACH = {
-	  left: 'right',
-	  right: 'left',
-	  top: 'bottom',
-	  bottom: 'top',
-	  middle: 'middle',
-	  center: 'center'
-	};
-
-	var sortAttach = function sortAttach(str) {
-	  var _str$split = str.split(' ');
-
-	  var _str$split2 = (0, _slicedToArray3.default)(_str$split, 2);
-
-	  var first = _str$split2[0];
-	  var second = _str$split2[1];
-
-	  if (['left', 'right'].indexOf(first) >= 0) {
-	    var _ref = [second, first];
-	    first = _ref[0];
-	    second = _ref[1];
-	  }
-	  return [first, second].join(' ');
-	};
-
-	function init(element, target, enabled, position, offset, targetOffset, constrainToParent, constrainToWindow, overrides) {
-	  var dropAttach = position.split(' ');
-	  dropAttach[0] = MIRROR_ATTACH[dropAttach[0]];
-	  dropAttach = dropAttach.join(' ');
-
-	  var constraints = [];
-	  if (constrainToParent) {
-	    constraints.push({
-	      to: 'scrollParent',
-	      pin: 'top, bottom',
-	      attachment: 'together none'
-	    });
-	  } else {
-	    constraints.push({
-	      to: 'scrollParent'
-	    });
-	  }
-
-	  if (constrainToWindow !== false) {
-	    constraints.push({
-	      to: 'window',
-	      attachment: 'together'
-	    });
-	  } else {
-	    constraints.push({
-	      to: 'window'
-	    });
-	  }
-
-	  return new _tether2.default((0, _util.merge)({}, {
-	    element: element,
-	    target: target,
-	    attachment: sortAttach(dropAttach),
-	    targetAttachment: sortAttach(position),
-	    classPrefix: 'vk-tether',
-	    offset: offset,
-	    targetOffset: targetOffset,
-	    enabled: enabled,
-	    constraints: constraints,
-	    addTargetClasses: false
-	  }, overrides));
-	}
-
-/***/ },
-/* 55 */
+/* 51 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1532,7 +2868,7 @@ module.exports =
 	};
 
 /***/ },
-/* 56 */
+/* 52 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1567,7 +2903,7 @@ module.exports =
 	        'a',
 	        {
 	          on: {
-	            click: function click(event) {
+	            'click': function click(event) {
 	              event.preventDefault();
 	              _this.$parent.$emit('change', _this.path);
 	            }
@@ -1593,7 +2929,7 @@ module.exports =
 	};
 
 /***/ },
-/* 57 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1602,11 +2938,11 @@ module.exports =
 	  value: true
 	});
 
-	var _babelHelperVueJsxMergeProps = __webpack_require__(10);
+	var _babelHelperVueJsxMergeProps = __webpack_require__(8);
 
 	var _babelHelperVueJsxMergeProps2 = _interopRequireDefault(_babelHelperVueJsxMergeProps);
 
-	var _defineProperty2 = __webpack_require__(21);
+	var _defineProperty2 = __webpack_require__(15);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
@@ -1667,7 +3003,7 @@ module.exports =
 	};
 
 /***/ },
-/* 58 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1676,7 +3012,7 @@ module.exports =
 	  value: true
 	});
 
-	var _util = __webpack_require__(4);
+	var _util = __webpack_require__(2);
 
 	exports.default = {
 	  name: 'VkButtonCheckbox',
@@ -1733,7 +3069,7 @@ module.exports =
 	};
 
 /***/ },
-/* 59 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1742,7 +3078,7 @@ module.exports =
 	  value: true
 	});
 
-	var _util = __webpack_require__(4);
+	var _util = __webpack_require__(2);
 
 	exports.default = {
 	  name: 'VkButtonRadio',
@@ -1783,7 +3119,7 @@ module.exports =
 	};
 
 /***/ },
-/* 60 */
+/* 56 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1795,9 +3131,9 @@ module.exports =
 	  functional: true,
 	  props: ['date'],
 	  render: function render(h, _ref) {
-	    var parent = _ref.parent;
-	    var props = _ref.props;
-	    var data = _ref.data;
+	    var parent = _ref.parent,
+	        props = _ref.props,
+	        data = _ref.data;
 
 	    if (parent.dateRender) {
 	      return h({
@@ -1822,7 +3158,7 @@ module.exports =
 	};
 
 /***/ },
-/* 61 */
+/* 57 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1842,7 +3178,7 @@ module.exports =
 	        "a",
 	        { "class": "uk-datepicker-previous",
 	          on: {
-	            click: function click(e) {
+	            "click": function click(e) {
 	              e.preventDefault();
 	              parent.$emit('change', parent.prevMonth);
 	            }
@@ -1853,7 +3189,7 @@ module.exports =
 	        "a",
 	        { "class": "uk-datepicker-next",
 	          on: {
-	            click: function click(e) {
+	            "click": function click(e) {
 	              e.preventDefault();
 	              parent.$emit('change', parent.nextMonth);
 	            }
@@ -1892,8 +3228,8 @@ module.exports =
 	  functional: true,
 	  props: ['value', 'display', 'options', 'onChange'],
 	  render: function render(h, _ref2) {
-	    var parent = _ref2.parent;
-	    var props = _ref2.props;
+	    var parent = _ref2.parent,
+	        props = _ref2.props;
 
 	    return h('span', {
 	      class: 'uk-form-select'
@@ -1919,7 +3255,7 @@ module.exports =
 	};
 
 /***/ },
-/* 62 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1928,23 +3264,23 @@ module.exports =
 	  value: true
 	});
 
-	var _isInteger = __webpack_require__(40);
+	var _isInteger = __webpack_require__(35);
 
 	var _isInteger2 = _interopRequireDefault(_isInteger);
 
-	var _moment = __webpack_require__(18);
+	var _moment = __webpack_require__(17);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
-	var _render = __webpack_require__(63);
+	var _render = __webpack_require__(59);
 
 	var _render2 = _interopRequireDefault(_render);
 
-	var _moment3 = __webpack_require__(92);
+	var _moment3 = __webpack_require__(91);
 
 	var _moment4 = _interopRequireDefault(_moment3);
 
-	var _date = __webpack_require__(53);
+	var _date = __webpack_require__(50);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2061,7 +3397,7 @@ module.exports =
 	};
 
 /***/ },
-/* 63 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2070,7 +3406,7 @@ module.exports =
 	  value: true
 	});
 
-	var _range2 = __webpack_require__(52);
+	var _range2 = __webpack_require__(48);
 
 	var _range3 = _interopRequireDefault(_range2);
 
@@ -2104,15 +3440,15 @@ module.exports =
 	  );
 	};
 
-	var _Header = __webpack_require__(61);
+	var _Header = __webpack_require__(57);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
-	var _Field = __webpack_require__(60);
+	var _Field = __webpack_require__(56);
 
 	var _Field2 = _interopRequireDefault(_Field);
 
-	var _moment = __webpack_require__(18);
+	var _moment = __webpack_require__(17);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -2123,7 +3459,97 @@ module.exports =
 	});
 
 /***/ },
-/* 64 */
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _isInteger = __webpack_require__(35);
+
+	var _isInteger2 = _interopRequireDefault(_isInteger);
+
+	var _moment = __webpack_require__(17);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	var _render = __webpack_require__(61);
+
+	var _render2 = _interopRequireDefault(_render);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  name: 'VkDatepicker',
+	  render: _render2.default,
+	  props: {
+	    year: {},
+	    month: {},
+	    dates: {
+	      type: Array,
+	      default: function _default() {
+	        return [];
+	      }
+	    },
+	    disabledDates: {
+	      type: Array,
+	      default: function _default() {
+	        return [];
+	      }
+	    },
+
+	    min: {
+	      type: [String, Number],
+	      default: '1980-01-01'
+	    },
+
+	    max: {
+	      type: [String, Number],
+	      default: '2050-12-31'
+	    }
+	  },
+	  computed: {
+	    datesMoments: function datesMoments() {
+	      return this.dates.map(function (d) {
+	        return (0, _moment2.default)(d);
+	      });
+	    },
+	    disabledDatesMoments: function disabledDatesMoments() {
+	      return this.disabledDates.map(function (d) {
+	        return (0, _moment2.default)(d);
+	      });
+	    },
+	    minMoment: function minMoment() {
+	      return (0, _isInteger2.default)(this.min) ? (0, _moment2.default)().add(-this.min - 1, 'days') : (0, _moment2.default)(this.min || this.$options.props.min.default);
+	    },
+	    maxMoment: function maxMoment() {
+	      return (0, _isInteger2.default)(this.max) ? (0, _moment2.default)().add(this.max, 'days') : (0, _moment2.default)(this.max || this.$options.props.max.default);
+	    }
+	  },
+	  methods: {
+	    isPicked: function isPicked(date) {
+	      return this.datesMoments.some(function (d) {
+	        return d.format('YYYY-MM-DD') === date.format('YYYY-MM-DD');
+	      });
+	    },
+	    isDisabled: function isDisabled(date) {
+	      var _this = this;
+
+	      return this.disabledDatesMoments.some(function (d) {
+	        return d.format('YYYY-MM-DD') === date.format('YYYY-MM-DD') || !date.isBetween(_this.minMoment, _this.maxMoment);
+	      });
+	    },
+	    toggle: function toggle(date) {
+	      this.isPicked(date) ? this.$emit('unpick', date) : this.$emit('pick', date);
+	    }
+	  }
+	};
+
+/***/ },
+/* 61 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2144,7 +3570,7 @@ module.exports =
 	        'date-render': dateRender
 	      },
 	      on: {
-	        change: function change(date) {
+	        'change': function change(date) {
 	          return _this.$emit('change', date);
 	        }
 	      }
@@ -2154,8 +3580,8 @@ module.exports =
 	};
 
 	var dateRender = function dateRender(h, _ref) {
-	  var props = _ref.props;
-	  var parent = _ref.parent;
+	  var props = _ref.props,
+	      parent = _ref.parent;
 
 	  var $calendar = parent;
 	  var $datepicker = parent.$parent;
@@ -2166,7 +3592,7 @@ module.exports =
 	        'uk-datepicker-table-disabled': $datepicker.isDisabled(props.date),
 	        'uk-datepicker-table-muted': props.date.month() !== $calendar.month || $datepicker.isDisabled(props.date)
 	      }, on: {
-	        click: function click() {
+	        'click': function click() {
 	          if (!$datepicker.isDisabled(props.date)) {
 	            $datepicker.toggle(props.date);
 	          }
@@ -2178,7 +3604,7 @@ module.exports =
 	};
 
 /***/ },
-/* 65 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2187,101 +3613,37 @@ module.exports =
 	  value: true
 	});
 
-	var _Datepicker = __webpack_require__(37);
+	var _babelHelperVueJsxMergeProps = __webpack_require__(8);
 
-	var _Datepicker2 = _interopRequireDefault(_Datepicker);
+	var _babelHelperVueJsxMergeProps2 = _interopRequireDefault(_babelHelperVueJsxMergeProps);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _popper = __webpack_require__(49);
 
-	exports.default = {
-	  name: 'VkDatepickerDrop',
-	  extends: _Datepicker2.default,
-	  render: function render(h) {
-	    var _this = this;
+	var _popper2 = _interopRequireDefault(_popper);
 
-	    return h(
-	      'vk-dropdown',
-	      {
-	        attrs: {
-	          target: this.target,
-	          show: this.show
-	        },
-	        on: {
-	          clickOut: function clickOut(e) {
-	            return _this.$emit('clickOut');
-	          }
-	        }
-	      },
-	      [h(_Datepicker2.default, {
-	        class: 'uk-margin-remove',
-	        props: {
-	          year: this.year,
-	          month: this.month,
-	          dates: this.dates,
-	          disabledDates: this.disabledDates,
-	          min: this.min,
-	          max: this.max
-	        },
-	        on: {
-	          pick: function pick(picked) {
-	            return _this.$emit('pick', picked);
-	          },
-	          unpick: function unpick(unpicked) {
-	            return _this.$emit('unpick', unpicked);
-	          },
-	          change: function change(date) {
-	            return _this.$emit('change', date);
-	          }
-	        }
-	      })]
-	    );
-	  },
-	  props: {
-	    show: {
-	      type: Boolean,
-	      required: true
-	    },
-	    target: {
-	      type: String,
-	      required: true
-	    }
-	  }
-	};
-
-/***/ },
-/* 66 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _tether = __webpack_require__(54);
-
-	var Tether = _interopRequireWildcard(_tether);
-
-	var _dom = __webpack_require__(11);
-
-	var _render = __webpack_require__(67);
-
-	var _render2 = _interopRequireDefault(_render);
+	var _dom = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	var onClick = void 0;
+	var onTargetClick = void 0;
+	var onMouseEnter = void 0;
+	var onMouseLeave = void 0;
 
 	exports.default = {
 	  name: 'VkDropdown',
-	  render: _render2.default,
 	  props: {
 	    show: {
 	      type: Boolean,
 	      default: false
 	    },
 	    target: {
-	      default: false
+	      type: String,
+	      default: ''
+	    },
+	    placement: {
+	      type: String,
+	      default: 'bottom-start'
 	    },
 	    blank: {
 	      type: Boolean,
@@ -2291,13 +3653,9 @@ module.exports =
 	      type: Boolean,
 	      default: false
 	    },
-	    position: {
-	      type: String,
-	      default: 'bottom left'
-	    },
 	    transition: {
 	      type: String,
-	      default: 'vk-transition-dropdown'
+	      default: ''
 	    },
 	    scrollable: {
 	      type: Boolean,
@@ -2305,94 +3663,124 @@ module.exports =
 	    },
 	    offset: {
 	      type: String,
-	      default: '0 0'
-	    },
-	    offsetTarget: {
-	      type: String,
-	      default: '0 0'
-	    },
-	    constrainToWindow: {
-	      type: Boolean,
-	      default: true
-	    },
-	    constrainToParent: {
-	      type: Boolean,
-	      default: true
-	    },
-	    tetherOptions: {
-	      type: Object,
-	      default: function _default() {
-	        return {};
-	      }
+	      default: '0 5'
 	    }
 	  },
+	  data: function data() {
+	    return {
+	      flipped: false
+	    };
+	  },
 	  computed: {
-	    targetNode: function targetNode() {
-	      return typeof this.target === 'string' ? document.querySelector(this.target) : this.target;
+	    popperOptions: function popperOptions() {
+	      return {
+	        placement: this.placement,
+	        modifiers: {
+	          offset: {
+	            offset: this.offset
+	          }
+	        }
+	      };
+	    }
+	  },
+	  render: function render(h) {
+	    var directives = [{
+	      name: 'show', value: this.show
+	    }];
+	    return h(
+	      'transition',
+	      {
+	        attrs: { name: this.transition }
+	      },
+	      [h(
+	        'div',
+	        (0, _babelHelperVueJsxMergeProps2.default)([{ directives: directives }, { 'class': {
+	            'uk-dropdown': !this.blank,
+	            'uk-dropdown-blank': this.blank,
+	            'uk-dropdown-small': !this.fixWidth,
+	            'uk-dropdown-scrollable': this.scrollable
+	          },
+	          attrs: { 'aria-hidden': this.show ? 'false' : 'true' }
+	        }]),
+	        [this.$slots.default]
+	      )]
+	    );
+	  },
+
+	  watch: {
+	    show: function show() {
+	      var _this = this;
+
+	      new _popper2.default(this.$targetElement, this.$el, this.popperOptions).onCreate(function (data) {
+	        _this.flipped = data.flipped;
+	      }).onUpdate(function (data) {
+	        _this.flipped = data.flipped;
+	      });
 	    }
 	  },
 	  mounted: function mounted() {
-	    if (this.targetNode) {
-	      this.init();
+	    var _this2 = this;
+
+	    this.$targetElement = this.target ? this.$vnode.context.$refs[this.target] || document.querySelector(this.target) : this.$el.parentNode;
+
+	    document.body.appendChild(this.$el);
+
+	    onTargetClick = function onTargetClick(event) {
+	      _this2.$emit('targetClick', event);
+	    };
+
+	    onMouseEnter = function onMouseEnter(event) {
+	      if (_this2.$targetElement.contains(event.fromElement)) {
+	        return;
+	      }
+	      _this2.$emit('targetHoverIn', event);
+	    };
+
+	    onMouseLeave = function onMouseLeave(event) {
+	      if (event.relatedTarget === _this2.$targetElement || _this2.$targetElement.contains(event.relatedTarget)) {
+	        return;
+	      }
+	      _this2.$emit('targetHoverOut', event);
+	    };
+
+	    onClick = function onClick(event) {
+	      if (_this2.show) {
+	        if (event.target === _this2.$targetElement || _this2.$targetElement.contains(event.target)) {
+	          return;
+	        }
+
+	        if (event.target === _this2.$el || _this2.$el.contains(event.target)) {
+	          _this2.$emit('clickIn', event);
+	        } else {
+	          _this2.$emit('clickOut', event);
+	        }
+	      }
+	    };
+
+	    (0, _dom.on)(this.$targetElement, 'mouseenter', onMouseEnter, this._uid);
+	    (0, _dom.on)(this.$targetElement, 'mouseleave', onMouseLeave, this._uid);
+	    (0, _dom.on)(this.$targetElement, 'click', onTargetClick, this._uid);
+	    (0, _dom.on)(document, 'click', onClick, this._uid);
+	    if ('ontouchstart' in document.documentElement) {
+	      (0, _dom.on)(document, 'touchstart', onClick, this._uid);
 	    }
 	  },
 
 	  methods: {
-	    init: function init() {
-	      this.initEvents();
-	      this.$tether = Tether.init(this.$el, this.targetNode, this.show, this.position, this.offset, this.offsetTarget, this.constrainToParent, this.constrainToWindow, this.tetherOptions);
-	    },
-	    initEvents: function initEvents() {
-	      var _this = this;
-
-	      var clickEvents = ['click'];
-	      if ('ontouchstart' in document.documentElement) {
-	        clickEvents.push('touchstart');
+	    remove: function remove() {
+	      if (this.$el.parentNode) {
+	        this.$el.parentNode.removeChild(this.$el);
 	      }
-	      var clickHandler = function clickHandler(event) {
-	        if (_this.show) {
-	          if (event.target === _this.targetNode || _this.targetNode.contains(event.target)) {
-	            return;
-	          }
-
-	          if (event.target === _this.$el || _this.$el.contains(event.target)) {
-	            _this.$emit('clickIn', event);
-	          } else {
-	            _this.$emit('clickOut', event);
-	          }
-	        }
-	      };
-	      for (var i = 0; i < clickEvents.length; ++i) {
-	        this.on(document, clickEvents[i], clickHandler);
-	      }
-	      this.on(this.targetNode, 'mouseover', function (event) {
-	        if (_this.targetNode.contains(event.fromElement)) {
-	          return;
-	        }
-	        _this.$emit('targetHoverIn', event);
-	      });
-	      this.on(this.targetNode, 'mouseout', function (event) {
-	        if (event.relatedTarget === _this.targetNode || _this.targetNode.contains(event.relatedTarget)) {
-	          return;
-	        }
-	        _this.$emit('targetHoverOut', event);
-	      });
-	    },
-	    on: function on(el, event, handler) {
-	      (0, _dom.on)(el, event, handler, this._uid);
 	    }
 	  },
 	  beforeDestroy: function beforeDestroy() {
-	    if (this.$tether !== undefined) {
-	      this.$tether.destroy();
-	    }
 	    (0, _dom.offAll)(this._uid);
-	    this.$el.parentNode.removeChild(this.$el);
+	    this.remove();
 	  }
 	};
 
 /***/ },
-/* 67 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2401,66 +3789,11 @@ module.exports =
 	  value: true
 	});
 
-	var _babelHelperVueJsxMergeProps = __webpack_require__(10);
-
-	var _babelHelperVueJsxMergeProps2 = _interopRequireDefault(_babelHelperVueJsxMergeProps);
-
-	exports.default = function (h) {
-	  var _this = this;
-
-	  var directives = [{
-	    name: 'show', value: this.show
-	  }];
-	  return h(
-	    'transition',
-	    (0, _babelHelperVueJsxMergeProps2.default)([{
-	      attrs: { name: this.transition }
-	    }, {
-	      on: {
-	        'before-enter': function beforeEnter() {
-	          _this.$nextTick(function () {
-	            return _this.$tether.enable();
-	          });
-	        },
-	        'after-leave': function afterLeave() {
-	          _this.$nextTick(function () {
-	            return _this.$tether.disable();
-	          });
-	        }
-	      }
-	    }]),
-	    [h(
-	      'div',
-	      (0, _babelHelperVueJsxMergeProps2.default)([{ directives: directives }, { 'class': {
-	          'uk-dropdown': !this.blank,
-	          'uk-dropdown-blank': this.blank,
-	          'uk-dropdown-small': !this.fixWidth,
-	          'uk-dropdown-scrollable': this.scrollable
-	        },
-	        attrs: { 'aria-hidden': this.show ? 'false' : 'true' }
-	      }]),
-	      [this.$slots.default]
-	    )]
-	  );
-	};
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ },
-/* 68 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _debounce2 = __webpack_require__(146);
+	var _debounce2 = __webpack_require__(142);
 
 	var _debounce3 = _interopRequireDefault(_debounce2);
 
-	var _dom = __webpack_require__(11);
+	var _dom = __webpack_require__(9);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2487,9 +3820,9 @@ module.exports =
 	exports.default = {
 	  functional: true,
 	  render: function render(h, _ref) {
-	    var props = _ref.props;
-	    var parent = _ref.parent;
-	    var children = _ref.children;
+	    var props = _ref.props,
+	        parent = _ref.parent,
+	        children = _ref.children;
 
 	    return h('transition', {
 	      props: {
@@ -2549,7 +3882,7 @@ module.exports =
 	}
 
 /***/ },
-/* 69 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2558,9 +3891,9 @@ module.exports =
 	  value: true
 	});
 
-	var _dom = __webpack_require__(11);
+	var _dom = __webpack_require__(9);
 
-	var _render = __webpack_require__(70);
+	var _render = __webpack_require__(65);
 
 	var _render2 = _interopRequireDefault(_render);
 
@@ -2620,7 +3953,7 @@ module.exports =
 	};
 
 /***/ },
-/* 70 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2629,7 +3962,7 @@ module.exports =
 	  value: true
 	});
 
-	var _babelHelperVueJsxMergeProps = __webpack_require__(10);
+	var _babelHelperVueJsxMergeProps = __webpack_require__(8);
 
 	var _babelHelperVueJsxMergeProps2 = _interopRequireDefault(_babelHelperVueJsxMergeProps);
 
@@ -2655,14 +3988,47 @@ module.exports =
 	  return h(_Transition2.default, [modal]);
 	};
 
-	var _Transition = __webpack_require__(68);
+	var _Transition = __webpack_require__(63);
 
 	var _Transition2 = _interopRequireDefault(_Transition);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
-/* 71 */
+/* 66 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  name: 'VkNotify',
+	  props: {
+	    placement: {
+	      type: String,
+	      default: 'top-center' }
+	  },
+	  render: function render(h) {
+	    return h(
+	      'div',
+	      { 'class': 'uk-notify uk-notify-' + this.placement },
+	      [this.$slots.default]
+	    );
+	  },
+	  mounted: function mounted() {
+	    document.body.appendChild(this.$el);
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    if (this.$el.parentNode) {
+	      document.body.removeChild(this.$el);
+	    }
+	  }
+	};
+
+/***/ },
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2671,7 +4037,79 @@ module.exports =
 	  value: true
 	});
 
-	var _dom = __webpack_require__(11);
+	var _defineProperty2 = __webpack_require__(15);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  name: 'VkNotifyMessage',
+	  props: {
+	    id: {
+	      type: [Number, String, Object],
+	      default: 0
+	    },
+	    status: {
+	      type: String,
+	      default: '' },
+	    timeout: {
+	      type: Number,
+	      default: 5000
+	    },
+	    transition: {
+	      type: String,
+	      default: ''
+	    }
+	  },
+	  computed: {
+	    statusClass: function statusClass() {
+	      return 'uk-notify-message-' + this.status.replace('info', 'primary');
+	    }
+	  },
+	  render: function render(h) {
+	    var _ref,
+	        _this = this;
+
+	    return h(
+	      'transition',
+	      {
+	        attrs: { name: this.transition }
+	      },
+	      [h(
+	        'div',
+	        { staticClass: 'uk-notify-message', 'class': (_ref = {}, (0, _defineProperty3.default)(_ref, this.statusClass, this.status), (0, _defineProperty3.default)(_ref, 'vk-notify-message-sticky', this.timeout === 0), _ref), on: {
+	            'click': function click() {
+	              return _this.$parent.$emit('click', _this.id);
+	            }
+	          }
+	        },
+	        [this.$slots.default]
+	      )]
+	    );
+	  },
+	  mounted: function mounted() {
+	    var _this2 = this;
+
+	    if (this.timeout > 0) {
+	      setTimeout(function () {
+	        _this2.$parent.$emit('timeout', _this2.id);
+	      }, this.timeout);
+	    }
+	  }
+	};
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _dom = __webpack_require__(9);
 
 	var html = document.documentElement;
 	var body = document.body;
@@ -2680,8 +4118,8 @@ module.exports =
 	exports.default = {
 	  functional: true,
 	  render: function render(h, _ref) {
-	    var parent = _ref.parent;
-	    var children = _ref.children;
+	    var parent = _ref.parent,
+	        children = _ref.children;
 
 	    return h('transition', {
 	      props: {
@@ -2729,7 +4167,7 @@ module.exports =
 	}
 
 /***/ },
-/* 72 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2738,9 +4176,9 @@ module.exports =
 	  value: true
 	});
 
-	var _dom = __webpack_require__(11);
+	var _dom = __webpack_require__(9);
 
-	var _render = __webpack_require__(73);
+	var _render = __webpack_require__(70);
 
 	var _render2 = _interopRequireDefault(_render);
 
@@ -2779,7 +4217,7 @@ module.exports =
 	};
 
 /***/ },
-/* 73 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2788,7 +4226,7 @@ module.exports =
 	  value: true
 	});
 
-	var _babelHelperVueJsxMergeProps = __webpack_require__(10);
+	var _babelHelperVueJsxMergeProps = __webpack_require__(8);
 
 	var _babelHelperVueJsxMergeProps2 = _interopRequireDefault(_babelHelperVueJsxMergeProps);
 
@@ -2804,7 +4242,7 @@ module.exports =
 	      attrs: { 'aria-hidden': this.show ? 'false' : 'true'
 	      },
 	      on: {
-	        click: function click(e) {
+	        'click': function click(e) {
 	          if (e.target !== _this.$el && _this.$el.contains(e.target)) {
 	            _this.$emit('clickIn', e);
 	          } else {
@@ -2824,14 +4262,14 @@ module.exports =
 	  return h(_Transition2.default, [offcanvas]);
 	};
 
-	var _Transition = __webpack_require__(71);
+	var _Transition = __webpack_require__(68);
 
 	var _Transition2 = _interopRequireDefault(_Transition);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
-/* 74 */
+/* 71 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2843,8 +4281,8 @@ module.exports =
 	  functional: true,
 	  props: ['icon', 'page'],
 	  render: function render(h, _ref) {
-	    var props = _ref.props;
-	    var parent = _ref.parent;
+	    var props = _ref.props,
+	        parent = _ref.parent;
 
 	    var icon = h('i', { class: 'uk-icon-' + props.icon });
 	    return props.page ? h('a', { on: { click: function click(e) {
@@ -2855,7 +4293,7 @@ module.exports =
 	};
 
 /***/ },
-/* 75 */
+/* 72 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2867,8 +4305,8 @@ module.exports =
 	  functional: true,
 	  props: ['page'],
 	  render: function render(h, _ref) {
-	    var props = _ref.props;
-	    var parent = _ref.parent;
+	    var props = _ref.props,
+	        parent = _ref.parent;
 
 	    var isCurrent = props.page === parent.page;
 	    return h(
@@ -2885,7 +4323,7 @@ module.exports =
 	};
 
 /***/ },
-/* 76 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2894,13 +4332,13 @@ module.exports =
 	  value: true
 	});
 
-	var _range2 = __webpack_require__(52);
+	var _range2 = __webpack_require__(48);
 
 	var _range3 = _interopRequireDefault(_range2);
 
-	var _util = __webpack_require__(4);
+	var _util = __webpack_require__(2);
 
-	var _render = __webpack_require__(77);
+	var _render = __webpack_require__(74);
 
 	var _render2 = _interopRequireDefault(_render);
 
@@ -2989,7 +4427,7 @@ module.exports =
 	};
 
 /***/ },
-/* 77 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3046,18 +4484,18 @@ module.exports =
 	  );
 	};
 
-	var _Page = __webpack_require__(75);
+	var _Page = __webpack_require__(72);
 
 	var _Page2 = _interopRequireDefault(_Page);
 
-	var _Button = __webpack_require__(74);
+	var _Button = __webpack_require__(71);
 
 	var _Button2 = _interopRequireDefault(_Button);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ },
-/* 78 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3066,53 +4504,23 @@ module.exports =
 	  value: true
 	});
 
-	var _Picker = __webpack_require__(38);
-
-	var _Picker2 = _interopRequireDefault(_Picker);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _util = __webpack_require__(2);
 
 	exports.default = {
-	  name: 'VkPickerDrop',
+	  name: 'VkPicker',
 	  render: function render(h) {
-	    var _this = this;
-
 	    return h(
-	      'vk-dropdown',
+	      'vk-table',
 	      {
 	        attrs: {
-	          target: this.target,
-	          show: this.show
-	        },
-	        on: {
-	          clickOut: function clickOut(e) {
-	            return _this.$emit('clickOut');
-	          }
-	        }
+	          'track-by': 'id',
+	          fields: this.tableFields,
+	          rows: this.rows }
 	      },
-	      [h(_Picker2.default, {
-	        class: 'uk-margin-remove',
-	        props: {
-	          fields: this.fields,
-	          rows: this.rows
-	        },
-	        on: {
-	          pick: function pick(picked) {
-	            return _this.$emit('pick', picked);
-	          }
-	        }
-	      })]
+	      []
 	    );
 	  },
 	  props: {
-	    show: {
-	      type: Boolean,
-	      required: true
-	    },
-	    target: {
-	      type: String,
-	      required: true
-	    },
 	    fields: {
 	      type: Array,
 	      required: true
@@ -3121,11 +4529,54 @@ module.exports =
 	      type: Array,
 	      required: true
 	    }
+	  },
+	  computed: {
+	    tableFields: function tableFields() {
+	      return this.fields.map(function (field) {
+	        if (field.pickable) {
+	          field.cell = pickableRender;
+	        }
+	        return field;
+	      });
+	    },
+	    pickables: function pickables() {
+	      var pickables = {};
+	      (0, _util.each)(this.fields, function (field) {
+	        if (field.pickable && (0, _util.isString)(field.pickable)) {
+	          pickables[field.name] = field.pickable;
+	        } else if (field.pickable) {
+	          pickables[field.name] = field.name;
+	        }
+	      });
+	      return pickables;
+	    }
 	  }
 	};
 
+
+	var pickableRender = function pickableRender(h, _ref) {
+	  var props = _ref.props,
+	      parent = _ref.parent;
+
+	  var vm = parent.$parent;
+	  return h(
+	    'a',
+	    {
+	      on: {
+	        'click': function click(e) {
+	          var field = props.field.name;
+	          var data = props.row[vm.pickables[field]];
+	          e.preventDefault();
+	          vm.$emit('pick', data, field);
+	        }
+	      }
+	    },
+	    [props.row[props.field.name]]
+	  );
+	};
+
 /***/ },
-/* 79 */
+/* 76 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3170,7 +4621,7 @@ module.exports =
 	};
 
 /***/ },
-/* 80 */
+/* 77 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3208,7 +4659,7 @@ module.exports =
 	        'a',
 	        {
 	          on: {
-	            click: function click(event) {
+	            'click': function click(event) {
 	              event.preventDefault();
 	              if (!_this.disabled && !_this.active) {
 	                _this.$parent.$emit('change', _this.index);
@@ -3223,7 +4674,7 @@ module.exports =
 	};
 
 /***/ },
-/* 81 */
+/* 78 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3273,7 +4724,7 @@ module.exports =
 	};
 
 /***/ },
-/* 82 */
+/* 79 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3293,38 +4744,237 @@ module.exports =
 	};
 
 /***/ },
-/* 83 */
-/***/ function(module, exports) {
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _extends2 = __webpack_require__(36);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	exports.default = {
 	  functional: true,
-	  props: ['row', 'field'],
+	  props: ['checked'],
 	  render: function render(h, _ref) {
-	    var parent = _ref.parent;
-	    var props = _ref.props;
-	    var data = _ref.data;
+	    var _this = this;
 
-	    if (props.field.render !== undefined) {
-	      return h({
-	        functional: true,
-	        props: ['row', 'field'],
-	        render: props.field.render
-	      }, {
-	        props: {
-	          row: props.row,
-	          field: props.field
+	    var data = _ref.data,
+	        props = _ref.props;
+
+	    return h('input', (0, _extends3.default)({}, data, {
+	      attrs: {
+	        type: 'checkbox'
+	      },
+	      domProps: {
+	        checked: props.checked
+	      },
+	      on: {
+	        click: function click(e) {
+	          e.target.checked = props.checked;
+
+	          if (data.on && data.on.click) {
+	            data.on.click.call(_this, e);
+	          }
 	        }
-	      });
-	    } else {
-	      return props.row[props.field.name];
-	    }
+	      }
+	    }));
 	  }
 	};
+
+/***/ },
+/* 81 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _defineProperty2 = __webpack_require__(15);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Cell = {
+	  functional: true,
+	  props: ['field'],
+	  render: function render(h, _ref) {
+	    var vm = _ref.parent,
+	        props = _ref.props;
+	    var field = props.field;
+	    var sortBy = field.sortBy,
+	        headerClass = field.headerClass;
+
+	    var orderedBy = vm.sortOrder[field.name];
+
+	    var Header = typeof field.header === 'function' ? h({
+	      functional: true,
+	      props: ['field'],
+	      render: field.header
+	    }, { props: { field: field } }) : field.header;
+	    return h('th', {
+	      class: (0, _defineProperty3.default)({
+	        'uk-visible-hover-inline': sortBy,
+	        'vk-table-order': sortBy,
+	        'uk-active': orderedBy
+	      }, headerClass, headerClass),
+	      on: {
+	        click: function click(e) {
+	          return sortBy && vm.emitSort(props.field);
+	        }
+	      }
+	    }, [sortBy ? h('span', {
+	      class: 'uk-position-relative'
+	    }, [Header, h(Icon, { props: { orderedBy: orderedBy } })]) : Header]);
+	  }
+	};
+
+	var Icon = {
+	  functional: true,
+	  props: ['orderedBy'],
+	  render: function render(h, _ref2) {
+	    var props = _ref2.props;
+	    var orderedBy = props.orderedBy;
+
+	    return h('i', {
+	      staticClass: 'uk-icon-justify uk-margin-small-left',
+	      class: {
+	        'uk-invisible': !orderedBy,
+	        'vk-icon-arrow-down': orderedBy === 'asc' || orderedBy === undefined,
+	        'vk-icon-arrow-up': orderedBy === 'desc'
+	      }
+	    });
+	  }
+	};
+
+	exports.default = Cell;
+
+/***/ },
+/* 82 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _util = __webpack_require__(2);
+
+	var Row = {
+	  functional: true,
+	  props: ['row'],
+	  render: function render(h, _ref) {
+	    var vm = _ref.parent,
+	        props = _ref.props;
+	    var fieldsDef = vm.fieldsDef;
+	    var row = props.row;
+
+	    return h('tr', {
+	      class: {
+	        'uk-active': vm.isSelected(row)
+	      },
+	      on: {
+	        click: function click(e) {
+	          if (e.target.tagName === 'TD') {
+	            vm.$emit('clickRow', vm.getRowId(row), row);
+	          }
+	        }
+	      }
+	    }, fieldsDef.map(function (field) {
+	      return h(Cell, { props: { field: field, row: row } });
+	    }));
+	  }
+	};
+
+	var Cell = {
+	  functional: true,
+	  props: ['row', 'field'],
+	  render: function render(h, _ref2) {
+	    var props = _ref2.props;
+	    var row = props.row,
+	        field = props.field;
+
+	    return h('td', { class: field.cellClass }, [(0, _util.isFunction)(field.cell) ? h({
+	      functional: true,
+	      props: ['row', 'field'],
+	      render: field.cell
+	    }, { props: { row: row, field: field } }) : field.cell || row[field.name]]);
+	  }
+	};
+
+	exports.default = Row;
+
+/***/ },
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends2 = __webpack_require__(36);
+
+	var _extends3 = _interopRequireDefault(_extends2);
+
+	exports.processSortOrder = processSortOrder;
+	exports.processFields = processFields;
+
+	var _util = __webpack_require__(2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function processSortOrder(field, currentOrder) {
+	  var newOrder = {};
+	  var sortBy = field.sortBy === true ? field.name : field.sortBy;
+
+	  if (currentOrder[sortBy]) {
+	    newOrder[sortBy] = currentOrder[sortBy] === 'asc' ? 'desc' : 'asc';
+	  } else {
+	    newOrder[sortBy] = 'asc';
+	  }
+	  return newOrder;
+	}
+
+	function processFields(fields) {
+	  return fields.map(function (f) {
+	    var field = {
+	      name: '',
+	      header: '',
+	      headerClass: '',
+	      cellClass: '',
+	      sortBy: ''
+	    };
+
+	    if ((0, _util.isString)(f)) {
+	      field.name = f;
+	    } else {
+	      field = (0, _extends3.default)({}, field, f);
+	    }
+
+	    if (field.header === '') {
+	      field.header = titleCase(field.name);
+	    }
+	    return field;
+	  });
+	}
+
+	function titleCase(str) {
+	  return str.replace(/\w+/g, function (txt) {
+	    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	  });
+	}
 
 /***/ },
 /* 84 */
@@ -3336,150 +4986,26 @@ module.exports =
 	  value: true
 	});
 
-	var _defineProperty2 = __webpack_require__(21);
+	var _selectField = __webpack_require__(85);
 
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+	var _selectField2 = _interopRequireDefault(_selectField);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _Header = __webpack_require__(81);
 
-	exports.default = {
-	  functional: true,
-	  props: ['field'],
-	  render: function render(h, _ref) {
-	    var parent = _ref.parent;
-	    var props = _ref.props;
+	var _Header2 = _interopRequireDefault(_Header);
 
-	    var orderedBy = parent.sortOrder[props.field.name];
-	    var icon = h(
-	      'i',
-	      { staticClass: 'uk-icon-justify uk-margin-small-left', 'class': {
-	          'uk-invisible': !orderedBy,
-	          'vk-icon-arrow-down': orderedBy === 'asc' || orderedBy === undefined,
-	          'vk-icon-arrow-up': orderedBy === 'desc'
-	        } },
-	      []
-	    );
-	    return h(
-	      'th',
-	      { 'class': (0, _defineProperty3.default)({
-	          'uk-visible-hover-inline': props.field.sortBy,
-	          'vk-table-order': props.field.sortBy,
-	          'uk-active': orderedBy
-	        }, props.field.headerClass, props.field.headerClass), on: {
-	          click: function click(e) {
-	            return props.field.sortBy && parent.emitSort(props.field);
-	          }
-	        }
-	      },
-	      [h(
-	        'span',
-	        { 'class': 'uk-position-relative' },
-	        [props.field.header, props.field.sortBy && icon]
-	      )]
-	    );
-	  }
-	};
+	var _Row = __webpack_require__(82);
 
-/***/ },
-/* 85 */
-/***/ function(module, exports, __webpack_require__) {
+	var _Row2 = _interopRequireDefault(_Row);
 
-	'use strict';
+	var _util = __webpack_require__(2);
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Checkbox = __webpack_require__(39);
-
-	var _Checkbox2 = _interopRequireDefault(_Checkbox);
-
-	var _Field = __webpack_require__(83);
-
-	var _Field2 = _interopRequireDefault(_Field);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  functional: true,
-	  props: ['row'],
-	  render: function render(h, _ref) {
-	    var parent = _ref.parent;
-	    var props = _ref.props;
-
-	    var rowId = props.row[parent.trackBy];
-	    return h(
-	      'tr',
-	      {
-	        on: {
-	          click: function click(e) {
-	            if (e.target.tagName === 'TD') {
-	              triggerChangeEvent(parent, props.row);
-	            }
-	          }
-	        }
-	      },
-	      [parent.selectable && h(
-	        'td',
-	        { 'class': 'vk-table-width-minimum' },
-	        [h(_Checkbox2.default, {
-	          props: {
-	            checked: parent.selectedRows.find(function (id) {
-	              return id === rowId;
-	            }),
-	            onClick: function onClick(e) {
-	              triggerChangeEvent(parent, props.row);
-	            }
-	          }
-	        })]
-	      ), parent.fieldsDef.map(function (field, index) {
-	        return h(
-	          'td',
-	          { 'class': field.cellClass },
-	          [h(_Field2.default, { props: { row: props.row, field: field } })]
-	        );
-	      })]
-	    );
-	  }
-	};
-
-
-	function triggerChangeEvent(parent, row) {
-	  var rowId = row[parent.trackBy];
-	  var selectedRows = parent.selectedRows.slice();
-	  if (selectedRows.find(function (id) {
-	    return id === rowId;
-	  })) {
-	    var index = selectedRows.indexOf(rowId);
-	    selectedRows.splice(index, 1);
-	    parent.$emit('unselect', selectedRows, [row]);
-	  } else {
-	    selectedRows.push(rowId);
-	    parent.$emit('select', selectedRows, [row]);
-	  }
-	}
-
-/***/ },
-/* 86 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _render = __webpack_require__(87);
-
-	var _render2 = _interopRequireDefault(_render);
-
-	var _util = __webpack_require__(4);
+	var _helper = __webpack_require__(83);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  name: 'VkTable',
-	  render: _render2.default,
 	  props: {
 	    fields: {
 	      type: Array,
@@ -3491,16 +5017,16 @@ module.exports =
 	    },
 	    trackBy: {
 	      type: String,
-	      required: true
+	      default: 'id'
 	    },
 	    selectable: {
 	      type: Boolean,
 	      default: false
 	    },
-	    selectedRows: {
-	      type: Array,
+	    selection: {
+	      type: Object,
 	      default: function _default() {
-	        return [];
+	        return {};
 	      }
 	    },
 	    condensed: {
@@ -3521,48 +5047,80 @@ module.exports =
 	        return {};
 	      } }
 	  },
-	  computed: {
-	    fieldsDef: function fieldsDef() {
-	      return this.fields.map(function (field) {
-	        var obj = {
-	          name: '',
-	          header: '',
-	          headerClass: '',
-	          cellClass: '',
-	          sortBy: ''
-	        };
-	        (0, _util.isString)(field) ? (0, _util.merge)(obj, { name: field }) : (0, _util.merge)(obj, field);
-	        if (obj.header !== false && obj.header === '') {
-	          obj.header = titleCase(obj.name);
+	  render: function render(h) {
+	    return h(
+	      'table',
+	      { staticClass: 'uk-table', 'class': {
+	          'uk-table-striped': this.striped,
+	          'uk-table-condensed': this.condensed,
+	          'uk-table-hover': this.hover
+	        } },
+	      [h(
+	        'thead',
+	        null,
+	        [h(
+	          'tr',
+	          null,
+	          [this.fieldsDef.map(function (field) {
+	            return h(_Header2.default, { props: { field: field } });
+	          })]
+	        )]
+	      ), h(
+	        'tbody',
+	        null,
+	        [this.rows.map(function (row) {
+	          return h(_Row2.default, { props: { row: row } });
+	        })]
+	      )]
+	    );
+	  },
+	  created: function created() {
+	    var _this = this;
+
+	    if (_util.warn && this.selectable) {
+	      this.rows.forEach(function (row) {
+	        if (row[_this.trackBy] === undefined) {
+	          (0, _util.warn)("Some of the Table rows have no 'id' set.");
 	        }
-	        return obj;
 	      });
 	    }
 	  },
-	  methods: {
-	    emitSort: function emitSort(field) {
-	      var sortBy = field.sortBy === true ? field.name : field.sortBy;
-	      var sortOrder = {};
 
-	      if (this.sortOrder[sortBy]) {
-	        sortOrder[sortBy] = this.sortOrder[sortBy] === 'asc' ? 'desc' : 'asc';
-	      } else {
-	        sortOrder[sortBy] = 'asc';
+	  computed: {
+	    isAllSelected: function isAllSelected() {
+	      var _this2 = this;
+
+	      return this.rows.length && this.rows.every(function (row) {
+	        return _this2.isSelected(row);
+	      });
+	    },
+	    fieldsDef: function fieldsDef() {
+	      var fields = (0, _helper.processFields)(this.fields);
+
+	      if (this.selectable) {
+	        fields.unshift(_selectField2.default);
 	      }
-	      this.$emit('sort', sortOrder);
+	      return fields;
+	    }
+	  },
+	  methods: {
+	    search: function search(query) {
+	      console.log('SEARCH FOR:', query);
+	    },
+	    isSelected: function isSelected(row) {
+	      return this.selection[this.getRowId(row)];
+	    },
+	    getRowId: function getRowId(row) {
+	      return row[this.trackBy];
+	    },
+	    emitSort: function emitSort(field) {
+	      this.$emit('sort', (0, _helper.processSortOrder)(field, this.sortOrder));
 	    }
 	  }
 	};
 
-
-	function titleCase(str) {
-	  return str.replace(/\w+/g, function (txt) {
-	    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-	  });
-	}
-
 /***/ },
-/* 87 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3571,77 +5129,53 @@ module.exports =
 	  value: true
 	});
 
-	exports.default = function (h) {
-	  var _this = this;
-
-	  var allSelected = this.rows.every(function (row) {
-	    return _this.selectedRows.find(function (id) {
-	      return id === row[_this.trackBy];
-	    });
-	  });
-	  return h(
-	    'table',
-	    { staticClass: 'uk-table', 'class': {
-	        'uk-table-striped': this.striped,
-	        'uk-table-condensed': this.condensed,
-	        'uk-table-hover': this.hover
-	      } },
-	    [h(
-	      'thead',
-	      null,
-	      [h(
-	        'tr',
-	        null,
-	        [this.selectable && h('th', [h(_Checkbox2.default, {
-	          props: {
-	            checked: allSelected,
-	            onClick: function onClick(e) {
-	              if (allSelected) {
-	                var affectedRows = _this.rows.slice();
-	                _this.$emit('unselect', [], affectedRows);
-	              } else {
-	                var newState = _this.rows.map(function (row) {
-	                  return row[_this.trackBy];
-	                });
-	                var _affectedRows = _this.rows.filter(function (row) {
-	                  return !_this.selectedRows.find(function (id) {
-	                    return row[_this.trackBy] === id;
-	                  });
-	                });
-	                _this.$emit('select', newState, _affectedRows);
-	              }
-	            }
-	          }
-	        })]), this.fieldsDef.map(function (field) {
-	          return h(_Header2.default, { props: { field: field } });
-	        })]
-	      )]
-	    ), h(
-	      'tbody',
-	      null,
-	      [this.rows.map(function (row) {
-	        return h(_Row2.default, { props: { row: row } });
-	      })]
-	    )]
-	  );
-	};
-
-	var _Checkbox = __webpack_require__(39);
+	var _Checkbox = __webpack_require__(80);
 
 	var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
-	var _Header = __webpack_require__(84);
-
-	var _Header2 = _interopRequireDefault(_Header);
-
-	var _Row = __webpack_require__(85);
-
-	var _Row2 = _interopRequireDefault(_Row);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	exports.default = {
+	  headerClass: 'uk-form vk-table-width-minimum',
+	  header: function header(h, _ref) {
+	    var vm = _ref.parent,
+	        props = _ref.props;
+
+	    return h(_Checkbox2.default, {
+	      props: {
+	        checked: vm.isAllSelected
+	      },
+	      on: {
+	        click: function click(e) {
+	          return vm.$emit('selectAll', vm.rows.map(function (row) {
+	            return vm.getRowId(row);
+	          }), vm.rows);
+	        }
+	      }
+	    });
+	  },
+
+	  cellClass: 'uk-form vk-table-width-minimum',
+	  cell: function cell(h, _ref2) {
+	    var vm = _ref2.parent,
+	        props = _ref2.props;
+	    var row = props.row;
+
+	    return h(_Checkbox2.default, {
+	      props: {
+	        checked: vm.isSelected(row)
+	      },
+	      on: {
+	        click: function click(e) {
+	          return vm.$emit('select', vm.getRowId(row), row);
+	        }
+	      }
+	    });
+	  }
+	};
+
 /***/ },
-/* 88 */
+/* 86 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3727,7 +5261,7 @@ module.exports =
 	};
 
 /***/ },
-/* 89 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3736,7 +5270,7 @@ module.exports =
 	  value: true
 	});
 
-	var _defineProperty2 = __webpack_require__(21);
+	var _defineProperty2 = __webpack_require__(15);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
@@ -3778,7 +5312,7 @@ module.exports =
 	        'a',
 	        {
 	          on: {
-	            click: function click(event) {
+	            'click': function click(event) {
 	              event.preventDefault();
 	              if (!_this.disabled) {
 	                _this.$parent.$emit('change', _this.index);
@@ -3793,7 +5327,7 @@ module.exports =
 	};
 
 /***/ },
-/* 90 */
+/* 88 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3868,7 +5402,7 @@ module.exports =
 	};
 
 /***/ },
-/* 91 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3877,7 +5411,161 @@ module.exports =
 	  value: true
 	});
 
-	var _babelHelperVueJsxMergeProps = __webpack_require__(10);
+	var _babelHelperVueJsxMergeProps = __webpack_require__(8);
+
+	var _babelHelperVueJsxMergeProps2 = _interopRequireDefault(_babelHelperVueJsxMergeProps);
+
+	var _defineProperty2 = __webpack_require__(15);
+
+	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
+	var _popper = __webpack_require__(49);
+
+	var _popper2 = _interopRequireDefault(_popper);
+
+	var _dom = __webpack_require__(9);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var onMouseEnter = void 0;
+	var onMouseLeave = void 0;
+
+	var POSITION_MIRROR = {
+	  top: 'bottom',
+	  right: 'left',
+	  left: 'right',
+	  bottom: 'top'
+	};
+
+	exports.default = {
+	  name: 'VkTooltip',
+	  props: {
+	    target: {
+	      type: String,
+	      default: ''
+	    },
+	    placement: {
+	      type: String,
+	      default: 'top'
+	    },
+	    offset: {
+	      type: String,
+	      default: '0 5'
+	    },
+	    transition: {
+	      type: String,
+	      default: ''
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      active: false,
+	      flipped: false
+	    };
+	  },
+	  computed: {
+	    popperOptions: function popperOptions() {
+	      return {
+	        placement: this.placement,
+	        modifiers: {
+	          offset: {
+	            offset: this.offset
+	          }
+	        }
+	      };
+	    },
+	    classes: function classes() {
+	      var placement = this.placement.split('-');
+	      var position = placement[0];
+	      if (this.flipped) {
+	        position = POSITION_MIRROR[placement[0]];
+	      }
+	      if (placement[1]) {
+	        position += '-' + placement[1].replace('start', 'left').replace('end', 'right');
+	      }
+	      return (0, _defineProperty3.default)({
+	        'uk-active': this.active
+	      }, 'uk-tooltip-' + position, true);
+	    }
+	  },
+	  render: function render(h) {
+	    var directives = [{
+	      name: 'show', value: this.active
+	    }];
+	    return h(
+	      'transition',
+	      {
+	        attrs: { name: this.transition }
+	      },
+	      [h(
+	        'div',
+	        (0, _babelHelperVueJsxMergeProps2.default)([{ directives: directives }, { staticClass: 'uk-tooltip', 'class': this.classes }]),
+	        [h(
+	          'div',
+	          { 'class': 'uk-tooltip-inner' },
+	          [this.$slots.default]
+	        )]
+	      )]
+	    );
+	  },
+	  mounted: function mounted() {
+	    var _this = this;
+
+	    this.$targetElement = this.target ? this.$vnode.context.$refs[this.target] || document.querySelector(this.target) : this.$el.parentNode;
+
+	    onMouseEnter = function onMouseEnter() {
+	      document.body.appendChild(_this.$el);
+	      _this.active = true;
+	      _this.$emit('show');
+	      new _popper2.default(_this.$targetElement, _this.$el, _this.popperOptions).onCreate(function (data) {
+	        _this.flipped = data.flipped;
+	      }).onUpdate(function (data) {
+	        _this.flipped = data.flipped;
+	      });
+	    };
+
+	    onMouseLeave = function onMouseLeave() {
+	      _this.active = false;
+	      (0, _dom.offAll)(_this.$el, _this._uid);
+	      _this.remove();
+	      _this.$emit('hide');
+	    };
+
+	    (0, _dom.on)(this.$targetElement, 'mouseenter', onMouseEnter, this._uid);
+	    (0, _dom.on)(this.$targetElement, 'focus', onMouseEnter, this._uid);
+	    (0, _dom.on)(this.$targetElement, 'mouseleave', onMouseLeave, this._uid);
+	    (0, _dom.on)(this.$targetElement, 'blur', onMouseLeave, this._uid);
+
+	    this.remove();
+	  },
+	  beforeDestroy: function beforeDestroy() {
+	    if (this.$targetElement) {
+	      (0, _dom.offAll)(this.$targetElement, this._uid);
+	    }
+	    this.active = false;
+	    this.remove();
+	  },
+
+	  methods: {
+	    remove: function remove() {
+	      if (this.$el.parentNode) {
+	        this.$el.parentNode.removeChild(this.$el);
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _babelHelperVueJsxMergeProps = __webpack_require__(8);
 
 	var _babelHelperVueJsxMergeProps2 = _interopRequireDefault(_babelHelperVueJsxMergeProps);
 
@@ -3931,7 +5619,7 @@ module.exports =
 	};
 
 /***/ },
-/* 92 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3940,11 +5628,11 @@ module.exports =
 	  value: true
 	});
 
-	var _moment = __webpack_require__(18);
+	var _moment = __webpack_require__(17);
 
 	var _moment2 = _interopRequireDefault(_moment);
 
-	var _util = __webpack_require__(4);
+	var _util = __webpack_require__(2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3983,196 +5671,125 @@ module.exports =
 	};
 
 /***/ },
+/* 92 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(100), __esModule: true };
+
+/***/ },
 /* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(102), __esModule: true };
+	module.exports = { "default": __webpack_require__(101), __esModule: true };
 
 /***/ },
 /* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(103), __esModule: true };
+	module.exports = { "default": __webpack_require__(102), __esModule: true };
 
 /***/ },
 /* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(105), __esModule: true };
+	module.exports = { "default": __webpack_require__(103), __esModule: true };
 
 /***/ },
 /* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(106), __esModule: true };
+	module.exports = { "default": __webpack_require__(104), __esModule: true };
 
 /***/ },
 /* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(107), __esModule: true };
+	module.exports = { "default": __webpack_require__(105), __esModule: true };
 
 /***/ },
 /* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(108), __esModule: true };
-
-/***/ },
-/* 99 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(109), __esModule: true };
-
-/***/ },
-/* 100 */
-/***/ function(module, exports, __webpack_require__) {
-
 	"use strict";
 
 	exports.__esModule = true;
 
-	var _isIterable2 = __webpack_require__(94);
-
-	var _isIterable3 = _interopRequireDefault(_isIterable2);
-
-	var _getIterator2 = __webpack_require__(93);
-
-	var _getIterator3 = _interopRequireDefault(_getIterator2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = function () {
-	  function sliceIterator(arr, i) {
-	    var _arr = [];
-	    var _n = true;
-	    var _d = false;
-	    var _e = undefined;
-
-	    try {
-	      for (var _i = (0, _getIterator3.default)(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
-	        _arr.push(_s.value);
-
-	        if (i && _arr.length === i) break;
-	      }
-	    } catch (err) {
-	      _d = true;
-	      _e = err;
-	    } finally {
-	      try {
-	        if (!_n && _i["return"]) _i["return"]();
-	      } finally {
-	        if (_d) throw _e;
-	      }
-	    }
-
-	    return _arr;
-	  }
-
-	  return function (arr, i) {
-	    if (Array.isArray(arr)) {
-	      return arr;
-	    } else if ((0, _isIterable3.default)(Object(arr))) {
-	      return sliceIterator(arr, i);
-	    } else {
-	      throw new TypeError("Invalid attempt to destructure non-iterable instance");
-	    }
-	  };
-	}();
-
-/***/ },
-/* 101 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	exports.__esModule = true;
-
-	var _iterator = __webpack_require__(99);
+	var _iterator = __webpack_require__(97);
 
 	var _iterator2 = _interopRequireDefault(_iterator);
 
-	var _symbol = __webpack_require__(98);
+	var _symbol = __webpack_require__(96);
 
 	var _symbol2 = _interopRequireDefault(_symbol);
 
-	var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj; };
+	var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
 	  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
 	} : function (obj) {
-	  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+	  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
 	};
 
 /***/ },
-/* 102 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(36);
-	__webpack_require__(35);
-	module.exports = __webpack_require__(130);
-
-/***/ },
-/* 103 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(36);
-	__webpack_require__(35);
-	module.exports = __webpack_require__(131);
-
-/***/ },
-/* 104 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(133);
+	__webpack_require__(126);
 	module.exports = __webpack_require__(1).Number.isInteger;
 
 /***/ },
-/* 105 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(134);
+	__webpack_require__(127);
+	module.exports = __webpack_require__(1).Object.assign;
+
+/***/ },
+/* 101 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(128);
 	var $Object = __webpack_require__(1).Object;
 	module.exports = function defineProperty(it, key, desc){
 	  return $Object.defineProperty(it, key, desc);
 	};
 
 /***/ },
-/* 106 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(135);
+	__webpack_require__(129);
 	module.exports = __webpack_require__(1).Object.getPrototypeOf;
 
 /***/ },
-/* 107 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(136);
+	__webpack_require__(130);
 	module.exports = __webpack_require__(1).Object.keys;
 
 /***/ },
-/* 108 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(138);
-	__webpack_require__(137);
-	__webpack_require__(139);
-	__webpack_require__(140);
+	__webpack_require__(133);
+	__webpack_require__(131);
+	__webpack_require__(134);
+	__webpack_require__(135);
 	module.exports = __webpack_require__(1).Symbol;
 
 /***/ },
-/* 109 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(35);
-	__webpack_require__(36);
+	__webpack_require__(132);
+	__webpack_require__(136);
 	module.exports = __webpack_require__(34).f('iterator');
 
 /***/ },
-/* 110 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -4181,20 +5798,20 @@ module.exports =
 	};
 
 /***/ },
-/* 111 */
+/* 107 */
 /***/ function(module, exports) {
 
 	module.exports = function(){ /* empty */ };
 
 /***/ },
-/* 112 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
 	// true  -> Array#includes
-	var toIObject = __webpack_require__(8)
-	  , toLength  = __webpack_require__(128)
-	  , toIndex   = __webpack_require__(127);
+	var toIObject = __webpack_require__(7)
+	  , toLength  = __webpack_require__(124)
+	  , toIndex   = __webpack_require__(123);
 	module.exports = function(IS_INCLUDES){
 	  return function($this, el, fromIndex){
 	    var O      = toIObject($this)
@@ -4213,11 +5830,11 @@ module.exports =
 	};
 
 /***/ },
-/* 113 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
-	var aFunction = __webpack_require__(110);
+	var aFunction = __webpack_require__(106);
 	module.exports = function(fn, that, length){
 	  aFunction(fn);
 	  if(that === undefined)return fn;
@@ -4238,13 +5855,13 @@ module.exports =
 	};
 
 /***/ },
-/* 114 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// all enumerable object keys, includes symbols
-	var getKeys = __webpack_require__(17)
-	  , gOPS    = __webpack_require__(47)
-	  , pIE     = __webpack_require__(26);
+	var getKeys = __webpack_require__(13)
+	  , gOPS    = __webpack_require__(27)
+	  , pIE     = __webpack_require__(19);
 	module.exports = function(it){
 	  var result     = getKeys(it)
 	    , getSymbols = gOPS.f;
@@ -4258,54 +5875,44 @@ module.exports =
 	};
 
 /***/ },
-/* 115 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(3).document && document.documentElement;
 
 /***/ },
-/* 116 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(22);
-	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
-	  return cof(it) == 'String' ? it.split('') : Object(it);
-	};
-
-/***/ },
-/* 117 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(22);
+	var cof = __webpack_require__(37);
 	module.exports = Array.isArray || function isArray(arg){
 	  return cof(arg) == 'Array';
 	};
 
 /***/ },
-/* 118 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.3 Number.isInteger(number)
-	var isObject = __webpack_require__(15)
+	var isObject = __webpack_require__(16)
 	  , floor    = Math.floor;
 	module.exports = function isInteger(it){
 	  return !isObject(it) && isFinite(it) && floor(it) === it;
 	};
 
 /***/ },
-/* 119 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var create         = __webpack_require__(45)
-	  , descriptor     = __webpack_require__(19)
-	  , setToStringTag = __webpack_require__(27)
+	var create         = __webpack_require__(42)
+	  , descriptor     = __webpack_require__(20)
+	  , setToStringTag = __webpack_require__(28)
 	  , IteratorPrototype = {};
 
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(9)(IteratorPrototype, __webpack_require__(2)('iterator'), function(){ return this; });
+	__webpack_require__(12)(IteratorPrototype, __webpack_require__(14)('iterator'), function(){ return this; });
 
 	module.exports = function(Constructor, NAME, next){
 	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
@@ -4313,7 +5920,7 @@ module.exports =
 	};
 
 /***/ },
-/* 120 */
+/* 115 */
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -4321,11 +5928,11 @@ module.exports =
 	};
 
 /***/ },
-/* 121 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getKeys   = __webpack_require__(17)
-	  , toIObject = __webpack_require__(8);
+	var getKeys   = __webpack_require__(13)
+	  , toIObject = __webpack_require__(7);
 	module.exports = function(object, el){
 	  var O      = toIObject(object)
 	    , keys   = getKeys(O)
@@ -4336,18 +5943,18 @@ module.exports =
 	};
 
 /***/ },
-/* 122 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var META     = __webpack_require__(20)('meta')
-	  , isObject = __webpack_require__(15)
-	  , has      = __webpack_require__(6)
-	  , setDesc  = __webpack_require__(7).f
+	var META     = __webpack_require__(22)('meta')
+	  , isObject = __webpack_require__(16)
+	  , has      = __webpack_require__(5)
+	  , setDesc  = __webpack_require__(6).f
 	  , id       = 0;
 	var isExtensible = Object.isExtensible || function(){
 	  return true;
 	};
-	var FREEZE = !__webpack_require__(14)(function(){
+	var FREEZE = !__webpack_require__(11)(function(){
 	  return isExtensible(Object.preventExtensions({}));
 	});
 	var setMeta = function(it){
@@ -4394,14 +6001,52 @@ module.exports =
 	};
 
 /***/ },
-/* 123 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var dP       = __webpack_require__(7)
-	  , anObject = __webpack_require__(12)
-	  , getKeys  = __webpack_require__(17);
+	'use strict';
+	// 19.1.2.1 Object.assign(target, source, ...)
+	var getKeys  = __webpack_require__(13)
+	  , gOPS     = __webpack_require__(27)
+	  , pIE      = __webpack_require__(19)
+	  , toObject = __webpack_require__(21)
+	  , IObject  = __webpack_require__(40)
+	  , $assign  = Object.assign;
 
-	module.exports = __webpack_require__(5) ? Object.defineProperties : function defineProperties(O, Properties){
+	// should work with symbols and should have deterministic property order (V8 bug)
+	module.exports = !$assign || __webpack_require__(11)(function(){
+	  var A = {}
+	    , B = {}
+	    , S = Symbol()
+	    , K = 'abcdefghijklmnopqrst';
+	  A[S] = 7;
+	  K.split('').forEach(function(k){ B[k] = k; });
+	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
+	  var T     = toObject(target)
+	    , aLen  = arguments.length
+	    , index = 1
+	    , getSymbols = gOPS.f
+	    , isEnum     = pIE.f;
+	  while(aLen > index){
+	    var S      = IObject(arguments[index++])
+	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
+	      , length = keys.length
+	      , j      = 0
+	      , key;
+	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
+	  } return T;
+	} : $assign;
+
+/***/ },
+/* 119 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var dP       = __webpack_require__(6)
+	  , anObject = __webpack_require__(18)
+	  , getKeys  = __webpack_require__(13);
+
+	module.exports = __webpack_require__(4) ? Object.defineProperties : function defineProperties(O, Properties){
 	  anObject(O);
 	  var keys   = getKeys(Properties)
 	    , length = keys.length
@@ -4412,18 +6057,18 @@ module.exports =
 	};
 
 /***/ },
-/* 124 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var pIE            = __webpack_require__(26)
-	  , createDesc     = __webpack_require__(19)
-	  , toIObject      = __webpack_require__(8)
+	var pIE            = __webpack_require__(19)
+	  , createDesc     = __webpack_require__(20)
+	  , toIObject      = __webpack_require__(7)
 	  , toPrimitive    = __webpack_require__(32)
-	  , has            = __webpack_require__(6)
-	  , IE8_DOM_DEFINE = __webpack_require__(43)
+	  , has            = __webpack_require__(5)
+	  , IE8_DOM_DEFINE = __webpack_require__(39)
 	  , gOPD           = Object.getOwnPropertyDescriptor;
 
-	exports.f = __webpack_require__(5) ? gOPD : function getOwnPropertyDescriptor(O, P){
+	exports.f = __webpack_require__(4) ? gOPD : function getOwnPropertyDescriptor(O, P){
 	  O = toIObject(O);
 	  P = toPrimitive(P, true);
 	  if(IE8_DOM_DEFINE)try {
@@ -4433,12 +6078,12 @@ module.exports =
 	};
 
 /***/ },
-/* 125 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(8)
-	  , gOPN      = __webpack_require__(46).f
+	var toIObject = __webpack_require__(7)
+	  , gOPN      = __webpack_require__(43).f
 	  , toString  = {}.toString;
 
 	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -4458,10 +6103,10 @@ module.exports =
 
 
 /***/ },
-/* 126 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(30)
+	var toInteger = __webpack_require__(31)
 	  , defined   = __webpack_require__(23);
 	// true  -> String#at
 	// false -> String#codePointAt
@@ -4480,10 +6125,10 @@ module.exports =
 	};
 
 /***/ },
-/* 127 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toInteger = __webpack_require__(30)
+	var toInteger = __webpack_require__(31)
 	  , max       = Math.max
 	  , min       = Math.min;
 	module.exports = function(index, length){
@@ -4492,70 +6137,31 @@ module.exports =
 	};
 
 /***/ },
-/* 128 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(30)
+	var toInteger = __webpack_require__(31)
 	  , min       = Math.min;
 	module.exports = function(it){
 	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 	};
 
 /***/ },
-/* 129 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var classof   = __webpack_require__(41)
-	  , ITERATOR  = __webpack_require__(2)('iterator')
-	  , Iterators = __webpack_require__(16);
-	module.exports = __webpack_require__(1).getIteratorMethod = function(it){
-	  if(it != undefined)return it[ITERATOR]
-	    || it['@@iterator']
-	    || Iterators[classof(it)];
-	};
-
-/***/ },
-/* 130 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var anObject = __webpack_require__(12)
-	  , get      = __webpack_require__(129);
-	module.exports = __webpack_require__(1).getIterator = function(it){
-	  var iterFn = get(it);
-	  if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
-	  return anObject(iterFn.call(it));
-	};
-
-/***/ },
-/* 131 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var classof   = __webpack_require__(41)
-	  , ITERATOR  = __webpack_require__(2)('iterator')
-	  , Iterators = __webpack_require__(16);
-	module.exports = __webpack_require__(1).isIterable = function(it){
-	  var O = Object(it);
-	  return O[ITERATOR] !== undefined
-	    || '@@iterator' in O
-	    || Iterators.hasOwnProperty(classof(O));
-	};
-
-/***/ },
-/* 132 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var addToUnscopables = __webpack_require__(111)
-	  , step             = __webpack_require__(120)
-	  , Iterators        = __webpack_require__(16)
-	  , toIObject        = __webpack_require__(8);
+	var addToUnscopables = __webpack_require__(107)
+	  , step             = __webpack_require__(115)
+	  , Iterators        = __webpack_require__(25)
+	  , toIObject        = __webpack_require__(7);
 
 	// 22.1.3.4 Array.prototype.entries()
 	// 22.1.3.13 Array.prototype.keys()
 	// 22.1.3.29 Array.prototype.values()
 	// 22.1.3.30 Array.prototype[@@iterator]()
-	module.exports = __webpack_require__(44)(Array, 'Array', function(iterated, kind){
+	module.exports = __webpack_require__(41)(Array, 'Array', function(iterated, kind){
 	  this._t = toIObject(iterated); // target
 	  this._i = 0;                   // next index
 	  this._k = kind;                // kind
@@ -4581,87 +6187,118 @@ module.exports =
 	addToUnscopables('entries');
 
 /***/ },
-/* 133 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 20.1.2.3 Number.isInteger(number)
-	var $export = __webpack_require__(13);
+	var $export = __webpack_require__(10);
 
-	$export($export.S, 'Number', {isInteger: __webpack_require__(118)});
+	$export($export.S, 'Number', {isInteger: __webpack_require__(113)});
 
 /***/ },
-/* 134 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $export = __webpack_require__(13);
-	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-	$export($export.S + $export.F * !__webpack_require__(5), 'Object', {defineProperty: __webpack_require__(7).f});
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(10);
+
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(118)});
 
 /***/ },
-/* 135 */
+/* 128 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $export = __webpack_require__(10);
+	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+	$export($export.S + $export.F * !__webpack_require__(4), 'Object', {defineProperty: __webpack_require__(6).f});
+
+/***/ },
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.9 Object.getPrototypeOf(O)
-	var toObject        = __webpack_require__(31)
-	  , $getPrototypeOf = __webpack_require__(48);
+	var toObject        = __webpack_require__(21)
+	  , $getPrototypeOf = __webpack_require__(44);
 
-	__webpack_require__(50)('getPrototypeOf', function(){
+	__webpack_require__(46)('getPrototypeOf', function(){
 	  return function getPrototypeOf(it){
 	    return $getPrototypeOf(toObject(it));
 	  };
 	});
 
 /***/ },
-/* 136 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(31)
-	  , $keys    = __webpack_require__(17);
+	var toObject = __webpack_require__(21)
+	  , $keys    = __webpack_require__(13);
 
-	__webpack_require__(50)('keys', function(){
+	__webpack_require__(46)('keys', function(){
 	  return function keys(it){
 	    return $keys(toObject(it));
 	  };
 	});
 
 /***/ },
-/* 137 */
+/* 131 */
 /***/ function(module, exports) {
 
 	
 
 /***/ },
-/* 138 */
+/* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var $at  = __webpack_require__(122)(true);
+
+	// 21.1.3.27 String.prototype[@@iterator]()
+	__webpack_require__(41)(String, 'String', function(iterated){
+	  this._t = String(iterated); // target
+	  this._i = 0;                // next index
+	// 21.1.5.2.1 %StringIteratorPrototype%.next()
+	}, function(){
+	  var O     = this._t
+	    , index = this._i
+	    , point;
+	  if(index >= O.length)return {value: undefined, done: true};
+	  point = $at(O, index);
+	  this._i += point.length;
+	  return {value: point, done: false};
+	});
+
+/***/ },
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// ECMAScript 6 symbols shim
 	var global         = __webpack_require__(3)
-	  , has            = __webpack_require__(6)
-	  , DESCRIPTORS    = __webpack_require__(5)
-	  , $export        = __webpack_require__(13)
-	  , redefine       = __webpack_require__(51)
-	  , META           = __webpack_require__(122).KEY
-	  , $fails         = __webpack_require__(14)
-	  , shared         = __webpack_require__(29)
-	  , setToStringTag = __webpack_require__(27)
-	  , uid            = __webpack_require__(20)
-	  , wks            = __webpack_require__(2)
+	  , has            = __webpack_require__(5)
+	  , DESCRIPTORS    = __webpack_require__(4)
+	  , $export        = __webpack_require__(10)
+	  , redefine       = __webpack_require__(47)
+	  , META           = __webpack_require__(117).KEY
+	  , $fails         = __webpack_require__(11)
+	  , shared         = __webpack_require__(30)
+	  , setToStringTag = __webpack_require__(28)
+	  , uid            = __webpack_require__(22)
+	  , wks            = __webpack_require__(14)
 	  , wksExt         = __webpack_require__(34)
 	  , wksDefine      = __webpack_require__(33)
-	  , keyOf          = __webpack_require__(121)
-	  , enumKeys       = __webpack_require__(114)
-	  , isArray        = __webpack_require__(117)
-	  , anObject       = __webpack_require__(12)
-	  , toIObject      = __webpack_require__(8)
+	  , keyOf          = __webpack_require__(116)
+	  , enumKeys       = __webpack_require__(110)
+	  , isArray        = __webpack_require__(112)
+	  , anObject       = __webpack_require__(18)
+	  , toIObject      = __webpack_require__(7)
 	  , toPrimitive    = __webpack_require__(32)
-	  , createDesc     = __webpack_require__(19)
-	  , _create        = __webpack_require__(45)
-	  , gOPNExt        = __webpack_require__(125)
-	  , $GOPD          = __webpack_require__(124)
-	  , $DP            = __webpack_require__(7)
-	  , $keys          = __webpack_require__(17)
+	  , createDesc     = __webpack_require__(20)
+	  , _create        = __webpack_require__(42)
+	  , gOPNExt        = __webpack_require__(121)
+	  , $GOPD          = __webpack_require__(120)
+	  , $DP            = __webpack_require__(6)
+	  , $keys          = __webpack_require__(13)
 	  , gOPD           = $GOPD.f
 	  , dP             = $DP.f
 	  , gOPN           = gOPNExt.f
@@ -4784,11 +6421,11 @@ module.exports =
 
 	  $GOPD.f = $getOwnPropertyDescriptor;
 	  $DP.f   = $defineProperty;
-	  __webpack_require__(46).f = gOPNExt.f = $getOwnPropertyNames;
-	  __webpack_require__(26).f  = $propertyIsEnumerable;
-	  __webpack_require__(47).f = $getOwnPropertySymbols;
+	  __webpack_require__(43).f = gOPNExt.f = $getOwnPropertyNames;
+	  __webpack_require__(19).f  = $propertyIsEnumerable;
+	  __webpack_require__(27).f = $getOwnPropertySymbols;
 
-	  if(DESCRIPTORS && !__webpack_require__(25)){
+	  if(DESCRIPTORS && !__webpack_require__(26)){
 	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
 	  }
 
@@ -4863,7 +6500,7 @@ module.exports =
 	});
 
 	// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(9)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(12)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 	// 19.4.3.5 Symbol.prototype[@@toStringTag]
 	setToStringTag($Symbol, 'Symbol');
 	// 20.2.1.9 Math[@@toStringTag]
@@ -4872,19 +6509,37 @@ module.exports =
 	setToStringTag(global.JSON, 'JSON', true);
 
 /***/ },
-/* 139 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(33)('asyncIterator');
 
 /***/ },
-/* 140 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(33)('observable');
 
 /***/ },
-/* 141 */
+/* 136 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(125);
+	var global        = __webpack_require__(3)
+	  , hide          = __webpack_require__(12)
+	  , Iterators     = __webpack_require__(25)
+	  , TO_STRING_TAG = __webpack_require__(14)('toStringTag');
+
+	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
+	  var NAME       = collections[i]
+	    , Collection = global[NAME]
+	    , proto      = Collection && Collection.prototype;
+	  if(proto && !proto[TO_STRING_TAG])hide(proto, TO_STRING_TAG, NAME);
+	  Iterators[NAME] = Iterators.Array;
+	}
+
+/***/ },
+/* 137 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -4918,12 +6573,12 @@ module.exports =
 
 
 /***/ },
-/* 142 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseRange = __webpack_require__(141),
-	    isIterateeCall = __webpack_require__(144),
-	    toFinite = __webpack_require__(149);
+	var baseRange = __webpack_require__(137),
+	    isIterateeCall = __webpack_require__(140),
+	    toFinite = __webpack_require__(145);
 
 	/**
 	 * Creates a `_.range` or `_.rangeRight` function.
@@ -4954,7 +6609,7 @@ module.exports =
 
 
 /***/ },
-/* 143 */
+/* 139 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -4965,7 +6620,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 144 */
+/* 140 */
 /***/ function(module, exports) {
 
 	/**
@@ -4989,10 +6644,10 @@ module.exports =
 
 
 /***/ },
-/* 145 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var freeGlobal = __webpack_require__(143);
+	var freeGlobal = __webpack_require__(139);
 
 	/** Detect free variable `self`. */
 	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -5004,12 +6659,12 @@ module.exports =
 
 
 /***/ },
-/* 146 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(147),
-	    now = __webpack_require__(148),
-	    toNumber = __webpack_require__(150);
+	var isObject = __webpack_require__(143),
+	    now = __webpack_require__(144),
+	    toNumber = __webpack_require__(146);
 
 	/** Error message constants. */
 	var FUNC_ERROR_TEXT = 'Expected a function';
@@ -5198,7 +6853,7 @@ module.exports =
 
 
 /***/ },
-/* 147 */
+/* 143 */
 /***/ function(module, exports) {
 
 	/**
@@ -5235,10 +6890,10 @@ module.exports =
 
 
 /***/ },
-/* 148 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(145);
+	var root = __webpack_require__(141);
 
 	/**
 	 * Gets the timestamp of the number of milliseconds that have elapsed since
@@ -5264,7 +6919,7 @@ module.exports =
 
 
 /***/ },
-/* 149 */
+/* 145 */
 /***/ function(module, exports) {
 
 	/**
@@ -5291,7 +6946,7 @@ module.exports =
 
 
 /***/ },
-/* 150 */
+/* 146 */
 /***/ function(module, exports) {
 
 	/**
@@ -5318,7 +6973,7 @@ module.exports =
 
 
 /***/ },
-/* 151 */
+/* 147 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -5501,1819 +7156,6 @@ module.exports =
 	    throw new Error('process.chdir is not supported');
 	};
 	process.umask = function() { return 0; };
-
-
-/***/ },
-/* 152 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.3.7 */
-
-	(function(root, factory) {
-	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	  } else if (typeof exports === 'object') {
-	    module.exports = factory(require, exports, module);
-	  } else {
-	    root.Tether = factory();
-	  }
-	}(this, function(require, exports, module) {
-
-	'use strict';
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	var TetherBase = undefined;
-	if (typeof TetherBase === 'undefined') {
-	  TetherBase = { modules: [] };
-	}
-
-	var zeroElement = null;
-
-	// Same as native getBoundingClientRect, except it takes into account parent <frame> offsets
-	// if the element lies within a nested document (<frame> or <iframe>-like).
-	function getActualBoundingClientRect(node) {
-	  var boundingRect = node.getBoundingClientRect();
-
-	  // The original object returned by getBoundingClientRect is immutable, so we clone it
-	  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
-	  var rect = {};
-	  for (var k in boundingRect) {
-	    rect[k] = boundingRect[k];
-	  }
-
-	  if (node.ownerDocument !== document) {
-	    var _frameElement = node.ownerDocument.defaultView.frameElement;
-	    if (_frameElement) {
-	      var frameRect = getActualBoundingClientRect(_frameElement);
-	      rect.top += frameRect.top;
-	      rect.bottom += frameRect.top;
-	      rect.left += frameRect.left;
-	      rect.right += frameRect.left;
-	    }
-	  }
-
-	  return rect;
-	}
-
-	function getScrollParents(el) {
-	  // In firefox if the el is inside an iframe with display: none; window.getComputedStyle() will return null;
-	  // https://bugzilla.mozilla.org/show_bug.cgi?id=548397
-	  var computedStyle = getComputedStyle(el) || {};
-	  var position = computedStyle.position;
-	  var parents = [];
-
-	  if (position === 'fixed') {
-	    return [el];
-	  }
-
-	  var parent = el;
-	  while ((parent = parent.parentNode) && parent && parent.nodeType === 1) {
-	    var style = undefined;
-	    try {
-	      style = getComputedStyle(parent);
-	    } catch (err) {}
-
-	    if (typeof style === 'undefined' || style === null) {
-	      parents.push(parent);
-	      return parents;
-	    }
-
-	    var _style = style;
-	    var overflow = _style.overflow;
-	    var overflowX = _style.overflowX;
-	    var overflowY = _style.overflowY;
-
-	    if (/(auto|scroll)/.test(overflow + overflowY + overflowX)) {
-	      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
-	        parents.push(parent);
-	      }
-	    }
-	  }
-
-	  parents.push(el.ownerDocument.body);
-
-	  // If the node is within a frame, account for the parent window scroll
-	  if (el.ownerDocument !== document) {
-	    parents.push(el.ownerDocument.defaultView);
-	  }
-
-	  return parents;
-	}
-
-	var uniqueId = (function () {
-	  var id = 0;
-	  return function () {
-	    return ++id;
-	  };
-	})();
-
-	var zeroPosCache = {};
-	var getOrigin = function getOrigin() {
-	  // getBoundingClientRect is unfortunately too accurate.  It introduces a pixel or two of
-	  // jitter as the user scrolls that messes with our ability to detect if two positions
-	  // are equivilant or not.  We place an element at the top left of the page that will
-	  // get the same jitter, so we can cancel the two out.
-	  var node = zeroElement;
-	  if (!node) {
-	    node = document.createElement('div');
-	    node.setAttribute('data-tether-id', uniqueId());
-	    extend(node.style, {
-	      top: 0,
-	      left: 0,
-	      position: 'absolute'
-	    });
-
-	    document.body.appendChild(node);
-
-	    zeroElement = node;
-	  }
-
-	  var id = node.getAttribute('data-tether-id');
-	  if (typeof zeroPosCache[id] === 'undefined') {
-	    zeroPosCache[id] = getActualBoundingClientRect(node);
-
-	    // Clear the cache when this position call is done
-	    defer(function () {
-	      delete zeroPosCache[id];
-	    });
-	  }
-
-	  return zeroPosCache[id];
-	};
-
-	function removeUtilElements() {
-	  if (zeroElement) {
-	    document.body.removeChild(zeroElement);
-	  }
-	  zeroElement = null;
-	};
-
-	function getBounds(el) {
-	  var doc = undefined;
-	  if (el === document) {
-	    doc = document;
-	    el = document.documentElement;
-	  } else {
-	    doc = el.ownerDocument;
-	  }
-
-	  var docEl = doc.documentElement;
-
-	  var box = getActualBoundingClientRect(el);
-
-	  var origin = getOrigin();
-
-	  box.top -= origin.top;
-	  box.left -= origin.left;
-
-	  if (typeof box.width === 'undefined') {
-	    box.width = document.body.scrollWidth - box.left - box.right;
-	  }
-	  if (typeof box.height === 'undefined') {
-	    box.height = document.body.scrollHeight - box.top - box.bottom;
-	  }
-
-	  box.top = box.top - docEl.clientTop;
-	  box.left = box.left - docEl.clientLeft;
-	  box.right = doc.body.clientWidth - box.width - box.left;
-	  box.bottom = doc.body.clientHeight - box.height - box.top;
-
-	  return box;
-	}
-
-	function getOffsetParent(el) {
-	  return el.offsetParent || document.documentElement;
-	}
-
-	var _scrollBarSize = null;
-	function getScrollBarSize() {
-	  if (_scrollBarSize) {
-	    return _scrollBarSize;
-	  }
-	  var inner = document.createElement('div');
-	  inner.style.width = '100%';
-	  inner.style.height = '200px';
-
-	  var outer = document.createElement('div');
-	  extend(outer.style, {
-	    position: 'absolute',
-	    top: 0,
-	    left: 0,
-	    pointerEvents: 'none',
-	    visibility: 'hidden',
-	    width: '200px',
-	    height: '150px',
-	    overflow: 'hidden'
-	  });
-
-	  outer.appendChild(inner);
-
-	  document.body.appendChild(outer);
-
-	  var widthContained = inner.offsetWidth;
-	  outer.style.overflow = 'scroll';
-	  var widthScroll = inner.offsetWidth;
-
-	  if (widthContained === widthScroll) {
-	    widthScroll = outer.clientWidth;
-	  }
-
-	  document.body.removeChild(outer);
-
-	  var width = widthContained - widthScroll;
-
-	  _scrollBarSize = { width: width, height: width };
-	  return _scrollBarSize;
-	}
-
-	function extend() {
-	  var out = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-	  var args = [];
-
-	  Array.prototype.push.apply(args, arguments);
-
-	  args.slice(1).forEach(function (obj) {
-	    if (obj) {
-	      for (var key in obj) {
-	        if (({}).hasOwnProperty.call(obj, key)) {
-	          out[key] = obj[key];
-	        }
-	      }
-	    }
-	  });
-
-	  return out;
-	}
-
-	function removeClass(el, name) {
-	  if (typeof el.classList !== 'undefined') {
-	    name.split(' ').forEach(function (cls) {
-	      if (cls.trim()) {
-	        el.classList.remove(cls);
-	      }
-	    });
-	  } else {
-	    var regex = new RegExp('(^| )' + name.split(' ').join('|') + '( |$)', 'gi');
-	    var className = getClassName(el).replace(regex, ' ');
-	    setClassName(el, className);
-	  }
-	}
-
-	function addClass(el, name) {
-	  if (typeof el.classList !== 'undefined') {
-	    name.split(' ').forEach(function (cls) {
-	      if (cls.trim()) {
-	        el.classList.add(cls);
-	      }
-	    });
-	  } else {
-	    removeClass(el, name);
-	    var cls = getClassName(el) + (' ' + name);
-	    setClassName(el, cls);
-	  }
-	}
-
-	function hasClass(el, name) {
-	  if (typeof el.classList !== 'undefined') {
-	    return el.classList.contains(name);
-	  }
-	  var className = getClassName(el);
-	  return new RegExp('(^| )' + name + '( |$)', 'gi').test(className);
-	}
-
-	function getClassName(el) {
-	  // Can't use just SVGAnimatedString here since nodes within a Frame in IE have
-	  // completely separately SVGAnimatedString base classes
-	  if (el.className instanceof el.ownerDocument.defaultView.SVGAnimatedString) {
-	    return el.className.baseVal;
-	  }
-	  return el.className;
-	}
-
-	function setClassName(el, className) {
-	  el.setAttribute('class', className);
-	}
-
-	function updateClasses(el, add, all) {
-	  // Of the set of 'all' classes, we need the 'add' classes, and only the
-	  // 'add' classes to be set.
-	  all.forEach(function (cls) {
-	    if (add.indexOf(cls) === -1 && hasClass(el, cls)) {
-	      removeClass(el, cls);
-	    }
-	  });
-
-	  add.forEach(function (cls) {
-	    if (!hasClass(el, cls)) {
-	      addClass(el, cls);
-	    }
-	  });
-	}
-
-	var deferred = [];
-
-	var defer = function defer(fn) {
-	  deferred.push(fn);
-	};
-
-	var flush = function flush() {
-	  var fn = undefined;
-	  while (fn = deferred.pop()) {
-	    fn();
-	  }
-	};
-
-	var Evented = (function () {
-	  function Evented() {
-	    _classCallCheck(this, Evented);
-	  }
-
-	  _createClass(Evented, [{
-	    key: 'on',
-	    value: function on(event, handler, ctx) {
-	      var once = arguments.length <= 3 || arguments[3] === undefined ? false : arguments[3];
-
-	      if (typeof this.bindings === 'undefined') {
-	        this.bindings = {};
-	      }
-	      if (typeof this.bindings[event] === 'undefined') {
-	        this.bindings[event] = [];
-	      }
-	      this.bindings[event].push({ handler: handler, ctx: ctx, once: once });
-	    }
-	  }, {
-	    key: 'once',
-	    value: function once(event, handler, ctx) {
-	      this.on(event, handler, ctx, true);
-	    }
-	  }, {
-	    key: 'off',
-	    value: function off(event, handler) {
-	      if (typeof this.bindings === 'undefined' || typeof this.bindings[event] === 'undefined') {
-	        return;
-	      }
-
-	      if (typeof handler === 'undefined') {
-	        delete this.bindings[event];
-	      } else {
-	        var i = 0;
-	        while (i < this.bindings[event].length) {
-	          if (this.bindings[event][i].handler === handler) {
-	            this.bindings[event].splice(i, 1);
-	          } else {
-	            ++i;
-	          }
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'trigger',
-	    value: function trigger(event) {
-	      if (typeof this.bindings !== 'undefined' && this.bindings[event]) {
-	        var i = 0;
-
-	        for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	          args[_key - 1] = arguments[_key];
-	        }
-
-	        while (i < this.bindings[event].length) {
-	          var _bindings$event$i = this.bindings[event][i];
-	          var handler = _bindings$event$i.handler;
-	          var ctx = _bindings$event$i.ctx;
-	          var once = _bindings$event$i.once;
-
-	          var context = ctx;
-	          if (typeof context === 'undefined') {
-	            context = this;
-	          }
-
-	          handler.apply(context, args);
-
-	          if (once) {
-	            this.bindings[event].splice(i, 1);
-	          } else {
-	            ++i;
-	          }
-	        }
-	      }
-	    }
-	  }]);
-
-	  return Evented;
-	})();
-
-	TetherBase.Utils = {
-	  getActualBoundingClientRect: getActualBoundingClientRect,
-	  getScrollParents: getScrollParents,
-	  getBounds: getBounds,
-	  getOffsetParent: getOffsetParent,
-	  extend: extend,
-	  addClass: addClass,
-	  removeClass: removeClass,
-	  hasClass: hasClass,
-	  updateClasses: updateClasses,
-	  defer: defer,
-	  flush: flush,
-	  uniqueId: uniqueId,
-	  Evented: Evented,
-	  getScrollBarSize: getScrollBarSize,
-	  removeUtilElements: removeUtilElements
-	};
-	/* globals TetherBase, performance */
-
-	'use strict';
-
-	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x6, _x7, _x8) { var _again = true; _function: while (_again) { var object = _x6, property = _x7, receiver = _x8; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x6 = parent; _x7 = property; _x8 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	if (typeof TetherBase === 'undefined') {
-	  throw new Error('You must include the utils.js file before tether.js');
-	}
-
-	var _TetherBase$Utils = TetherBase.Utils;
-	var getScrollParents = _TetherBase$Utils.getScrollParents;
-	var getBounds = _TetherBase$Utils.getBounds;
-	var getOffsetParent = _TetherBase$Utils.getOffsetParent;
-	var extend = _TetherBase$Utils.extend;
-	var addClass = _TetherBase$Utils.addClass;
-	var removeClass = _TetherBase$Utils.removeClass;
-	var updateClasses = _TetherBase$Utils.updateClasses;
-	var defer = _TetherBase$Utils.defer;
-	var flush = _TetherBase$Utils.flush;
-	var getScrollBarSize = _TetherBase$Utils.getScrollBarSize;
-	var removeUtilElements = _TetherBase$Utils.removeUtilElements;
-
-	function within(a, b) {
-	  var diff = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
-
-	  return a + diff >= b && b >= a - diff;
-	}
-
-	var transformKey = (function () {
-	  if (typeof document === 'undefined') {
-	    return '';
-	  }
-	  var el = document.createElement('div');
-
-	  var transforms = ['transform', 'WebkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
-	  for (var i = 0; i < transforms.length; ++i) {
-	    var key = transforms[i];
-	    if (el.style[key] !== undefined) {
-	      return key;
-	    }
-	  }
-	})();
-
-	var tethers = [];
-
-	var position = function position() {
-	  tethers.forEach(function (tether) {
-	    tether.position(false);
-	  });
-	  flush();
-	};
-
-	function now() {
-	  if (typeof performance !== 'undefined' && typeof performance.now !== 'undefined') {
-	    return performance.now();
-	  }
-	  return +new Date();
-	}
-
-	(function () {
-	  var lastCall = null;
-	  var lastDuration = null;
-	  var pendingTimeout = null;
-
-	  var tick = function tick() {
-	    if (typeof lastDuration !== 'undefined' && lastDuration > 16) {
-	      // We voluntarily throttle ourselves if we can't manage 60fps
-	      lastDuration = Math.min(lastDuration - 16, 250);
-
-	      // Just in case this is the last event, remember to position just once more
-	      pendingTimeout = setTimeout(tick, 250);
-	      return;
-	    }
-
-	    if (typeof lastCall !== 'undefined' && now() - lastCall < 10) {
-	      // Some browsers call events a little too frequently, refuse to run more than is reasonable
-	      return;
-	    }
-
-	    if (pendingTimeout != null) {
-	      clearTimeout(pendingTimeout);
-	      pendingTimeout = null;
-	    }
-
-	    lastCall = now();
-	    position();
-	    lastDuration = now() - lastCall;
-	  };
-
-	  if (typeof window !== 'undefined' && typeof window.addEventListener !== 'undefined') {
-	    ['resize', 'scroll', 'touchmove'].forEach(function (event) {
-	      window.addEventListener(event, tick);
-	    });
-	  }
-	})();
-
-	var MIRROR_LR = {
-	  center: 'center',
-	  left: 'right',
-	  right: 'left'
-	};
-
-	var MIRROR_TB = {
-	  middle: 'middle',
-	  top: 'bottom',
-	  bottom: 'top'
-	};
-
-	var OFFSET_MAP = {
-	  top: 0,
-	  left: 0,
-	  middle: '50%',
-	  center: '50%',
-	  bottom: '100%',
-	  right: '100%'
-	};
-
-	var autoToFixedAttachment = function autoToFixedAttachment(attachment, relativeToAttachment) {
-	  var left = attachment.left;
-	  var top = attachment.top;
-
-	  if (left === 'auto') {
-	    left = MIRROR_LR[relativeToAttachment.left];
-	  }
-
-	  if (top === 'auto') {
-	    top = MIRROR_TB[relativeToAttachment.top];
-	  }
-
-	  return { left: left, top: top };
-	};
-
-	var attachmentToOffset = function attachmentToOffset(attachment) {
-	  var left = attachment.left;
-	  var top = attachment.top;
-
-	  if (typeof OFFSET_MAP[attachment.left] !== 'undefined') {
-	    left = OFFSET_MAP[attachment.left];
-	  }
-
-	  if (typeof OFFSET_MAP[attachment.top] !== 'undefined') {
-	    top = OFFSET_MAP[attachment.top];
-	  }
-
-	  return { left: left, top: top };
-	};
-
-	function addOffset() {
-	  var out = { top: 0, left: 0 };
-
-	  for (var _len = arguments.length, offsets = Array(_len), _key = 0; _key < _len; _key++) {
-	    offsets[_key] = arguments[_key];
-	  }
-
-	  offsets.forEach(function (_ref) {
-	    var top = _ref.top;
-	    var left = _ref.left;
-
-	    if (typeof top === 'string') {
-	      top = parseFloat(top, 10);
-	    }
-	    if (typeof left === 'string') {
-	      left = parseFloat(left, 10);
-	    }
-
-	    out.top += top;
-	    out.left += left;
-	  });
-
-	  return out;
-	}
-
-	function offsetToPx(offset, size) {
-	  if (typeof offset.left === 'string' && offset.left.indexOf('%') !== -1) {
-	    offset.left = parseFloat(offset.left, 10) / 100 * size.width;
-	  }
-	  if (typeof offset.top === 'string' && offset.top.indexOf('%') !== -1) {
-	    offset.top = parseFloat(offset.top, 10) / 100 * size.height;
-	  }
-
-	  return offset;
-	}
-
-	var parseOffset = function parseOffset(value) {
-	  var _value$split = value.split(' ');
-
-	  var _value$split2 = _slicedToArray(_value$split, 2);
-
-	  var top = _value$split2[0];
-	  var left = _value$split2[1];
-
-	  return { top: top, left: left };
-	};
-	var parseAttachment = parseOffset;
-
-	var TetherClass = (function (_Evented) {
-	  _inherits(TetherClass, _Evented);
-
-	  function TetherClass(options) {
-	    var _this = this;
-
-	    _classCallCheck(this, TetherClass);
-
-	    _get(Object.getPrototypeOf(TetherClass.prototype), 'constructor', this).call(this);
-	    this.position = this.position.bind(this);
-
-	    tethers.push(this);
-
-	    this.history = [];
-
-	    this.setOptions(options, false);
-
-	    TetherBase.modules.forEach(function (module) {
-	      if (typeof module.initialize !== 'undefined') {
-	        module.initialize.call(_this);
-	      }
-	    });
-
-	    this.position();
-	  }
-
-	  _createClass(TetherClass, [{
-	    key: 'getClass',
-	    value: function getClass() {
-	      var key = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
-	      var classes = this.options.classes;
-
-	      if (typeof classes !== 'undefined' && classes[key]) {
-	        return this.options.classes[key];
-	      } else if (this.options.classPrefix) {
-	        return this.options.classPrefix + '-' + key;
-	      } else {
-	        return key;
-	      }
-	    }
-	  }, {
-	    key: 'setOptions',
-	    value: function setOptions(options) {
-	      var _this2 = this;
-
-	      var pos = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
-
-	      var defaults = {
-	        offset: '0 0',
-	        targetOffset: '0 0',
-	        targetAttachment: 'auto auto',
-	        classPrefix: 'tether'
-	      };
-
-	      this.options = extend(defaults, options);
-
-	      var _options = this.options;
-	      var element = _options.element;
-	      var target = _options.target;
-	      var targetModifier = _options.targetModifier;
-
-	      this.element = element;
-	      this.target = target;
-	      this.targetModifier = targetModifier;
-
-	      if (this.target === 'viewport') {
-	        this.target = document.body;
-	        this.targetModifier = 'visible';
-	      } else if (this.target === 'scroll-handle') {
-	        this.target = document.body;
-	        this.targetModifier = 'scroll-handle';
-	      }
-
-	      ['element', 'target'].forEach(function (key) {
-	        if (typeof _this2[key] === 'undefined') {
-	          throw new Error('Tether Error: Both element and target must be defined');
-	        }
-
-	        if (typeof _this2[key].jquery !== 'undefined') {
-	          _this2[key] = _this2[key][0];
-	        } else if (typeof _this2[key] === 'string') {
-	          _this2[key] = document.querySelector(_this2[key]);
-	        }
-	      });
-
-	      addClass(this.element, this.getClass('element'));
-	      if (!(this.options.addTargetClasses === false)) {
-	        addClass(this.target, this.getClass('target'));
-	      }
-
-	      if (!this.options.attachment) {
-	        throw new Error('Tether Error: You must provide an attachment');
-	      }
-
-	      this.targetAttachment = parseAttachment(this.options.targetAttachment);
-	      this.attachment = parseAttachment(this.options.attachment);
-	      this.offset = parseOffset(this.options.offset);
-	      this.targetOffset = parseOffset(this.options.targetOffset);
-
-	      if (typeof this.scrollParents !== 'undefined') {
-	        this.disable();
-	      }
-
-	      if (this.targetModifier === 'scroll-handle') {
-	        this.scrollParents = [this.target];
-	      } else {
-	        this.scrollParents = getScrollParents(this.target);
-	      }
-
-	      if (!(this.options.enabled === false)) {
-	        this.enable(pos);
-	      }
-	    }
-	  }, {
-	    key: 'getTargetBounds',
-	    value: function getTargetBounds() {
-	      if (typeof this.targetModifier !== 'undefined') {
-	        if (this.targetModifier === 'visible') {
-	          if (this.target === document.body) {
-	            return { top: pageYOffset, left: pageXOffset, height: innerHeight, width: innerWidth };
-	          } else {
-	            var bounds = getBounds(this.target);
-
-	            var out = {
-	              height: bounds.height,
-	              width: bounds.width,
-	              top: bounds.top,
-	              left: bounds.left
-	            };
-
-	            out.height = Math.min(out.height, bounds.height - (pageYOffset - bounds.top));
-	            out.height = Math.min(out.height, bounds.height - (bounds.top + bounds.height - (pageYOffset + innerHeight)));
-	            out.height = Math.min(innerHeight, out.height);
-	            out.height -= 2;
-
-	            out.width = Math.min(out.width, bounds.width - (pageXOffset - bounds.left));
-	            out.width = Math.min(out.width, bounds.width - (bounds.left + bounds.width - (pageXOffset + innerWidth)));
-	            out.width = Math.min(innerWidth, out.width);
-	            out.width -= 2;
-
-	            if (out.top < pageYOffset) {
-	              out.top = pageYOffset;
-	            }
-	            if (out.left < pageXOffset) {
-	              out.left = pageXOffset;
-	            }
-
-	            return out;
-	          }
-	        } else if (this.targetModifier === 'scroll-handle') {
-	          var bounds = undefined;
-	          var target = this.target;
-	          if (target === document.body) {
-	            target = document.documentElement;
-
-	            bounds = {
-	              left: pageXOffset,
-	              top: pageYOffset,
-	              height: innerHeight,
-	              width: innerWidth
-	            };
-	          } else {
-	            bounds = getBounds(target);
-	          }
-
-	          var style = getComputedStyle(target);
-
-	          var hasBottomScroll = target.scrollWidth > target.clientWidth || [style.overflow, style.overflowX].indexOf('scroll') >= 0 || this.target !== document.body;
-
-	          var scrollBottom = 0;
-	          if (hasBottomScroll) {
-	            scrollBottom = 15;
-	          }
-
-	          var height = bounds.height - parseFloat(style.borderTopWidth) - parseFloat(style.borderBottomWidth) - scrollBottom;
-
-	          var out = {
-	            width: 15,
-	            height: height * 0.975 * (height / target.scrollHeight),
-	            left: bounds.left + bounds.width - parseFloat(style.borderLeftWidth) - 15
-	          };
-
-	          var fitAdj = 0;
-	          if (height < 408 && this.target === document.body) {
-	            fitAdj = -0.00011 * Math.pow(height, 2) - 0.00727 * height + 22.58;
-	          }
-
-	          if (this.target !== document.body) {
-	            out.height = Math.max(out.height, 24);
-	          }
-
-	          var scrollPercentage = this.target.scrollTop / (target.scrollHeight - height);
-	          out.top = scrollPercentage * (height - out.height - fitAdj) + bounds.top + parseFloat(style.borderTopWidth);
-
-	          if (this.target === document.body) {
-	            out.height = Math.max(out.height, 24);
-	          }
-
-	          return out;
-	        }
-	      } else {
-	        return getBounds(this.target);
-	      }
-	    }
-	  }, {
-	    key: 'clearCache',
-	    value: function clearCache() {
-	      this._cache = {};
-	    }
-	  }, {
-	    key: 'cache',
-	    value: function cache(k, getter) {
-	      // More than one module will often need the same DOM info, so
-	      // we keep a cache which is cleared on each position call
-	      if (typeof this._cache === 'undefined') {
-	        this._cache = {};
-	      }
-
-	      if (typeof this._cache[k] === 'undefined') {
-	        this._cache[k] = getter.call(this);
-	      }
-
-	      return this._cache[k];
-	    }
-	  }, {
-	    key: 'enable',
-	    value: function enable() {
-	      var _this3 = this;
-
-	      var pos = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
-
-	      if (!(this.options.addTargetClasses === false)) {
-	        addClass(this.target, this.getClass('enabled'));
-	      }
-	      addClass(this.element, this.getClass('enabled'));
-	      this.enabled = true;
-
-	      this.scrollParents.forEach(function (parent) {
-	        if (parent !== _this3.target.ownerDocument) {
-	          parent.addEventListener('scroll', _this3.position);
-	        }
-	      });
-
-	      if (pos) {
-	        this.position();
-	      }
-	    }
-	  }, {
-	    key: 'disable',
-	    value: function disable() {
-	      var _this4 = this;
-
-	      removeClass(this.target, this.getClass('enabled'));
-	      removeClass(this.element, this.getClass('enabled'));
-	      this.enabled = false;
-
-	      if (typeof this.scrollParents !== 'undefined') {
-	        this.scrollParents.forEach(function (parent) {
-	          parent.removeEventListener('scroll', _this4.position);
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'destroy',
-	    value: function destroy() {
-	      var _this5 = this;
-
-	      this.disable();
-
-	      tethers.forEach(function (tether, i) {
-	        if (tether === _this5) {
-	          tethers.splice(i, 1);
-	        }
-	      });
-
-	      // Remove any elements we were using for convenience from the DOM
-	      if (tethers.length === 0) {
-	        removeUtilElements();
-	      }
-	    }
-	  }, {
-	    key: 'updateAttachClasses',
-	    value: function updateAttachClasses(elementAttach, targetAttach) {
-	      var _this6 = this;
-
-	      elementAttach = elementAttach || this.attachment;
-	      targetAttach = targetAttach || this.targetAttachment;
-	      var sides = ['left', 'top', 'bottom', 'right', 'middle', 'center'];
-
-	      if (typeof this._addAttachClasses !== 'undefined' && this._addAttachClasses.length) {
-	        // updateAttachClasses can be called more than once in a position call, so
-	        // we need to clean up after ourselves such that when the last defer gets
-	        // ran it doesn't add any extra classes from previous calls.
-	        this._addAttachClasses.splice(0, this._addAttachClasses.length);
-	      }
-
-	      if (typeof this._addAttachClasses === 'undefined') {
-	        this._addAttachClasses = [];
-	      }
-	      var add = this._addAttachClasses;
-
-	      if (elementAttach.top) {
-	        add.push(this.getClass('element-attached') + '-' + elementAttach.top);
-	      }
-	      if (elementAttach.left) {
-	        add.push(this.getClass('element-attached') + '-' + elementAttach.left);
-	      }
-	      if (targetAttach.top) {
-	        add.push(this.getClass('target-attached') + '-' + targetAttach.top);
-	      }
-	      if (targetAttach.left) {
-	        add.push(this.getClass('target-attached') + '-' + targetAttach.left);
-	      }
-
-	      var all = [];
-	      sides.forEach(function (side) {
-	        all.push(_this6.getClass('element-attached') + '-' + side);
-	        all.push(_this6.getClass('target-attached') + '-' + side);
-	      });
-
-	      defer(function () {
-	        if (!(typeof _this6._addAttachClasses !== 'undefined')) {
-	          return;
-	        }
-
-	        updateClasses(_this6.element, _this6._addAttachClasses, all);
-	        if (!(_this6.options.addTargetClasses === false)) {
-	          updateClasses(_this6.target, _this6._addAttachClasses, all);
-	        }
-
-	        delete _this6._addAttachClasses;
-	      });
-	    }
-	  }, {
-	    key: 'position',
-	    value: function position() {
-	      var _this7 = this;
-
-	      var flushChanges = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
-
-	      // flushChanges commits the changes immediately, leave true unless you are positioning multiple
-	      // tethers (in which case call Tether.Utils.flush yourself when you're done)
-
-	      if (!this.enabled) {
-	        return;
-	      }
-
-	      this.clearCache();
-
-	      // Turn 'auto' attachments into the appropriate corner or edge
-	      var targetAttachment = autoToFixedAttachment(this.targetAttachment, this.attachment);
-
-	      this.updateAttachClasses(this.attachment, targetAttachment);
-
-	      var elementPos = this.cache('element-bounds', function () {
-	        return getBounds(_this7.element);
-	      });
-
-	      var width = elementPos.width;
-	      var height = elementPos.height;
-
-	      if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
-	        var _lastSize = this.lastSize;
-
-	        // We cache the height and width to make it possible to position elements that are
-	        // getting hidden.
-	        width = _lastSize.width;
-	        height = _lastSize.height;
-	      } else {
-	        this.lastSize = { width: width, height: height };
-	      }
-
-	      var targetPos = this.cache('target-bounds', function () {
-	        return _this7.getTargetBounds();
-	      });
-	      var targetSize = targetPos;
-
-	      // Get an actual px offset from the attachment
-	      var offset = offsetToPx(attachmentToOffset(this.attachment), { width: width, height: height });
-	      var targetOffset = offsetToPx(attachmentToOffset(targetAttachment), targetSize);
-
-	      var manualOffset = offsetToPx(this.offset, { width: width, height: height });
-	      var manualTargetOffset = offsetToPx(this.targetOffset, targetSize);
-
-	      // Add the manually provided offset
-	      offset = addOffset(offset, manualOffset);
-	      targetOffset = addOffset(targetOffset, manualTargetOffset);
-
-	      // It's now our goal to make (element position + offset) == (target position + target offset)
-	      var left = targetPos.left + targetOffset.left - offset.left;
-	      var top = targetPos.top + targetOffset.top - offset.top;
-
-	      for (var i = 0; i < TetherBase.modules.length; ++i) {
-	        var _module2 = TetherBase.modules[i];
-	        var ret = _module2.position.call(this, {
-	          left: left,
-	          top: top,
-	          targetAttachment: targetAttachment,
-	          targetPos: targetPos,
-	          elementPos: elementPos,
-	          offset: offset,
-	          targetOffset: targetOffset,
-	          manualOffset: manualOffset,
-	          manualTargetOffset: manualTargetOffset,
-	          scrollbarSize: scrollbarSize,
-	          attachment: this.attachment
-	        });
-
-	        if (ret === false) {
-	          return false;
-	        } else if (typeof ret === 'undefined' || typeof ret !== 'object') {
-	          continue;
-	        } else {
-	          top = ret.top;
-	          left = ret.left;
-	        }
-	      }
-
-	      // We describe the position three different ways to give the optimizer
-	      // a chance to decide the best possible way to position the element
-	      // with the fewest repaints.
-	      var next = {
-	        // It's position relative to the page (absolute positioning when
-	        // the element is a child of the body)
-	        page: {
-	          top: top,
-	          left: left
-	        },
-
-	        // It's position relative to the viewport (fixed positioning)
-	        viewport: {
-	          top: top - pageYOffset,
-	          bottom: pageYOffset - top - height + innerHeight,
-	          left: left - pageXOffset,
-	          right: pageXOffset - left - width + innerWidth
-	        }
-	      };
-
-	      var doc = this.target.ownerDocument;
-	      var win = doc.defaultView;
-
-	      var scrollbarSize = undefined;
-	      if (win.innerHeight > doc.documentElement.clientHeight) {
-	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
-	        next.viewport.bottom -= scrollbarSize.height;
-	      }
-
-	      if (win.innerWidth > doc.documentElement.clientWidth) {
-	        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
-	        next.viewport.right -= scrollbarSize.width;
-	      }
-
-	      if (['', 'static'].indexOf(doc.body.style.position) === -1 || ['', 'static'].indexOf(doc.body.parentElement.style.position) === -1) {
-	        // Absolute positioning in the body will be relative to the page, not the 'initial containing block'
-	        next.page.bottom = doc.body.scrollHeight - top - height;
-	        next.page.right = doc.body.scrollWidth - left - width;
-	      }
-
-	      if (typeof this.options.optimizations !== 'undefined' && this.options.optimizations.moveElement !== false && !(typeof this.targetModifier !== 'undefined')) {
-	        (function () {
-	          var offsetParent = _this7.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this7.target);
-	          });
-	          var offsetPosition = _this7.cache('target-offsetparent-bounds', function () {
-	            return getBounds(offsetParent);
-	          });
-	          var offsetParentStyle = getComputedStyle(offsetParent);
-	          var offsetParentSize = offsetPosition;
-
-	          var offsetBorder = {};
-	          ['Top', 'Left', 'Bottom', 'Right'].forEach(function (side) {
-	            offsetBorder[side.toLowerCase()] = parseFloat(offsetParentStyle['border' + side + 'Width']);
-	          });
-
-	          offsetPosition.right = doc.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
-	          offsetPosition.bottom = doc.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
-
-	          if (next.page.top >= offsetPosition.top + offsetBorder.top && next.page.bottom >= offsetPosition.bottom) {
-	            if (next.page.left >= offsetPosition.left + offsetBorder.left && next.page.right >= offsetPosition.right) {
-	              // We're within the visible part of the target's scroll parent
-	              var scrollTop = offsetParent.scrollTop;
-	              var scrollLeft = offsetParent.scrollLeft;
-
-	              // It's position relative to the target's offset parent (absolute positioning when
-	              // the element is moved to be a child of the target's offset parent).
-	              next.offset = {
-	                top: next.page.top - offsetPosition.top + scrollTop - offsetBorder.top,
-	                left: next.page.left - offsetPosition.left + scrollLeft - offsetBorder.left
-	              };
-	            }
-	          }
-	        })();
-	      }
-
-	      // We could also travel up the DOM and try each containing context, rather than only
-	      // looking at the body, but we're gonna get diminishing returns.
-
-	      this.move(next);
-
-	      this.history.unshift(next);
-
-	      if (this.history.length > 3) {
-	        this.history.pop();
-	      }
-
-	      if (flushChanges) {
-	        flush();
-	      }
-
-	      return true;
-	    }
-
-	    // THE ISSUE
-	  }, {
-	    key: 'move',
-	    value: function move(pos) {
-	      var _this8 = this;
-
-	      if (!(typeof this.element.parentNode !== 'undefined')) {
-	        return;
-	      }
-
-	      var same = {};
-
-	      for (var type in pos) {
-	        same[type] = {};
-
-	        for (var key in pos[type]) {
-	          var found = false;
-
-	          for (var i = 0; i < this.history.length; ++i) {
-	            var point = this.history[i];
-	            if (typeof point[type] !== 'undefined' && !within(point[type][key], pos[type][key])) {
-	              found = true;
-	              break;
-	            }
-	          }
-
-	          if (!found) {
-	            same[type][key] = true;
-	          }
-	        }
-	      }
-
-	      var css = { top: '', left: '', right: '', bottom: '' };
-
-	      var transcribe = function transcribe(_same, _pos) {
-	        var hasOptimizations = typeof _this8.options.optimizations !== 'undefined';
-	        var gpu = hasOptimizations ? _this8.options.optimizations.gpu : null;
-	        if (gpu !== false) {
-	          var yPos = undefined,
-	              xPos = undefined;
-	          if (_same.top) {
-	            css.top = 0;
-	            yPos = _pos.top;
-	          } else {
-	            css.bottom = 0;
-	            yPos = -_pos.bottom;
-	          }
-
-	          if (_same.left) {
-	            css.left = 0;
-	            xPos = _pos.left;
-	          } else {
-	            css.right = 0;
-	            xPos = -_pos.right;
-	          }
-
-	          if (window.matchMedia) {
-	            // HubSpot/tether#207
-	            var retina = window.matchMedia('only screen and (min-resolution: 1.3dppx)').matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 1.3)').matches;
-	            if (!retina) {
-	              xPos = Math.round(xPos);
-	              yPos = Math.round(yPos);
-	            }
-	          }
-
-	          css[transformKey] = 'translateX(' + xPos + 'px) translateY(' + yPos + 'px)';
-
-	          if (transformKey !== 'msTransform') {
-	            // The Z transform will keep this in the GPU (faster, and prevents artifacts),
-	            // but IE9 doesn't support 3d transforms and will choke.
-	            css[transformKey] += " translateZ(0)";
-	          }
-	        } else {
-	          if (_same.top) {
-	            css.top = _pos.top + 'px';
-	          } else {
-	            css.bottom = _pos.bottom + 'px';
-	          }
-
-	          if (_same.left) {
-	            css.left = _pos.left + 'px';
-	          } else {
-	            css.right = _pos.right + 'px';
-	          }
-	        }
-	      };
-
-	      var moved = false;
-	      if ((same.page.top || same.page.bottom) && (same.page.left || same.page.right)) {
-	        css.position = 'absolute';
-	        transcribe(same.page, pos.page);
-	      } else if ((same.viewport.top || same.viewport.bottom) && (same.viewport.left || same.viewport.right)) {
-	        css.position = 'fixed';
-	        transcribe(same.viewport, pos.viewport);
-	      } else if (typeof same.offset !== 'undefined' && same.offset.top && same.offset.left) {
-	        (function () {
-	          css.position = 'absolute';
-	          var offsetParent = _this8.cache('target-offsetparent', function () {
-	            return getOffsetParent(_this8.target);
-	          });
-
-	          if (getOffsetParent(_this8.element) !== offsetParent) {
-	            defer(function () {
-	              _this8.element.parentNode.removeChild(_this8.element);
-	              offsetParent.appendChild(_this8.element);
-	            });
-	          }
-
-	          transcribe(same.offset, pos.offset);
-	          moved = true;
-	        })();
-	      } else {
-	        css.position = 'absolute';
-	        transcribe({ top: true, left: true }, pos.page);
-	      }
-
-	      if (!moved) {
-	        var offsetParentIsBody = true;
-	        var currentNode = this.element.parentNode;
-	        while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
-	          if (getComputedStyle(currentNode).position !== 'static') {
-	            offsetParentIsBody = false;
-	            break;
-	          }
-
-	          currentNode = currentNode.parentNode;
-	        }
-
-	        if (!offsetParentIsBody) {
-	          this.element.parentNode.removeChild(this.element);
-	          this.element.ownerDocument.body.appendChild(this.element);
-	        }
-	      }
-
-	      // Any css change will trigger a repaint, so let's avoid one if nothing changed
-	      var writeCSS = {};
-	      var write = false;
-	      for (var key in css) {
-	        var val = css[key];
-	        var elVal = this.element.style[key];
-
-	        if (elVal !== val) {
-	          write = true;
-	          writeCSS[key] = val;
-	        }
-	      }
-
-	      if (write) {
-	        defer(function () {
-	          extend(_this8.element.style, writeCSS);
-	          _this8.trigger('repositioned');
-	        });
-	      }
-	    }
-	  }]);
-
-	  return TetherClass;
-	})(Evented);
-
-	TetherClass.modules = [];
-
-	TetherBase.position = position;
-
-	var Tether = extend(TetherClass, TetherBase);
-	/* globals TetherBase */
-
-	'use strict';
-
-	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
-	var _TetherBase$Utils = TetherBase.Utils;
-	var getBounds = _TetherBase$Utils.getBounds;
-	var extend = _TetherBase$Utils.extend;
-	var updateClasses = _TetherBase$Utils.updateClasses;
-	var defer = _TetherBase$Utils.defer;
-
-	var BOUNDS_FORMAT = ['left', 'top', 'right', 'bottom'];
-
-	function getBoundingRect(tether, to) {
-	  if (to === 'scrollParent') {
-	    to = tether.scrollParents[0];
-	  } else if (to === 'window') {
-	    to = [pageXOffset, pageYOffset, innerWidth + pageXOffset, innerHeight + pageYOffset];
-	  }
-
-	  if (to === document) {
-	    to = to.documentElement;
-	  }
-
-	  if (typeof to.nodeType !== 'undefined') {
-	    (function () {
-	      var node = to;
-	      var size = getBounds(to);
-	      var pos = size;
-	      var style = getComputedStyle(to);
-
-	      to = [pos.left, pos.top, size.width + pos.left, size.height + pos.top];
-
-	      // Account any parent Frames scroll offset
-	      if (node.ownerDocument !== document) {
-	        var win = node.ownerDocument.defaultView;
-	        to[0] += win.pageXOffset;
-	        to[1] += win.pageYOffset;
-	        to[2] += win.pageXOffset;
-	        to[3] += win.pageYOffset;
-	      }
-
-	      BOUNDS_FORMAT.forEach(function (side, i) {
-	        side = side[0].toUpperCase() + side.substr(1);
-	        if (side === 'Top' || side === 'Left') {
-	          to[i] += parseFloat(style['border' + side + 'Width']);
-	        } else {
-	          to[i] -= parseFloat(style['border' + side + 'Width']);
-	        }
-	      });
-	    })();
-	  }
-
-	  return to;
-	}
-
-	TetherBase.modules.push({
-	  position: function position(_ref) {
-	    var _this = this;
-
-	    var top = _ref.top;
-	    var left = _ref.left;
-	    var targetAttachment = _ref.targetAttachment;
-
-	    if (!this.options.constraints) {
-	      return true;
-	    }
-
-	    var _cache = this.cache('element-bounds', function () {
-	      return getBounds(_this.element);
-	    });
-
-	    var height = _cache.height;
-	    var width = _cache.width;
-
-	    if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
-	      var _lastSize = this.lastSize;
-
-	      // Handle the item getting hidden as a result of our positioning without glitching
-	      // the classes in and out
-	      width = _lastSize.width;
-	      height = _lastSize.height;
-	    }
-
-	    var targetSize = this.cache('target-bounds', function () {
-	      return _this.getTargetBounds();
-	    });
-
-	    var targetHeight = targetSize.height;
-	    var targetWidth = targetSize.width;
-
-	    var allClasses = [this.getClass('pinned'), this.getClass('out-of-bounds')];
-
-	    this.options.constraints.forEach(function (constraint) {
-	      var outOfBoundsClass = constraint.outOfBoundsClass;
-	      var pinnedClass = constraint.pinnedClass;
-
-	      if (outOfBoundsClass) {
-	        allClasses.push(outOfBoundsClass);
-	      }
-	      if (pinnedClass) {
-	        allClasses.push(pinnedClass);
-	      }
-	    });
-
-	    allClasses.forEach(function (cls) {
-	      ['left', 'top', 'right', 'bottom'].forEach(function (side) {
-	        allClasses.push(cls + '-' + side);
-	      });
-	    });
-
-	    var addClasses = [];
-
-	    var tAttachment = extend({}, targetAttachment);
-	    var eAttachment = extend({}, this.attachment);
-
-	    this.options.constraints.forEach(function (constraint) {
-	      var to = constraint.to;
-	      var attachment = constraint.attachment;
-	      var pin = constraint.pin;
-
-	      if (typeof attachment === 'undefined') {
-	        attachment = '';
-	      }
-
-	      var changeAttachX = undefined,
-	          changeAttachY = undefined;
-	      if (attachment.indexOf(' ') >= 0) {
-	        var _attachment$split = attachment.split(' ');
-
-	        var _attachment$split2 = _slicedToArray(_attachment$split, 2);
-
-	        changeAttachY = _attachment$split2[0];
-	        changeAttachX = _attachment$split2[1];
-	      } else {
-	        changeAttachX = changeAttachY = attachment;
-	      }
-
-	      var bounds = getBoundingRect(_this, to);
-
-	      if (changeAttachY === 'target' || changeAttachY === 'both') {
-	        if (top < bounds[1] && tAttachment.top === 'top') {
-	          top += targetHeight;
-	          tAttachment.top = 'bottom';
-	        }
-
-	        if (top + height > bounds[3] && tAttachment.top === 'bottom') {
-	          top -= targetHeight;
-	          tAttachment.top = 'top';
-	        }
-	      }
-
-	      if (changeAttachY === 'together') {
-	        if (tAttachment.top === 'top') {
-	          if (eAttachment.top === 'bottom' && top < bounds[1]) {
-	            top += targetHeight;
-	            tAttachment.top = 'bottom';
-
-	            top += height;
-	            eAttachment.top = 'top';
-	          } else if (eAttachment.top === 'top' && top + height > bounds[3] && top - (height - targetHeight) >= bounds[1]) {
-	            top -= height - targetHeight;
-	            tAttachment.top = 'bottom';
-
-	            eAttachment.top = 'bottom';
-	          }
-	        }
-
-	        if (tAttachment.top === 'bottom') {
-	          if (eAttachment.top === 'top' && top + height > bounds[3]) {
-	            top -= targetHeight;
-	            tAttachment.top = 'top';
-
-	            top -= height;
-	            eAttachment.top = 'bottom';
-	          } else if (eAttachment.top === 'bottom' && top < bounds[1] && top + (height * 2 - targetHeight) <= bounds[3]) {
-	            top += height - targetHeight;
-	            tAttachment.top = 'top';
-
-	            eAttachment.top = 'top';
-	          }
-	        }
-
-	        if (tAttachment.top === 'middle') {
-	          if (top + height > bounds[3] && eAttachment.top === 'top') {
-	            top -= height;
-	            eAttachment.top = 'bottom';
-	          } else if (top < bounds[1] && eAttachment.top === 'bottom') {
-	            top += height;
-	            eAttachment.top = 'top';
-	          }
-	        }
-	      }
-
-	      if (changeAttachX === 'target' || changeAttachX === 'both') {
-	        if (left < bounds[0] && tAttachment.left === 'left') {
-	          left += targetWidth;
-	          tAttachment.left = 'right';
-	        }
-
-	        if (left + width > bounds[2] && tAttachment.left === 'right') {
-	          left -= targetWidth;
-	          tAttachment.left = 'left';
-	        }
-	      }
-
-	      if (changeAttachX === 'together') {
-	        if (left < bounds[0] && tAttachment.left === 'left') {
-	          if (eAttachment.left === 'right') {
-	            left += targetWidth;
-	            tAttachment.left = 'right';
-
-	            left += width;
-	            eAttachment.left = 'left';
-	          } else if (eAttachment.left === 'left') {
-	            left += targetWidth;
-	            tAttachment.left = 'right';
-
-	            left -= width;
-	            eAttachment.left = 'right';
-	          }
-	        } else if (left + width > bounds[2] && tAttachment.left === 'right') {
-	          if (eAttachment.left === 'left') {
-	            left -= targetWidth;
-	            tAttachment.left = 'left';
-
-	            left -= width;
-	            eAttachment.left = 'right';
-	          } else if (eAttachment.left === 'right') {
-	            left -= targetWidth;
-	            tAttachment.left = 'left';
-
-	            left += width;
-	            eAttachment.left = 'left';
-	          }
-	        } else if (tAttachment.left === 'center') {
-	          if (left + width > bounds[2] && eAttachment.left === 'left') {
-	            left -= width;
-	            eAttachment.left = 'right';
-	          } else if (left < bounds[0] && eAttachment.left === 'right') {
-	            left += width;
-	            eAttachment.left = 'left';
-	          }
-	        }
-	      }
-
-	      if (changeAttachY === 'element' || changeAttachY === 'both') {
-	        if (top < bounds[1] && eAttachment.top === 'bottom') {
-	          top += height;
-	          eAttachment.top = 'top';
-	        }
-
-	        if (top + height > bounds[3] && eAttachment.top === 'top') {
-	          top -= height;
-	          eAttachment.top = 'bottom';
-	        }
-	      }
-
-	      if (changeAttachX === 'element' || changeAttachX === 'both') {
-	        if (left < bounds[0]) {
-	          if (eAttachment.left === 'right') {
-	            left += width;
-	            eAttachment.left = 'left';
-	          } else if (eAttachment.left === 'center') {
-	            left += width / 2;
-	            eAttachment.left = 'left';
-	          }
-	        }
-
-	        if (left + width > bounds[2]) {
-	          if (eAttachment.left === 'left') {
-	            left -= width;
-	            eAttachment.left = 'right';
-	          } else if (eAttachment.left === 'center') {
-	            left -= width / 2;
-	            eAttachment.left = 'right';
-	          }
-	        }
-	      }
-
-	      if (typeof pin === 'string') {
-	        pin = pin.split(',').map(function (p) {
-	          return p.trim();
-	        });
-	      } else if (pin === true) {
-	        pin = ['top', 'left', 'right', 'bottom'];
-	      }
-
-	      pin = pin || [];
-
-	      var pinned = [];
-	      var oob = [];
-
-	      if (top < bounds[1]) {
-	        if (pin.indexOf('top') >= 0) {
-	          top = bounds[1];
-	          pinned.push('top');
-	        } else {
-	          oob.push('top');
-	        }
-	      }
-
-	      if (top + height > bounds[3]) {
-	        if (pin.indexOf('bottom') >= 0) {
-	          top = bounds[3] - height;
-	          pinned.push('bottom');
-	        } else {
-	          oob.push('bottom');
-	        }
-	      }
-
-	      if (left < bounds[0]) {
-	        if (pin.indexOf('left') >= 0) {
-	          left = bounds[0];
-	          pinned.push('left');
-	        } else {
-	          oob.push('left');
-	        }
-	      }
-
-	      if (left + width > bounds[2]) {
-	        if (pin.indexOf('right') >= 0) {
-	          left = bounds[2] - width;
-	          pinned.push('right');
-	        } else {
-	          oob.push('right');
-	        }
-	      }
-
-	      if (pinned.length) {
-	        (function () {
-	          var pinnedClass = undefined;
-	          if (typeof _this.options.pinnedClass !== 'undefined') {
-	            pinnedClass = _this.options.pinnedClass;
-	          } else {
-	            pinnedClass = _this.getClass('pinned');
-	          }
-
-	          addClasses.push(pinnedClass);
-	          pinned.forEach(function (side) {
-	            addClasses.push(pinnedClass + '-' + side);
-	          });
-	        })();
-	      }
-
-	      if (oob.length) {
-	        (function () {
-	          var oobClass = undefined;
-	          if (typeof _this.options.outOfBoundsClass !== 'undefined') {
-	            oobClass = _this.options.outOfBoundsClass;
-	          } else {
-	            oobClass = _this.getClass('out-of-bounds');
-	          }
-
-	          addClasses.push(oobClass);
-	          oob.forEach(function (side) {
-	            addClasses.push(oobClass + '-' + side);
-	          });
-	        })();
-	      }
-
-	      if (pinned.indexOf('left') >= 0 || pinned.indexOf('right') >= 0) {
-	        eAttachment.left = tAttachment.left = false;
-	      }
-	      if (pinned.indexOf('top') >= 0 || pinned.indexOf('bottom') >= 0) {
-	        eAttachment.top = tAttachment.top = false;
-	      }
-
-	      if (tAttachment.top !== targetAttachment.top || tAttachment.left !== targetAttachment.left || eAttachment.top !== _this.attachment.top || eAttachment.left !== _this.attachment.left) {
-	        _this.updateAttachClasses(eAttachment, tAttachment);
-	        _this.trigger('update', {
-	          attachment: eAttachment,
-	          targetAttachment: tAttachment
-	        });
-	      }
-	    });
-
-	    defer(function () {
-	      if (!(_this.options.addTargetClasses === false)) {
-	        updateClasses(_this.target, addClasses, allClasses);
-	      }
-	      updateClasses(_this.element, addClasses, allClasses);
-	    });
-
-	    return { top: top, left: left };
-	  }
-	});
-	/* globals TetherBase */
-
-	'use strict';
-
-	var _TetherBase$Utils = TetherBase.Utils;
-	var getBounds = _TetherBase$Utils.getBounds;
-	var updateClasses = _TetherBase$Utils.updateClasses;
-	var defer = _TetherBase$Utils.defer;
-
-	TetherBase.modules.push({
-	  position: function position(_ref) {
-	    var _this = this;
-
-	    var top = _ref.top;
-	    var left = _ref.left;
-
-	    var _cache = this.cache('element-bounds', function () {
-	      return getBounds(_this.element);
-	    });
-
-	    var height = _cache.height;
-	    var width = _cache.width;
-
-	    var targetPos = this.getTargetBounds();
-
-	    var bottom = top + height;
-	    var right = left + width;
-
-	    var abutted = [];
-	    if (top <= targetPos.bottom && bottom >= targetPos.top) {
-	      ['left', 'right'].forEach(function (side) {
-	        var targetPosSide = targetPos[side];
-	        if (targetPosSide === left || targetPosSide === right) {
-	          abutted.push(side);
-	        }
-	      });
-	    }
-
-	    if (left <= targetPos.right && right >= targetPos.left) {
-	      ['top', 'bottom'].forEach(function (side) {
-	        var targetPosSide = targetPos[side];
-	        if (targetPosSide === top || targetPosSide === bottom) {
-	          abutted.push(side);
-	        }
-	      });
-	    }
-
-	    var allClasses = [];
-	    var addClasses = [];
-
-	    var sides = ['left', 'top', 'right', 'bottom'];
-	    allClasses.push(this.getClass('abutted'));
-	    sides.forEach(function (side) {
-	      allClasses.push(_this.getClass('abutted') + '-' + side);
-	    });
-
-	    if (abutted.length) {
-	      addClasses.push(this.getClass('abutted'));
-	    }
-
-	    abutted.forEach(function (side) {
-	      addClasses.push(_this.getClass('abutted') + '-' + side);
-	    });
-
-	    defer(function () {
-	      if (!(_this.options.addTargetClasses === false)) {
-	        updateClasses(_this.target, addClasses, allClasses);
-	      }
-	      updateClasses(_this.element, addClasses, allClasses);
-	    });
-
-	    return true;
-	  }
-	});
-	/* globals TetherBase */
-
-	'use strict';
-
-	var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
-	TetherBase.modules.push({
-	  position: function position(_ref) {
-	    var top = _ref.top;
-	    var left = _ref.left;
-
-	    if (!this.options.shift) {
-	      return;
-	    }
-
-	    var shift = this.options.shift;
-	    if (typeof this.options.shift === 'function') {
-	      shift = this.options.shift.call(this, { top: top, left: left });
-	    }
-
-	    var shiftTop = undefined,
-	        shiftLeft = undefined;
-	    if (typeof shift === 'string') {
-	      shift = shift.split(' ');
-	      shift[1] = shift[1] || shift[0];
-
-	      var _shift = shift;
-
-	      var _shift2 = _slicedToArray(_shift, 2);
-
-	      shiftTop = _shift2[0];
-	      shiftLeft = _shift2[1];
-
-	      shiftTop = parseFloat(shiftTop, 10);
-	      shiftLeft = parseFloat(shiftLeft, 10);
-	    } else {
-	      shiftTop = shift.top;
-	      shiftLeft = shift.left;
-	    }
-
-	    top += shiftTop;
-	    left += shiftLeft;
-
-	    return { top: top, left: left };
-	  }
-	});
-	return Tether;
-
-	}));
 
 
 /***/ }

@@ -88,7 +88,7 @@ export default {
   },
   methods: {
     search (query) {
-      console.log('SEARCH FOR:', query);
+      console.log('SEARCH FOR:', query)
     },
     isSelected (row) {
       return this.selection[this.getRowId(row)]
