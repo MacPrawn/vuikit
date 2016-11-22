@@ -49,8 +49,7 @@ export default {
       <table staticClass="uk-table" class={{
         'uk-table-striped': this.striped,
         'uk-table-condensed': this.condensed,
-        'uk-table-hover': this.hover,
-        'uk-jean': true
+        'uk-table-hover': this.hover
       }}>
         <thead>
           <tr>
@@ -88,6 +87,9 @@ export default {
     }
   },
   methods: {
+    search (query) {
+      console.log('SEARCH FOR:', query);
+    },
     isSelected (row) {
       return this.selection[this.getRowId(row)]
     },
