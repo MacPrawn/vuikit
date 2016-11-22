@@ -5104,6 +5104,7 @@ module.exports =
 	  created: function created() {
 	    var _this = this;
 
+	    (0, _util.warn)(this.searchable);
 	    if (_util.warn && this.selectable) {
 	      this.rows.forEach(function (row) {
 	        if (row[_this.trackBy] === undefined) {
