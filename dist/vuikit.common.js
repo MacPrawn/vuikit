@@ -5191,7 +5191,7 @@ module.exports =
 	          {
 	            attrs: { type: "text" },
 	            on: {
-	              "keyUp": function keyUp(e) {
+	              "keyup": function keyup(e) {
 	                console.log('search field value changed', _this.value);
 	                vm.search(_this.value);
 	              }
