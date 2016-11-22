@@ -5186,17 +5186,19 @@ module.exports =
 	          "i",
 	          { "class": "uk-icon-search" },
 	          []
-	        ), h('input', {
-	          attrs: {
-	            type: 'text'
-	          },
-	          on: {
-	            keyUp: function keyUp(e) {
-	              console.log('search field value changed', _this.value);
-	              vm.search(_this.value);
+	        ), h(
+	          "input",
+	          {
+	            attrs: { type: "text" },
+	            on: {
+	              "keyUp": function keyUp(e) {
+	                console.log('search field value changed', _this.value);
+	                vm.search(_this.value);
+	              }
 	            }
-	          }
-	        })]
+	          },
+	          []
+	        )]
 	      )]
 	    );
 	  }
