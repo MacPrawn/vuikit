@@ -44,6 +44,11 @@ export default {
       default: () => ({}) // field: asc|desc
     }
   },
+  data () {
+    return {
+      search: ''
+    }
+  },
   render (h) {
     return (
       <table staticClass="uk-table" class={{
@@ -57,7 +62,7 @@ export default {
           </tr>
         </thead>
         <tbody>
-          { this.rows.map(row => h(Row, { props: { row } })) }
+          { this.filteredRows().map(row => h(Row, { props: { row } })) }
         </tbody>
       </table>
     )
@@ -84,6 +89,15 @@ export default {
         fields.unshift(selectField)
       }
       return fields
+    },
+    filteredRows () {
+      if (!this.search) return this.rows
+      this.search = this.search.toLowerCase()
+      return this.rows.filter((row) => {
+        return Object.keys(row).some((key) => {
+          return String(row[key]).toLowerCase().indexOf(this.search) > -1
+        })
+      })
     }
   },
   methods: {
