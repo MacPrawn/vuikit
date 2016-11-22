@@ -20,7 +20,7 @@ export default {
       type: String,
       default: 'id'
     },
-    noSearch: {
+    searchable: {
       type: Boolean,
       default: false
     },
@@ -57,7 +57,7 @@ export default {
   render (h) {
     return (
       <div staticClass="nibnut-datagrid">
-        { !this.noSearch && h(searchField, { props: {} }) }
+        { this.searchable && h(searchField, { props: {} }) }
         <table staticClass="uk-table" class={{
           'uk-table-striped': this.striped,
           'uk-table-condensed': this.condensed,

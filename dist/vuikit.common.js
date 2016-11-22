@@ -5033,7 +5033,7 @@ module.exports =
 	      type: String,
 	      default: 'id'
 	    },
-	    noSearch: {
+	    searchable: {
 	      type: Boolean,
 	      default: false
 	    },
@@ -5074,7 +5074,7 @@ module.exports =
 	    return h(
 	      'div',
 	      { staticClass: 'nibnut-datagrid' },
-	      [!this.noSearch && h(_searchField2.default, { props: {} }), h(
+	      [this.searchable && h(_searchField2.default, { props: {} }), h(
 	        'table',
 	        { staticClass: 'uk-table', 'class': {
 	            'uk-table-striped': this.striped,
