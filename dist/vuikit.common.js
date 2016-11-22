@@ -5072,9 +5072,9 @@ module.exports =
 	      { staticClass: 'nibnut-datagrid' },
 	      [h(
 	        'form',
-	        { staticClass: 'uk-grid uk-text-right', directives: [{
+	        { staticClass: 'uk-form uk-text-right', directives: [{
 	            name: 'if',
-	            value: 'searchable'
+	            value: 'this.searchable'
 	          }]
 	        },
 	        [h(
@@ -5089,7 +5089,7 @@ module.exports =
 	            {
 	              directives: [{
 	                name: 'model',
-	                value: 'search'
+	                value: 'filterKey'
 	              }],
 	              attrs: { type: 'text' }
 	            },

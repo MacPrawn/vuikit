@@ -56,10 +56,10 @@ export default {
   render (h) {
     return (
       <div staticClass="nibnut-datagrid">
-        <form staticClass="uk-grid uk-text-right" v-if="searchable">
+        <form staticClass="uk-form uk-text-right" v-if="this.searchable">
           <div class="uk-form-icon">
               <i class="uk-icon-search"></i>
-              <input v-model="search" type="text"/>
+              <input v-model="filterKey" type="text"/>
           </div>
         </form>
         <table staticClass="uk-table" class={{
