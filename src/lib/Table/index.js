@@ -77,8 +77,9 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
-        <vk-pagination total="{ this.filteredRows().length }"
-          page-range="{{ this.pageRange }}"
+        <vk-pagination total={ this.filteredRows().length }
+          page-range={ this.pageRange }
+          compact
           on-change={e => {
             console.log(arguments)
           }}>
