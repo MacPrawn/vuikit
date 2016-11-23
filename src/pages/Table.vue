@@ -184,7 +184,7 @@ const events = {
     emited: false
   },
   clickRow: {
-    description: 'Emited when a click was performed on a row passing as argument it id and data.',
+    description: `Emited when a click was performed on a row passing as argument it id and data.`,
     emited: false
   },
   select: {
