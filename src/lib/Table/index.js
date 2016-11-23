@@ -4,6 +4,7 @@ import Header from './Header'
 import Row from './Row'
 import { warn } from '../../helpers/util'
 import { processFields, processSortOrder } from './helper'
+import { orderBy } from 'lodash'
 
 export default {
   name: 'VkTable',
@@ -112,6 +113,8 @@ export default {
         }
       })
     }
+    this.sortOrder = {}
+    this.sortOrder[this.fields[0].name] = 'asc'
     this.$on('clickRow', function () {
       console.log('clickRow event received', arguments)
     })
@@ -130,7 +133,10 @@ export default {
       return fields
     },
     filteredRows () {
-      // if (!this.filterKey) return this.rows
+      const by = Object.keys(this.sortOrder)[0]
+      const dir = this.sortOrder[by]
+      this.rows = orderBy(this.rows, [item => item[by]], dir)
+
       this.filterKey = this.filterKey.toLowerCase()
       var visibleRows = this.rows.filter((row) => {
         return Object.keys(row).some((key) => {
