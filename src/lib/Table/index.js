@@ -48,10 +48,6 @@ export default {
       type: Object,
       default: () => ({}) // field: asc|desc
     },
-    pageRange: {
-      type: Number,
-      default: 3
-    },
     perPage: {
       type: Number,
       default: 10
@@ -81,7 +77,14 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
-        { this.perPage && h('vk-pagination', { props: { total: this.filteredRows.length, pageRange: this.pageRange, limit: this.perPage, compact: true } }) }
+        <vk-pagination ref="pagination" total={ this.rows.length }
+          page={ this.page }
+          limit={ this.perPage }
+          compact
+          on-change={o => {
+            this.page = o.page
+          }}>
+        </vk-pagination>
       </div>
     )
   },
@@ -109,18 +112,22 @@ export default {
       return fields
     },
     filteredRows () {
-      if (!this.filterKey) return this.rows
+      // if (!this.filterKey) return this.rows
       this.filterKey = this.filterKey.toLowerCase()
-      return this.rows.filter((row) => {
+      var visibleRows = this.rows.filter((row) => {
         return Object.keys(row).some((key) => {
           return String(row[key]).toLowerCase().indexOf(this.filterKey) > -1
         })
       })
+
+      var startAt = this.perPage * (this.page - 1)
+      visibleRows = visibleRows.slice(startAt, startAt + this.perPage)
+
+      return visibleRows
     }
   },
   methods: {
     search (query) {
-      console.log('SEARCH FOR:', query)
       this.filterKey = query
     },
     isSelected (row) {

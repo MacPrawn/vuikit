@@ -5064,10 +5064,6 @@ module.exports =
 	      default: function _default() {
 	        return {};
 	      } },
-	    pageRange: {
-	      type: Number,
-	      default: 3
-	    },
 	    perPage: {
 	      type: Number,
 	      default: 10
@@ -5080,6 +5076,8 @@ module.exports =
 	    };
 	  },
 	  render: function render(h) {
+	    var _this = this;
+
 	    return h(
 	      'div',
 	      { staticClass: 'nibnut-datagrid' },
@@ -5107,15 +5105,29 @@ module.exports =
 	            return h(_Row2.default, { props: { row: row } });
 	          })]
 	        )]
-	      ), this.perPage && h('vk-pagination', { props: { total: this.filteredRows.length, pageRange: this.pageRange, limit: this.perPage, compact: true } })]
+	      ), h(
+	        'vk-pagination',
+	        { ref: 'pagination', attrs: { total: this.rows.length,
+	            page: this.page,
+	            limit: this.perPage,
+	            compact: true
+	          },
+	          on: {
+	            'change': function change(o) {
+	              _this.page = o.page;
+	            }
+	          }
+	        },
+	        []
+	      )]
 	    );
 	  },
 	  created: function created() {
-	    var _this = this;
+	    var _this2 = this;
 
 	    if (_util.warn && this.selectable) {
 	      this.rows.forEach(function (row) {
-	        if (row[_this.trackBy] === undefined) {
+	        if (row[_this2.trackBy] === undefined) {
 	          (0, _util.warn)("Some of the Table rows have no 'id' set.");
 	        }
 	      });
@@ -5124,10 +5136,10 @@ module.exports =
 
 	  computed: {
 	    isAllSelected: function isAllSelected() {
-	      var _this2 = this;
+	      var _this3 = this;
 
 	      return this.rows.length && this.rows.every(function (row) {
-	        return _this2.isSelected(row);
+	        return _this3.isSelected(row);
 	      });
 	    },
 	    fieldsDef: function fieldsDef() {
@@ -5139,20 +5151,23 @@ module.exports =
 	      return fields;
 	    },
 	    filteredRows: function filteredRows() {
-	      var _this3 = this;
+	      var _this4 = this;
 
-	      if (!this.filterKey) return this.rows;
 	      this.filterKey = this.filterKey.toLowerCase();
-	      return this.rows.filter(function (row) {
+	      var visibleRows = this.rows.filter(function (row) {
 	        return (0, _keys2.default)(row).some(function (key) {
-	          return String(row[key]).toLowerCase().indexOf(_this3.filterKey) > -1;
+	          return String(row[key]).toLowerCase().indexOf(_this4.filterKey) > -1;
 	        });
 	      });
+
+	      var startAt = this.perPage * (this.page - 1);
+	      visibleRows = visibleRows.slice(startAt, startAt + this.perPage);
+
+	      return visibleRows;
 	    }
 	  },
 	  methods: {
 	    search: function search(query) {
-	      console.log('SEARCH FOR:', query);
 	      this.filterKey = query;
 	    },
 	    isSelected: function isSelected(row) {
