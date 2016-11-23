@@ -5071,6 +5071,8 @@ module.exports =
 	    };
 	  },
 	  render: function render(h) {
+	    var _arguments = arguments;
+
 	    return h(
 	      'div',
 	      { staticClass: 'nibnut-datagrid' },
@@ -5098,6 +5100,19 @@ module.exports =
 	            return h(_Row2.default, { props: { row: row } });
 	          })]
 	        )]
+	      ), h(
+	        'vk-pagination',
+	        {
+	          attrs: { total: '200',
+	            'page-range': '3'
+	          },
+	          on: {
+	            'change': function change(e) {
+	              console.log(_arguments);
+	            }
+	          }
+	        },
+	        []
 	      )]
 	    );
 	  },
@@ -5190,7 +5205,6 @@ module.exports =
 	            attrs: { type: "text" },
 	            on: {
 	              "keyup": function keyup(e) {
-	                console.log('search field value changed', e.target.value);
 	                vm.search(e.target.value);
 	              }
 	            }

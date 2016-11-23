@@ -72,6 +72,12 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
+        <vk-pagination total="200"
+          page-range="3"
+          on-change={e => {
+            console.log(arguments)
+          }}>
+        </vk-pagination>
       </div>
     )
   },
