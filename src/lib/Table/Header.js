@@ -45,8 +45,8 @@ const Icon = {
       staticClass: 'uk-icon-justify uk-margin-small-left',
       class: {
         'uk-invisible': !orderedBy,
-        'vk-icon-arrow-down': orderedBy === 'asc' || orderedBy === undefined,
-        'vk-icon-arrow-up': orderedBy === 'desc'
+        'uk-icon-arrow-down': orderedBy === 'asc' || orderedBy === undefined,
+        'uk-icon-arrow-up': orderedBy === 'desc'
       }
     })
   }
