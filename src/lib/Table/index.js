@@ -112,6 +112,9 @@ export default {
         }
       })
     }
+    this.$on('clickRow', function () {
+      console.log('clickRow event received', arguments)
+    })
   },
   computed: {
     isAllSelected () {

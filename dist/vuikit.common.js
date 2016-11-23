@@ -5165,6 +5165,9 @@ module.exports =
 	        }
 	      });
 	    }
+	    this.$on('clickRow', function () {
+	      console.log('clickRow event received', arguments);
+	    });
 	  },
 
 	  computed: {
