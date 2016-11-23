@@ -5080,8 +5080,6 @@ module.exports =
 	    };
 	  },
 	  render: function render(h) {
-	    var _arguments = arguments;
-
 	    return h(
 	      'div',
 	      { staticClass: 'nibnut-datagrid' },
@@ -5109,22 +5107,7 @@ module.exports =
 	            return h(_Row2.default, { props: { row: row } });
 	          })]
 	        )]
-	      ), h(
-	        'vk-pagination',
-	        {
-	          attrs: { total: this.filteredRows.length,
-	            'page-range': this.pageRange,
-	            limit: this.perPage,
-	            compact: true
-	          },
-	          on: {
-	            'change': function change(e) {
-	              console.log(_arguments);
-	            }
-	          }
-	        },
-	        []
-	      )]
+	      ), this.perPage && h('vk-pagination', { props: { total: this.filteredRows.length, pageRange: this.pageRange, limit: this.perPage, compact: true } })]
 	    );
 	  },
 	  created: function created() {

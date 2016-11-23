@@ -81,14 +81,7 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
-        <vk-pagination total={ this.filteredRows.length }
-          page-range={ this.pageRange }
-          limit={ this.perPage }
-          compact
-          on-change={e => {
-            console.log(arguments)
-          }}>
-        </vk-pagination>
+        { this.perPage && h('vk-pagination', { props: { total: this.filteredRows.length, pageRange: this.pageRange, limit: this.perPage, compact: true } }) }
       </div>
     )
   },
