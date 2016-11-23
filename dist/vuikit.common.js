@@ -5108,7 +5108,7 @@ module.exports =
 	      ), h(
 	        'vk-pagination',
 	        {
-	          attrs: { total: this.filteredRows().length,
+	          attrs: { total: this.filteredRows.length,
 	            'page-range': this.pageRange,
 	            compact: true
 	          },
