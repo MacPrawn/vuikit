@@ -5096,9 +5096,9 @@ module.exports =
 	            { 'class': 'uk-width-1-2' },
 	            [h(
 	              'div',
-	              { 'class': 'uk-form-controls uk-form-controls-text' },
+	              { 'class': 'uk-form-label' },
 	              [h(
-	                'h5',
+	                'h2',
 	                null,
 	                [this.title]
 	              )]

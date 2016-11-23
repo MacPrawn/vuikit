@@ -69,8 +69,8 @@ export default {
         <form staticClass="uk-form uk-form-horizontal">
           <div class="uk-grid">
             <div class="uk-width-1-2">
-              <div class="uk-form-controls uk-form-controls-text">
-                <h5>{ this.title }</h5>
+              <div class="uk-form-label">
+                <h2>{ this.title }</h2>
               </div>
             </div>
             <div class="uk-width-1-2">
