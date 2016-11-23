@@ -4891,7 +4891,6 @@ module.exports =
 	      },
 	      on: {
 	        click: function click(e) {
-	          console.log('row clicked', e.target.tagName, vm.getRowId(row));
 	          if (e.target.tagName === 'TD') {
 	            vm.$emit('clickRow', vm.getRowId(row), row);
 	          }
@@ -5166,10 +5165,6 @@ module.exports =
 	      });
 	    }
 	    this.sortOrder[this.fields[0].name] = 'asc';
-	    console.log(this.sortOrder);
-	    this.$on('clickRow', function () {
-	      console.log('clickRow event received', arguments);
-	    });
 	  },
 
 	  computed: {
