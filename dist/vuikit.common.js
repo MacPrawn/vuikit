@@ -5135,7 +5135,11 @@ module.exports =
 	        )]
 	      ), h(
 	        'vk-pagination',
-	        { ref: 'pagination', attrs: { total: this.rows.length,
+	        { ref: 'pagination', directives: [{
+	            name: 'show',
+	            value: this.rows.length > this.perPage
+	          }],
+	          attrs: { total: this.rows.length,
 	            page: this.page,
 	            limit: this.perPage,
 	            compact: true
