@@ -51,6 +51,10 @@ export default {
     pageRange: {
       type: Number,
       default: 3
+    },
+    perPage: {
+      type: Number,
+      default: 10
     }
   },
   data () {
@@ -79,6 +83,7 @@ export default {
         </table>
         <vk-pagination total={ this.filteredRows.length }
           page-range={ this.pageRange }
+          limit={ this.perPage }
           compact
           on-change={e => {
             console.log(arguments)

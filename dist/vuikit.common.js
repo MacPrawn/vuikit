@@ -5067,6 +5067,10 @@ module.exports =
 	    pageRange: {
 	      type: Number,
 	      default: 3
+	    },
+	    perPage: {
+	      type: Number,
+	      default: 10
 	    }
 	  },
 	  data: function data() {
@@ -5110,6 +5114,7 @@ module.exports =
 	        {
 	          attrs: { total: this.filteredRows.length,
 	            'page-range': this.pageRange,
+	            limit: this.perPage,
 	            compact: true
 	          },
 	          on: {
