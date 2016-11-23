@@ -110,8 +110,8 @@ export default {
         }
       })
     }
-    this.sortOrder = {}
     this.sortOrder[this.fields[0].name] = 'asc'
+    console.log(this.sortOrder)
     this.$on('clickRow', function () {
       console.log('clickRow event received', arguments)
     })
@@ -157,8 +157,8 @@ export default {
     getRowId (row) {
       return row[this.trackBy]
     },
-    emitSort (field) {
-      this.$emit('sort', processSortOrder(field, this.sortOrder))
+    sortOn (field) {
+      this.sortOrder = processSortOrder(field, this.sortOrder)
     }
   }
 }

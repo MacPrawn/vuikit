@@ -21,7 +21,7 @@ const Cell = {
         [headerClass]: headerClass
       },
       on: {
-        click: e => sortBy && vm.emitSort(props.field)
+        click: e => sortBy && vm.sortOn(props.field)
       }
     }, [
       sortBy

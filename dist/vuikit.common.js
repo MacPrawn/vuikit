@@ -4835,7 +4835,7 @@ module.exports =
 	      }, headerClass, headerClass),
 	      on: {
 	        click: function click(e) {
-	          return sortBy && vm.emitSort(props.field);
+	          return sortBy && vm.sortOn(props.field);
 	        }
 	      }
 	    }, [sortBy ? h('span', {
@@ -5165,8 +5165,8 @@ module.exports =
 	        }
 	      });
 	    }
-	    this.sortOrder = {};
 	    this.sortOrder[this.fields[0].name] = 'asc';
+	    console.log(this.sortOrder);
 	    this.$on('clickRow', function () {
 	      console.log('clickRow event received', arguments);
 	    });
@@ -5220,8 +5220,8 @@ module.exports =
 	    getRowId: function getRowId(row) {
 	      return row[this.trackBy];
 	    },
-	    emitSort: function emitSort(field) {
-	      this.$emit('sort', (0, _helper.processSortOrder)(field, this.sortOrder));
+	    sortOn: function sortOn(field) {
+	      this.sortOrder = (0, _helper.processSortOrder)(field, this.sortOrder);
 	    }
 	  }
 	};

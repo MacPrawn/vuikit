@@ -8,18 +8,13 @@
         ref="table"
         title="Example Table"
         :fields="fields"
-        :rows="sortedRows"
+        :rows="rows"
         :selectable="props.selectable.demo.value"
         :selection="selection"
         :condensed="props.condensed.demo.value"
         :striped="props.striped.demo.value"
         :hover="props.hover.demo.value"
-        :sort-order="sortOrder"
         :per-page="props.perPage.demo.value"
-        @sort="
-          events.sort.emited = true,
-          sortOrder = arguments[0]
-        "
         @clickRow="
           events.clickRow.emited = true,
           selection[arguments[0]]
@@ -66,7 +61,6 @@
 </template>
 
 <script>
-import { orderBy } from 'lodash'
 import Component from '../lib/Table'
 import mixin from './_mixin'
 import { mergeProps } from '../helpers/pages'
@@ -79,9 +73,6 @@ export default {
     props: mergeProps(Component.props, props),
     events,
     example,
-    sortOrder: {
-      name: 'asc'
-    },
     selection: {},
     fields: [{
       name: 'name',
@@ -102,14 +93,7 @@ export default {
       { id: 2, name: 'Item B', hits: 40, desc: 'Description' },
       { id: 3, name: 'Item C', hits: 700, desc: 'Description' }
     ]
-  }),
-  computed: {
-    sortedRows () {
-      const by = Object.keys(this.sortOrder)[0]
-      const dir = this.sortOrder[by]
-      return orderBy(this.rows, [item => item[by]], dir)
-    }
-  }
+  })
 }
 
 const props = {
@@ -158,11 +142,6 @@ const props = {
       value: false
     }
   },
-  sortOrder: {
-    description: `Object defining the current order being the <code>key</code> the
-      field being sorted by and the <code>value</code> the direction, <code>asc</code>
-      or <code>desc</code>.`
-  },
   perPage: {
     description: 'Number of rows per page.',
     demo: {
@@ -178,11 +157,6 @@ const props = {
 }
 
 const events = {
-  sort: {
-    description: `Emited on the intention to sort the rows passing as argument
-    the sorting data.`,
-    emited: false
-  },
   clickRow: {
     description: `Emited when a click was performed on a row passing as argument it id and data.`,
     emited: false
@@ -217,7 +191,6 @@ const example =
     { id: 2, name: 'Item B', hits: 40, desc: 'Description' },
     { id: 3, name: 'Item C', hits: 700, desc: 'Description' }
   ]"
-  @sort="sortOrder = arguments[0]"
   @clickRow="
     selection[arguments[0]]
       ? $delete(selection, arguments[0])
