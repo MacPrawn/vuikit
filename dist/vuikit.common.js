@@ -5021,6 +5021,10 @@ module.exports =
 	exports.default = {
 	  name: 'VkTable',
 	  props: {
+	    title: {
+	      type: String,
+	      default: ''
+	    },
 	    fields: {
 	      type: Array,
 	      required: true
@@ -5081,7 +5085,23 @@ module.exports =
 	    return h(
 	      'div',
 	      { staticClass: 'nibnut-datagrid' },
-	      [this.searchable && h(_searchField2.default, { props: {} }), h(
+	      [h(
+	        'div',
+	        { 'class': 'uk-grid' },
+	        [h(
+	          'div',
+	          { 'class': 'uk-width-1-2' },
+	          [h(
+	            'h5',
+	            null,
+	            [this.title]
+	          )]
+	        ), h(
+	          'div',
+	          { 'class': 'uk-width-1-2' },
+	          [this.searchable && h(_searchField2.default, { props: {} })]
+	        )]
+	      ), h(
 	        'table',
 	        { staticClass: 'uk-table', 'class': {
 	            'uk-table-striped': this.striped,
@@ -5109,7 +5129,7 @@ module.exports =
 	        'vk-pagination',
 	        { ref: 'pagination', attrs: { total: this.rows.length,
 	            page: this.page,
-	            limit: parseInt(this.perPage) || 10,
+	            limit: this.perPage,
 	            compact: true
 	          },
 	          on: {

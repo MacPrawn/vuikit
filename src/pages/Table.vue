@@ -6,6 +6,7 @@
       <!-- DEMO -->
       <vk-table
         ref="table"
+        title="Example Table"
         :fields="fields"
         :rows="sortedRows"
         :selectable="props.selectable.demo.value"

@@ -8,6 +8,10 @@ import { processFields, processSortOrder } from './helper'
 export default {
   name: 'VkTable',
   props: {
+    title: {
+      type: String,
+      default: ''
+    },
     fields: {
       type: Array,
       required: true
@@ -62,7 +66,14 @@ export default {
   render (h) {
     return (
       <div staticClass="nibnut-datagrid">
-        { this.searchable && h(searchField, { props: {} }) }
+        <div class="uk-grid">
+          <div class="uk-width-1-2">
+            <h5>{ this.title }</h5>
+          </div>
+          <div class="uk-width-1-2">
+            { this.searchable && h(searchField, { props: {} }) }
+          </div>
+        </div>
         <table staticClass="uk-table" class={{
           'uk-table-striped': this.striped,
           'uk-table-condensed': this.condensed,
@@ -79,7 +90,7 @@ export default {
         </table>
         <vk-pagination ref="pagination" total={ this.rows.length }
           page={ this.page }
-          limit={ parseInt(this.perPage) || 10 }
+          limit={ this.perPage }
           compact
           on-change={o => {
             this.page = o.page
