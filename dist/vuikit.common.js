@@ -5109,7 +5109,7 @@ module.exports =
 	        'vk-pagination',
 	        { ref: 'pagination', attrs: { total: this.rows.length,
 	            page: this.page,
-	            limit: this.perPage,
+	            limit: parseInt(this.perPage) || 10,
 	            compact: true
 	          },
 	          on: {

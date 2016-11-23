@@ -79,7 +79,7 @@ export default {
         </table>
         <vk-pagination ref="pagination" total={ this.rows.length }
           page={ this.page }
-          limit={ this.perPage }
+          limit={ parseInt(this.perPage) || 10 }
           compact
           on-change={o => {
             this.page = o.page

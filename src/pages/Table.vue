@@ -14,6 +14,7 @@
         :striped="props.striped.demo.value"
         :hover="props.hover.demo.value"
         :sort-order="sortOrder"
+        :per-page="props.perPage.demo.value"
         @sort="
           events.sort.emited = true,
           sortOrder = arguments[0]
@@ -160,6 +161,18 @@ const props = {
     description: `Object defining the current order being the <code>key</code> the
       field being sorted by and the <code>value</code> the direction, <code>asc</code>
       or <code>desc</code>.`
+  },
+  perPage: {
+    description: 'Number of rows per page.',
+    demo: {
+      type: 'Select',
+      options: [
+        { text: '1', value: 1 },
+        { text: '5', value: 5 },
+        { text: '10', value: 10 }
+      ],
+      value: 10
+    }
   }
 }
 
