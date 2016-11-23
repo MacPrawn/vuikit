@@ -5155,8 +5155,7 @@ module.exports =
 	    );
 	  },
 	  created: function created() {
-	    var _this2 = this,
-	        _arguments = arguments;
+	    var _this2 = this;
 
 	    if (_util.warn && this.selectable) {
 	      this.rows.forEach(function (row) {
@@ -5167,8 +5166,8 @@ module.exports =
 	    }
 	    this.sortOrder[this.fields[0].name] = 'asc';
 	    this.$on('clickRow', function (rowID, row) {
-	      console.log('clickRow event received', _arguments);
-	      _this2.$emit('test', rowID, row);
+	      console.log('clickRow event received', rowID, row);
+	      _this2.$emit('clickRow', rowID, row);
 	    });
 	  },
 
