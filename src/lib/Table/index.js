@@ -70,7 +70,7 @@ export default {
           <div class="uk-grid">
             <div class="uk-width-1-2">
               <div class="uk-form-label">
-                <h2>{ this.title }</h2>
+                <h2 class="uk-margin-remove">{ this.title }</h2>
               </div>
             </div>
             <div class="uk-width-1-2">
@@ -92,7 +92,7 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
-        <vk-pagination ref="pagination" total={ this.rows.length }
+        <vk-pagination ref="pagination" v-show={ this.rows.length > this.perPage } total={ this.rows.length }
           page={ this.page }
           limit={ this.perPage }
           compact

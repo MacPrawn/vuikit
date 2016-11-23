@@ -5099,7 +5099,7 @@ module.exports =
 	              { 'class': 'uk-form-label' },
 	              [h(
 	                'h2',
-	                null,
+	                { 'class': 'uk-margin-remove' },
 	                [this.title]
 	              )]
 	            )]
