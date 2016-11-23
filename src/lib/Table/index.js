@@ -47,11 +47,16 @@ export default {
     sortOrder: {
       type: Object,
       default: () => ({}) // field: asc|desc
+    },
+    pageRange: {
+      type: Number,
+      default: 3
     }
   },
   data () {
     return {
-      filterKey: ''
+      filterKey: '',
+      page: 1
     }
   },
   render (h) {
@@ -72,8 +77,8 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
-        <vk-pagination total="200"
-          page-range="3"
+        <vk-pagination total="{ this.filteredRows().length }"
+          page-range="{{ this.pageRange }}"
           on-change={e => {
             console.log(arguments)
           }}>

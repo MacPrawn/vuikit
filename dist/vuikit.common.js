@@ -5063,11 +5063,16 @@ module.exports =
 	      type: Object,
 	      default: function _default() {
 	        return {};
-	      } }
+	      } },
+	    pageRange: {
+	      type: Number,
+	      default: 3
+	    }
 	  },
 	  data: function data() {
 	    return {
-	      filterKey: ''
+	      filterKey: '',
+	      page: 1
 	    };
 	  },
 	  render: function render(h) {
@@ -5103,8 +5108,8 @@ module.exports =
 	      ), h(
 	        'vk-pagination',
 	        {
-	          attrs: { total: '200',
-	            'page-range': '3'
+	          attrs: { total: '{ this.filteredRows().length }',
+	            'page-range': '{{ this.pageRange }}'
 	          },
 	          on: {
 	            'change': function change(e) {
