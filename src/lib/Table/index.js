@@ -66,14 +66,18 @@ export default {
   render (h) {
     return (
       <div staticClass="nibnut-datagrid">
-        <div class="uk-grid">
-          <div class="uk-width-1-2">
-            <h5>{ this.title }</h5>
+        <form staticClass="uk-form uk-form-horizontal">
+          <div class="uk-grid">
+            <div class="uk-width-1-2">
+              <div class="uk-form-controls uk-form-controls-text">
+                <h5>{ this.title }</h5>
+              </div>
+            </div>
+            <div class="uk-width-1-2">
+              { this.searchable && h(searchField, { props: {} }) }
+            </div>
           </div>
-          <div class="uk-width-1-2">
-            { this.searchable && h(searchField, { props: {} }) }
-          </div>
-        </div>
+        </form>
         <table staticClass="uk-table" class={{
           'uk-table-striped': this.striped,
           'uk-table-condensed': this.condensed,

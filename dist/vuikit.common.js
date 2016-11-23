@@ -5086,20 +5086,28 @@ module.exports =
 	      'div',
 	      { staticClass: 'nibnut-datagrid' },
 	      [h(
-	        'div',
-	        { 'class': 'uk-grid' },
+	        'form',
+	        { staticClass: 'uk-form uk-form-horizontal' },
 	        [h(
 	          'div',
-	          { 'class': 'uk-width-1-2' },
+	          { 'class': 'uk-grid' },
 	          [h(
-	            'h5',
-	            null,
-	            [this.title]
+	            'div',
+	            { 'class': 'uk-width-1-2' },
+	            [h(
+	              'div',
+	              { 'class': 'uk-form-controls uk-form-controls-text' },
+	              [h(
+	                'h5',
+	                null,
+	                [this.title]
+	              )]
+	            )]
+	          ), h(
+	            'div',
+	            { 'class': 'uk-width-1-2' },
+	            [this.searchable && h(_searchField2.default, { props: {} })]
 	          )]
-	        ), h(
-	          'div',
-	          { 'class': 'uk-width-1-2' },
-	          [this.searchable && h(_searchField2.default, { props: {} })]
 	        )]
 	      ), h(
 	        'table',
@@ -5219,8 +5227,8 @@ module.exports =
 	        props = _ref.props;
 
 	    return h(
-	      "form",
-	      { staticClass: "uk-form uk-text-right" },
+	      "div",
+	      { "class": "uk-form-controls uk-text-right" },
 	      [h(
 	        "div",
 	        { "class": "uk-form-icon" },
