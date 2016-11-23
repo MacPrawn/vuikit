@@ -49,10 +49,6 @@ export default {
       type: Boolean,
       default: false
     },
-    sortOrder: {
-      type: Object,
-      default: () => ({}) // field: asc|desc
-    },
     perPage: {
       type: Number,
       default: 10
@@ -61,6 +57,7 @@ export default {
   data () {
     return {
       filterKey: '',
+      sortOrder: {},
       page: 1
     }
   },
@@ -135,10 +132,10 @@ export default {
     filteredRows () {
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
-      this.rows = orderBy(this.rows, [item => item[by]], dir)
+      var sortedRows = orderBy(this.rows, [item => item[by]], dir)
 
       this.filterKey = this.filterKey.toLowerCase()
-      var visibleRows = this.rows.filter((row) => {
+      var visibleRows = sortedRows.filter((row) => {
         return Object.keys(row).some((key) => {
           return String(row[key]).toLowerCase().indexOf(this.filterKey) > -1
         })

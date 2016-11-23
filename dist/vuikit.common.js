@@ -5068,11 +5068,6 @@ module.exports =
 	      type: Boolean,
 	      default: false
 	    },
-	    sortOrder: {
-	      type: Object,
-	      default: function _default() {
-	        return {};
-	      } },
 	    perPage: {
 	      type: Number,
 	      default: 10
@@ -5081,6 +5076,7 @@ module.exports =
 	  data: function data() {
 	    return {
 	      filterKey: '',
+	      sortOrder: {},
 	      page: 1
 	    };
 	  },
@@ -5197,12 +5193,12 @@ module.exports =
 
 	      var by = (0, _keys2.default)(this.sortOrder)[0];
 	      var dir = this.sortOrder[by];
-	      this.rows = (0, _orderBy3.default)(this.rows, [function (item) {
+	      var sortedRows = (0, _orderBy3.default)(this.rows, [function (item) {
 	        return item[by];
 	      }], dir);
 
 	      this.filterKey = this.filterKey.toLowerCase();
-	      var visibleRows = this.rows.filter(function (row) {
+	      var visibleRows = sortedRows.filter(function (row) {
 	        return (0, _keys2.default)(row).some(function (key) {
 	          return String(row[key]).toLowerCase().indexOf(_this4.filterKey) > -1;
 	        });
