@@ -14,7 +14,7 @@ const Row = {
         click: e => {
           // console.log('row clicked', e.target.tagName, vm.getRowId(row))
           if (e.target.tagName === 'TD') {
-            vm.$emit('clickRow', vm.getRowId(row), row)
+            vm.$emit('_clickRow', vm.getRowId(row), row)
           }
         }
       }
