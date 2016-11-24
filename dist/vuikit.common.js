@@ -5103,7 +5103,7 @@ module.exports =
 	              { 'class': 'uk-form-label' },
 	              [h(
 	                'h2',
-	                { 'class': 'uk-vertical-align uk-margin-remove' },
+	                { 'class': 'uk-margin-remove' },
 	                [this.title, h(
 	                  'vk-button',
 	                  {
@@ -5111,10 +5111,17 @@ module.exports =
 	                      name: 'show',
 	                      value: this.editable
 	                    }],
-	                    attrs: { active: true, color: 'primary', size: 'mini' },
-	                    on: {
-	                      'click': 'edit'
+	                    attrs: {
+	                      active: true,
+	                      color: 'primary',
+	                      size: 'mini'
 	                    },
+	                    on: {
+	                      'click': function click(e) {
+	                        _this.edit();
+	                      }
+	                    },
+
 	                    'class': 'uk-margin-small-left' },
 	                  ['Add New']
 	                )]
