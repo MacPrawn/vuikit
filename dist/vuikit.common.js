@@ -4892,7 +4892,7 @@ module.exports =
 	      on: {
 	        click: function click(e) {
 	          if (e.target.tagName === 'TD') {
-	            vm.$emit('clickRow', vm.getRowId(row), row);
+	            vm.$emit('clickrow', vm.getRowId(row), row);
 	          }
 	        }
 	      }
@@ -5165,8 +5165,8 @@ module.exports =
 	      });
 	    }
 	    this.sortOrder[this.fields[0].name] = 'asc';
-	    this.$on('clickRow', function (rowID, row) {
-	      console.log('clickRow event received', rowID, row, _this2);
+	    this.$on('clickrow', function (rowID, row) {
+	      console.log('clickrow event received', rowID, row, _this2);
 	    });
 	  },
 
