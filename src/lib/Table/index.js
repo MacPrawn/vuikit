@@ -79,8 +79,8 @@ export default {
                     active
                     color="primary"
                     size="mini"
-                    on-click={e => {
-                      console.log('click')
+                    native-on-click={e => {
+                      console.log('click', this)
                       this.edit()
                     }}
                     class="uk-margin-small-left">Add New</vk-button>

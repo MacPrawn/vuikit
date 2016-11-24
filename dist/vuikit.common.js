@@ -5114,15 +5114,12 @@ module.exports =
 	                    attrs: {
 	                      active: true,
 	                      color: 'primary',
-	                      size: 'mini'
-	                    },
-	                    on: {
-	                      'click': function click(e) {
-	                        console.log('click');
+	                      size: 'mini',
+	                      'native-on-click': function nativeOnClick(e) {
+	                        console.log('click', _this);
 	                        _this.edit();
 	                      }
 	                    },
-
 	                    'class': 'uk-margin-small-left' },
 	                  ['Add New']
 	                )]
