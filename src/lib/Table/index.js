@@ -72,9 +72,9 @@ export default {
           <div class="uk-grid">
             <div class="uk-width-1-2">
               <div class="uk-form-label">
-                <h2 class="uk-margin-remove">
+                <h2 class="uk-vertical-align uk-margin-remove">
                   { this.title }
-                  <vk-button v-show={ this.editable } active color="primary" size="small">Add New</vk-button>
+                  <vk-button v-show={ this.editable } active color="primary" size="mini" on-click="edit" class="uk-margin-small-left">Add New</vk-button>
                 </h2>
               </div>
             </div>
