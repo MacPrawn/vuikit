@@ -177,7 +177,7 @@ export default {
       this.sortOrder = processSortOrder(field, this.sortOrder)
     },
     edit (row, rowID) {
-      this.$emit('editrow', this.id, rowID || this.getRowId(row), row)
+      this.$emit('editrow', this.$el.id, rowID || this.getRowId(row), row)
     }
   }
 }
