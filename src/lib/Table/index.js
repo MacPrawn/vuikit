@@ -74,19 +74,12 @@ export default {
               <div class="uk-form-label">
                 <h2 class="uk-margin-remove">
                   { this.title }
-                  { this.editable && h('vk-button', {
-                    class: { 'uk-margin-small-left': true },
-                    props: { active: true, color: 'primary', size: 'mini' },
-                    on: { click: (e) => { console.log('on.click', this) } },
-                    nativeOn: { click: (e) => { console.log('on.click.native', this) } }
-                  }) }
                   <vk-button
                     v-show={ this.editable }
                     active
                     color="primary"
                     size="mini"
                     nativeOnClick={e => {
-                      console.log('click', this)
                       this.edit()
                     }}
                     class="uk-margin-small-left">Add New</vk-button>
@@ -178,7 +171,7 @@ export default {
       return this.selection[this.getRowId(row)]
     },
     getRowId (row) {
-      return row[this.trackBy]
+      return row ? row[this.trackBy] : null
     },
     sortOn (field) {
       this.sortOrder = processSortOrder(field, this.sortOrder)

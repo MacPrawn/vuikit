@@ -5104,16 +5104,7 @@ module.exports =
 	              [h(
 	                'h2',
 	                { 'class': 'uk-margin-remove' },
-	                [this.title, this.editable && h('vk-button', {
-	                  class: { 'uk-margin-small-left': true },
-	                  props: { active: true, color: 'primary', size: 'mini' },
-	                  on: { click: function click(e) {
-	                      console.log('on.click', _this);
-	                    } },
-	                  nativeOn: { click: function click(e) {
-	                      console.log('on.click.native', _this);
-	                    } }
-	                }), h(
+	                [this.title, h(
 	                  'vk-button',
 	                  {
 	                    directives: [{
@@ -5127,7 +5118,6 @@ module.exports =
 	                    },
 	                    nativeOn: {
 	                      'click': function click(e) {
-	                        console.log('click', _this);
 	                        _this.edit();
 	                      }
 	                    },
@@ -5252,7 +5242,7 @@ module.exports =
 	      return this.selection[this.getRowId(row)];
 	    },
 	    getRowId: function getRowId(row) {
-	      return row[this.trackBy];
+	      return row ? row[this.trackBy] : null;
 	    },
 	    sortOn: function sortOn(field) {
 	      this.sortOrder = (0, _helper.processSortOrder)(field, this.sortOrder);
