@@ -80,6 +80,7 @@ export default {
                     color="primary"
                     size="mini"
                     on-click={e => {
+                      console.log('click')
                       this.edit()
                     }}
                     class="uk-margin-small-left">Add New</vk-button>

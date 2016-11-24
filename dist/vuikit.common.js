@@ -5118,6 +5118,7 @@ module.exports =
 	                    },
 	                    on: {
 	                      'click': function click(e) {
+	                        console.log('click');
 	                        _this.edit();
 	                      }
 	                    },
