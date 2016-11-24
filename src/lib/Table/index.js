@@ -29,6 +29,10 @@ export default {
       type: Boolean,
       default: false
     },
+    editable: {
+      type: Boolean,
+      default: false
+    },
     selectable: {
       type: Boolean,
       default: false
@@ -68,7 +72,10 @@ export default {
           <div class="uk-grid">
             <div class="uk-width-1-2">
               <div class="uk-form-label">
-                <h2 class="uk-margin-remove">{ this.title }</h2>
+                <h2 class="uk-margin-remove">
+                  { this.title }
+                  { this.editable && h('button', { props: {} }) }
+                </h2>
               </div>
             </div>
             <div class="uk-width-1-2">
@@ -111,10 +118,11 @@ export default {
       })
     }
     this.sortOrder[this.fields[0].name] = 'asc'
-    console.log('created', this)
-    this.$on('clickrow', (rowID, row) => {
-      this.$emit('editrow', this, rowID, row)
-    })
+    if (this.editable) {
+      this.$on('clickrow', (rowID, row) => {
+        this.$emit('editrow', this, rowID, row)
+      })
+    }
   },
   computed: {
     isAllSelected () {

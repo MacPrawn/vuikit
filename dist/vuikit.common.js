@@ -5045,6 +5045,10 @@ module.exports =
 	      type: Boolean,
 	      default: false
 	    },
+	    editable: {
+	      type: Boolean,
+	      default: false
+	    },
 	    selectable: {
 	      type: Boolean,
 	      default: false
@@ -5100,7 +5104,7 @@ module.exports =
 	              [h(
 	                'h2',
 	                { 'class': 'uk-margin-remove' },
-	                [this.title]
+	                [this.title, this.editable && h('button', { props: {} })]
 	              )]
 	            )]
 	          ), h(
@@ -5165,10 +5169,11 @@ module.exports =
 	      });
 	    }
 	    this.sortOrder[this.fields[0].name] = 'asc';
-	    console.log('created', this);
-	    this.$on('clickrow', function (rowID, row) {
-	      _this2.$emit('editrow', _this2, rowID, row);
-	    });
+	    if (this.editable) {
+	      this.$on('clickrow', function (rowID, row) {
+	        _this2.$emit('editrow', _this2, rowID, row);
+	      });
+	    }
 	  },
 
 	  computed: {
