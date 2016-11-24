@@ -5248,7 +5248,7 @@ module.exports =
 	      this.sortOrder = (0, _helper.processSortOrder)(field, this.sortOrder);
 	    },
 	    edit: function edit(row, rowID) {
-	      this.$emit('editrow', this, rowID || this.getRowId(row), row);
+	      this.$emit('editrow', this.id, rowID || this.getRowId(row), row);
 	    }
 	  }
 	};
