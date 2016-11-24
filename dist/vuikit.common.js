@@ -5104,7 +5104,17 @@ module.exports =
 	              [h(
 	                'h2',
 	                { 'class': 'uk-margin-remove' },
-	                [this.title, this.editable && h('button', { props: {} })]
+	                [this.title, h(
+	                  'vk-button',
+	                  {
+	                    directives: [{
+	                      name: 'show',
+	                      value: this.editable
+	                    }],
+	                    attrs: { active: true, color: 'primary', size: 'small' }
+	                  },
+	                  ['Add New']
+	                )]
 	              )]
 	            )]
 	          ), h(
@@ -5171,7 +5181,7 @@ module.exports =
 	    this.sortOrder[this.fields[0].name] = 'asc';
 	    if (this.editable) {
 	      this.$on('clickrow', function (rowID, row) {
-	        _this2.$emit('editrow', _this2, rowID, row);
+	        _this2.edit(row, rowID);
 	      });
 	    }
 	  },
@@ -5226,6 +5236,9 @@ module.exports =
 	    },
 	    sortOn: function sortOn(field) {
 	      this.sortOrder = (0, _helper.processSortOrder)(field, this.sortOrder);
+	    },
+	    edit: function edit(row, rowID) {
+	      this.$emit('editrow', this, rowID || this.getRowId(row), row);
 	    }
 	  }
 	};

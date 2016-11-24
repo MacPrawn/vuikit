@@ -74,7 +74,7 @@ export default {
               <div class="uk-form-label">
                 <h2 class="uk-margin-remove">
                   { this.title }
-                  { this.editable && h('button', { props: {} }) }
+                  <vk-button v-show={ this.editable } active color="primary" size="small">Add New</vk-button>
                 </h2>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default {
     this.sortOrder[this.fields[0].name] = 'asc'
     if (this.editable) {
       this.$on('clickrow', (rowID, row) => {
-        this.$emit('editrow', this, rowID, row)
+        this.edit(row, rowID)
       })
     }
   },
@@ -167,6 +167,9 @@ export default {
     },
     sortOn (field) {
       this.sortOrder = processSortOrder(field, this.sortOrder)
+    },
+    edit (row, rowID) {
+      this.$emit('editrow', this, rowID || this.getRowId(row), row)
     }
   }
 }
