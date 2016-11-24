@@ -5104,7 +5104,16 @@ module.exports =
 	              [h(
 	                'h2',
 	                { 'class': 'uk-margin-remove' },
-	                [this.title, h(
+	                [this.title, this.editable && h('vk-button', {
+	                  class: { 'uk-margin-small-left': true },
+	                  props: { active: true, color: 'primary', size: 'mini' },
+	                  on: { click: function click(e) {
+	                      console.log('on.click', _this);
+	                    } },
+	                  nativeOn: { click: function click(e) {
+	                      console.log('on.click.native', _this);
+	                    } }
+	                }), h(
 	                  'vk-button',
 	                  {
 	                    directives: [{
@@ -5114,12 +5123,15 @@ module.exports =
 	                    attrs: {
 	                      active: true,
 	                      color: 'primary',
-	                      size: 'mini',
-	                      'native-on-click': function nativeOnClick(e) {
+	                      size: 'mini'
+	                    },
+	                    nativeOn: {
+	                      'click': function click(e) {
 	                        console.log('click', _this);
 	                        _this.edit();
 	                      }
 	                    },
+
 	                    'class': 'uk-margin-small-left' },
 	                  ['Add New']
 	                )]

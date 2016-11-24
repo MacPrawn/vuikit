@@ -74,12 +74,18 @@ export default {
               <div class="uk-form-label">
                 <h2 class="uk-margin-remove">
                   { this.title }
+                  { this.editable && h('vk-button', {
+                    class: { 'uk-margin-small-left': true },
+                    props: { active: true, color: 'primary', size: 'mini' },
+                    on: { click: (e) => { console.log('on.click', this) } },
+                    nativeOn: { click: (e) => { console.log('on.click.native', this) } }
+                  }) }
                   <vk-button
                     v-show={ this.editable }
                     active
                     color="primary"
                     size="mini"
-                    native-on-click={e => {
+                    nativeOnClick={e => {
                       console.log('click', this)
                       this.edit()
                     }}
