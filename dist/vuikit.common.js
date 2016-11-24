@@ -5165,9 +5165,6 @@ module.exports =
 	      });
 	    }
 	    this.sortOrder[this.fields[0].name] = 'asc';
-	    this.$on('clickrow', function (rowID, row) {
-	      console.log('clickrow event received', rowID, row, _this2);
-	    });
 	  },
 
 	  computed: {

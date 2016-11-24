@@ -111,9 +111,6 @@ export default {
       })
     }
     this.sortOrder[this.fields[0].name] = 'asc'
-    this.$on('clickrow', (rowID, row) => {
-      console.log('clickrow event received', rowID, row, this)
-    })
   },
   computed: {
     isAllSelected () {
