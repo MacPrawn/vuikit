@@ -5165,6 +5165,10 @@ module.exports =
 	      });
 	    }
 	    this.sortOrder[this.fields[0].name] = 'asc';
+	    console.log('created', this);
+	    this.$on('clickrow', function (rowID, row) {
+	      _this2.$emit('editrow', _this2, rowID, row);
+	    });
 	  },
 
 	  computed: {

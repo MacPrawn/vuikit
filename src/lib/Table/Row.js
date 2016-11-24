@@ -12,7 +12,6 @@ const Row = {
       },
       on: {
         click: e => {
-          // console.log('row clicked', e.target.tagName, vm.getRowId(row))
           if (e.target.tagName === 'TD') {
             vm.$emit('clickrow', vm.getRowId(row), row)
           }
