@@ -4910,14 +4910,13 @@ module.exports =
 	    var row = props.row,
 	        field = props.field;
 
-	    var fieldName = field.name;
 	    var componentProps = {};
-	    componentProps[fieldName] = row[fieldName];
+	    componentProps[field.name] = row[field.name];
 	    return h('td', { class: field.cellClass }, [field.component ? h(field.component, { props: componentProps }) : (0, _util.isFunction)(field.cell) ? h({
 	      functional: true,
 	      props: ['row', 'field'],
 	      render: field.cell
-	    }, { props: { row: row, field: field } }) : field.cell || row[fieldName]]);
+	    }, { props: { row: row, field: field } }) : field.cell || row[field.name]]);
 	  }
 	};
 

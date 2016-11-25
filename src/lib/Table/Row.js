@@ -28,9 +28,8 @@ const Cell = {
   props: ['row', 'field'],
   render (h, { props }) {
     const { row, field } = props
-    const fieldName = field.name
     const componentProps = {}
-    componentProps[fieldName] = row[ fieldName ]
+    componentProps[field.name] = row[ field.name ]
     return h('td', { class: field.cellClass }, [
       field.component
         ? h(field.component, { props: componentProps })
@@ -40,7 +39,7 @@ const Cell = {
             props: ['row', 'field'],
             render: field.cell
           }, { props: { row, field } })
-          : field.cell || row[ fieldName ]
+          : field.cell || row[ field.name ]
     ])
   }
 }
