@@ -28,16 +28,17 @@ const Cell = {
   props: ['row', 'field'],
   render (h, { props }) {
     const { row, field } = props
-    console.log(h, h.render)
+    const fieldName = field.name
     return h('td', { class: field.cellClass }, [
-      // default or custom render
-      isFunction(field.cell)
-        ? h({
-          functional: true,
-          props: ['row', 'field'],
-          render: field.cell
-        }, { props: { row, field } })
-        : field.cell || row[ field.name ]
+      field.component
+        ? h(field.component, { props: { fieldName: row[ fieldName ] } })
+        : isFunction(field.cell)
+          ? h({
+            functional: true,
+            props: ['row', 'field'],
+            render: field.cell
+          }, { props: { row, field } })
+          : field.cell || row[ fieldName ]
     ])
   }
 }

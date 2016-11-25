@@ -4910,12 +4910,12 @@ module.exports =
 	    var row = props.row,
 	        field = props.field;
 
-	    console.log(h, h.render);
-	    return h('td', { class: field.cellClass }, [(0, _util.isFunction)(field.cell) ? h({
+	    var fieldName = field.name;
+	    return h('td', { class: field.cellClass }, [field.component ? h(field.component, { props: { fieldName: row[fieldName] } }) : (0, _util.isFunction)(field.cell) ? h({
 	      functional: true,
 	      props: ['row', 'field'],
 	      render: field.cell
-	    }, { props: { row: row, field: field } }) : field.cell || row[field.name]]);
+	    }, { props: { row: row, field: field } }) : field.cell || row[fieldName]]);
 	  }
 	};
 
