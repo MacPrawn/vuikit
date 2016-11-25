@@ -28,7 +28,7 @@ const Cell = {
   props: ['row', 'field'],
   render (h, { props }) {
     const { row, field } = props
-    console.log(this, this.render)
+    console.log(h, h.render)
     return h('td', { class: field.cellClass }, [
       // default or custom render
       isFunction(field.cell)

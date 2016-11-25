@@ -4910,7 +4910,7 @@ module.exports =
 	    var row = props.row,
 	        field = props.field;
 
-	    console.log(this, this.render);
+	    console.log(h, h.render);
 	    return h('td', { class: field.cellClass }, [(0, _util.isFunction)(field.cell) ? h({
 	      functional: true,
 	      props: ['row', 'field'],
