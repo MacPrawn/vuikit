@@ -29,9 +29,11 @@ const Cell = {
   render (h, { props }) {
     const { row, field } = props
     const fieldName = field.name
+    const componentProps = {}
+    componentProps[fieldName] = row[ fieldName ]
     return h('td', { class: field.cellClass }, [
-      field.component
-        ? h(field.component, { props: { fieldName: row[ fieldName ] } })
+      field.partial
+        ? h(field.component, { props: componentProps })
         : isFunction(field.cell)
           ? h({
             functional: true,

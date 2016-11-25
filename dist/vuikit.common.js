@@ -4911,7 +4911,9 @@ module.exports =
 	        field = props.field;
 
 	    var fieldName = field.name;
-	    return h('td', { class: field.cellClass }, [field.component ? h(field.component, { props: { fieldName: row[fieldName] } }) : (0, _util.isFunction)(field.cell) ? h({
+	    var componentProps = {};
+	    componentProps[fieldName] = row[fieldName];
+	    return h('td', { class: field.cellClass }, [field.partial ? h(field.component, { props: componentProps }) : (0, _util.isFunction)(field.cell) ? h({
 	      functional: true,
 	      props: ['row', 'field'],
 	      render: field.cell
