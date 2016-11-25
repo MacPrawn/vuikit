@@ -32,7 +32,7 @@ const Cell = {
     const componentProps = {}
     componentProps[fieldName] = row[ fieldName ]
     return h('td', { class: field.cellClass }, [
-      field.partial
+      field.component
         ? h(field.component, { props: componentProps })
         : isFunction(field.cell)
           ? h({
