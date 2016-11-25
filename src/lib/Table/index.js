@@ -13,6 +13,10 @@ export default {
       type: String,
       default: ''
     },
+    addNewTitle: {
+      type: String,
+      default: ''
+    },
     fields: {
       type: Array,
       required: true
@@ -75,14 +79,14 @@ export default {
                 <h2 class="uk-margin-remove">
                   { this.title }
                   <vk-button
-                    v-show={ this.editable }
+                    v-show={ this.editable && this.addNewTitle }
                     active
                     color="primary"
                     size="mini"
                     nativeOnClick={e => {
                       this.edit()
                     }}
-                    class="uk-margin-small-left">Add New</vk-button>
+                    class="uk-margin-small-left">{ this.addNewTitle }</vk-button>
                 </h2>
               </div>
             </div>

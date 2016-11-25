@@ -5029,6 +5029,10 @@ module.exports =
 	      type: String,
 	      default: ''
 	    },
+	    addNewTitle: {
+	      type: String,
+	      default: ''
+	    },
 	    fields: {
 	      type: Array,
 	      required: true
@@ -5109,7 +5113,7 @@ module.exports =
 	                  {
 	                    directives: [{
 	                      name: 'show',
-	                      value: this.editable
+	                      value: this.editable && this.addNewTitle
 	                    }],
 	                    attrs: {
 	                      active: true,
@@ -5123,7 +5127,7 @@ module.exports =
 	                    },
 
 	                    'class': 'uk-margin-small-left' },
-	                  ['Add New']
+	                  [this.addNewTitle]
 	                )]
 	              )]
 	            )]
