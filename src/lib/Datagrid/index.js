@@ -1,12 +1,8 @@
 import searchField from './searchField'
-import selectField from '../Table/selectField'
-import { warn } from '../../helpers/util'
-import { processFields, processSortOrder } from './helper'
 import { orderBy } from 'lodash'
 
 export default {
   name: 'VkDatagrid',
-  mixins: ['vk-table'],
   props: {
     title: {
       type: String,
@@ -116,14 +112,6 @@ export default {
     )
   },
   created () {
-    // check for rows id if selectable enabled
-    if (warn && this.selectable) {
-      this.rows.forEach(row => {
-        if (row[this.trackBy] === undefined) {
-          warn("Some of the Table rows have no 'id' set.")
-        }
-      })
-    }
     this.sortOrder[this.fields[0].name] = 'asc'
     if (this.editable) {
       this.$on('clickrow', (rowID, row) => {
@@ -132,18 +120,6 @@ export default {
     }
   },
   computed: {
-    isAllSelected () {
-      return this.rows.length && this.rows.every(row => this.isSelected(row))
-    },
-    fieldsDef () {
-      const fields = processFields(this.fields)
-      // add selectable field if
-      // required and no provided
-      if (this.selectable) {
-        fields.unshift(selectField)
-      }
-      return fields
-    },
     filteredRows () {
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
@@ -165,15 +141,6 @@ export default {
   methods: {
     search (query) {
       this.filterKey = query
-    },
-    isSelected (row) {
-      return this.selection[this.getRowId(row)]
-    },
-    getRowId (row) {
-      return row ? row[this.trackBy] : null
-    },
-    sortOn (field) {
-      this.sortOrder = processSortOrder(field, this.sortOrder)
     },
     edit (row, rowID) {
       this.$emit('editrow', this.$el.id, rowID || this.getRowId(row), row)
