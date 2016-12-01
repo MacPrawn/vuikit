@@ -1,5 +1,8 @@
 import searchField from './searchField'
-import VkTable from '../Table/index';
+import selectField from '../Table/selectField'
+import { warn } from '../../helpers/util'
+import { processFields, processSortOrder } from './helper'
+import { orderBy } from 'lodash'
 
 export default {
   name: 'VkDatagrid',
@@ -92,14 +95,14 @@ export default {
           </div>
         </form>
         <vk-table ref="table"
-          :fields={{ this.fields }}
-          :rows={{ this.filteredRows }}
-          trackBy={{ this.trackBy }}
-          selectable={{ this.selectable }}
-          :selection={{ this.selection }}
-          condensed={{ this.condensed }}
-          striped={{ this.striped }}
-          hover={{ this.hover }}
+          fields={ this.fields }
+          rows={ this.filteredRows }
+          trackBy={ this.trackBy }
+          selectable={ this.selectable }
+          selection={ this.selection }
+          condensed={ this.condensed }
+          striped={ this.striped }
+          hover={ this.hover }
         ></vk-table>
         <vk-pagination ref="pagination" v-show={ this.rows.length > this.perPage } total={ this.rows.length }
           page={ this.page }

@@ -17,6 +17,7 @@ import SubnavItem from './SubnavItem'
 import Switcher from './Switcher'
 import SwitcherItem from './SwitcherItem'
 import Table from './Table'
+import Datagrid from './Datagrid'
 import Tabs from './Tabs'
 import TabsItem from './TabsItem'
 import TabsVertical from './TabsVertical'
@@ -43,6 +44,7 @@ const Vuikit = {
   Switcher,
   SwitcherItem,
   Table,
+  Datagrid,
   Tabs,
   TabsItem,
   TabsVertical,
