@@ -13,7 +13,7 @@ const Row = {
       on: {
         click: e => {
           if (e.target.tagName === 'TD') {
-            vm.$emit('clickRow', vm.getRowId(row), row)
+            vm.$emit('clickrow', vm.getRowId(row), row)
           }
         }
       }
@@ -28,15 +28,18 @@ const Cell = {
   props: ['row', 'field'],
   render (h, { props }) {
     const { row, field } = props
+    const componentProps = {}
+    componentProps[field.name] = row[ field.name ]
     return h('td', { class: field.cellClass }, [
-      // default or custom render
-      isFunction(field.cell)
-        ? h({
-          functional: true,
-          props: ['row', 'field'],
-          render: field.cell
-        }, { props: { row, field } })
-        : field.cell || row[ field.name ]
+      field.component
+        ? h(field.component, { props: componentProps })
+        : isFunction(field.cell)
+          ? h({
+            functional: true,
+            props: ['row', 'field'],
+            render: field.cell
+          }, { props: { row, field } })
+          : field.cell || row[ field.name ]
     ])
   }
 }

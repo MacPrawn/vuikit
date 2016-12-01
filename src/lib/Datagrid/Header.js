@@ -21,7 +21,7 @@ const Cell = {
         [headerClass]: headerClass
       },
       on: {
-        click: e => sortBy && vm.emitSort(props.field)
+        click: e => sortBy && vm.sortOn(props.field)
       }
     }, [
       sortBy
@@ -45,8 +45,8 @@ const Icon = {
       staticClass: 'uk-icon-justify uk-margin-small-left',
       class: {
         'uk-invisible': !orderedBy,
-        'vk-icon-arrow-down': orderedBy === 'asc' || orderedBy === undefined,
-        'vk-icon-arrow-up': orderedBy === 'desc'
+        'uk-icon-arrow-down': orderedBy === 'asc' || orderedBy === undefined,
+        'uk-icon-arrow-up': orderedBy === 'desc'
       }
     })
   }
