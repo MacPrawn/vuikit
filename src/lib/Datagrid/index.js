@@ -99,9 +99,13 @@ export default {
           condensed={ this.condensed }
           striped={ this.striped }
           hover={ this.hover }
-          on-clickRow={(rowID, row) => {
+          sort-order={ this.sortOrder }
+          on-clickRow={ (rowID, row) => {
             this.edit(rowID, row)
-          }}
+          } }
+          on-sort={ (order) => {
+            this.sort(order)
+          } }
         ></vk-table>
         <vk-pagination ref="pagination" v-show={ this.rows.length > this.perPage } total={ this.rows.length }
           page={ this.page }
@@ -143,6 +147,9 @@ export default {
     edit (row, rowID) {
       if (!rowID && row) rowID = this.$refs.table.getRowId(row)
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
+    },
+    sort (order) {
+      this.sortOrder = order
     }
   }
 }

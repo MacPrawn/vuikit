@@ -6,15 +6,18 @@
       <!-- DEMO -->
       <vk-table
         ref="table"
-        title="Example Table"
         :fields="fields"
-        :rows="rows"
+        :rows="sortedRows"
         :selectable="props.selectable.demo.value"
         :selection="selection"
         :condensed="props.condensed.demo.value"
         :striped="props.striped.demo.value"
         :hover="props.hover.demo.value"
-        :per-page="props.perPage.demo.value"
+        :sort-order="sortOrder"
+        @sort="
+          events.sort.emited = true,
+          sortOrder = arguments[0]
+        "
         @clickRow="
           events.clickRow.emited = true,
           selection[arguments[0]]
@@ -36,8 +39,8 @@
       </vk-table>
       <!-- DESC -->
       <div class="uk-margin-large">
-        The <code>vk-table</code> component renders a table based on the provided fields
-        definition and data.
+        The <code>vk-table</code> component renders a UIkit table providing
+        additional features for displaying dynamic data.
       </div>
       <!-- TABS -->
       <vk-tabs
@@ -61,6 +64,7 @@
 </template>
 
 <script>
+import { orderBy } from 'lodash'
 import Component from '../lib/Table'
 import mixin from './_mixin'
 import { mergeProps } from '../helpers/pages'
@@ -73,6 +77,9 @@ export default {
     props: mergeProps(Component.props, props),
     events,
     example,
+    sortOrder: {
+      name: 'asc'
+    },
     selection: {},
     fields: [{
       name: 'name',
@@ -93,7 +100,14 @@ export default {
       { id: 2, name: 'Item B', hits: 40, desc: 'Description' },
       { id: 3, name: 'Item C', hits: 700, desc: 'Description' }
     ]
-  })
+  }),
+  computed: {
+    sortedRows () {
+      const by = Object.keys(this.sortOrder)[0]
+      const dir = this.sortOrder[by]
+      return orderBy(this.rows, [item => item[by]], dir)
+    }
+  }
 }
 
 const props = {
@@ -142,23 +156,21 @@ const props = {
       value: false
     }
   },
-  perPage: {
-    description: 'Number of rows per page.',
-    demo: {
-      type: 'Select',
-      options: [
-        { text: '1', value: 1 },
-        { text: '5', value: 5 },
-        { text: '10', value: 10 }
-      ],
-      value: 10
-    }
+  sortOrder: {
+    description: `Object defining the current order being the <code>key</code> the
+      field being sorted by and the <code>value</code> the direction, <code>asc</code>
+      or <code>desc</code>.`
   }
 }
 
 const events = {
+  sort: {
+    description: `Emited on the intention to sort the rows passing as argument
+    the sorting data.`,
+    emited: false
+  },
   clickRow: {
-    description: `Emited when a click was performed on a row passing as argument it id and data.`,
+    description: 'Emited when a click was performed on a row passing as argument it id and data.',
     emited: false
   },
   select: {
@@ -191,6 +203,7 @@ const example =
     { id: 2, name: 'Item B', hits: 40, desc: 'Description' },
     { id: 3, name: 'Item C', hits: 700, desc: 'Description' }
   ]"
+  @sort="sortOrder = arguments[0]"
   @clickRow="
     selection[arguments[0]]
       ? $delete(selection, arguments[0])

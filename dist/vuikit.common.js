@@ -3618,11 +3618,15 @@ module.exports =
 	            selection: this.selection,
 	            condensed: this.condensed,
 	            striped: this.striped,
-	            hover: this.hover
+	            hover: this.hover,
+	            'sort-order': this.sortOrder
 	          },
 	          on: {
 	            'clickRow': function clickRow(rowID, row) {
 	              _this.edit(rowID, row);
+	            },
+	            'sort': function sort(order) {
+	              _this.sort(order);
 	            }
 	          }
 	        },
@@ -3682,6 +3686,9 @@ module.exports =
 	    edit: function edit(row, rowID) {
 	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
 	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
+	    },
+	    sort: function sort(order) {
+	      this.sortOrder = order;
 	    }
 	  }
 	};
