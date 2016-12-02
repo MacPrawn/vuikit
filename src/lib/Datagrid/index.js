@@ -99,6 +99,9 @@ export default {
           condensed={ this.condensed }
           striped={ this.striped }
           hover={ this.hover }
+          on-clickRow={(rowID, row) => {
+            this.edit(rowID, row)
+          }}
         ></vk-table>
         <vk-pagination ref="pagination" v-show={ this.rows.length > this.perPage } total={ this.rows.length }
           page={ this.page }
@@ -113,11 +116,6 @@ export default {
   },
   created () {
     this.sortOrder[this.fields[0].name] = 'asc'
-    if (this.editable) {
-      this.$on('clickrow', (rowID, row) => {
-        this.edit(row, rowID)
-      })
-    }
   },
   computed: {
     filteredRows () {
@@ -143,7 +141,8 @@ export default {
       this.filterKey = query
     },
     edit (row, rowID) {
-      this.$emit('editrow', this.$el.id, rowID || this.getRowId(row), row)
+      if (!rowID && row) rowID = this.$refs.table.getRowId(row)
+      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
     }
   }
 }

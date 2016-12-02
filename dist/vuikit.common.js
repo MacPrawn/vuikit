@@ -3619,6 +3619,11 @@ module.exports =
 	            condensed: this.condensed,
 	            striped: this.striped,
 	            hover: this.hover
+	          },
+	          on: {
+	            'clickRow': function clickRow(rowID, row) {
+	              _this.edit(rowID, row);
+	            }
 	          }
 	        },
 	        []
@@ -3644,19 +3649,12 @@ module.exports =
 	    );
 	  },
 	  created: function created() {
-	    var _this2 = this;
-
 	    this.sortOrder[this.fields[0].name] = 'asc';
-	    if (this.editable) {
-	      this.$on('clickrow', function (rowID, row) {
-	        _this2.edit(row, rowID);
-	      });
-	    }
 	  },
 
 	  computed: {
 	    filteredRows: function filteredRows() {
-	      var _this3 = this;
+	      var _this2 = this;
 
 	      var by = (0, _keys2.default)(this.sortOrder)[0];
 	      var dir = this.sortOrder[by];
@@ -3667,7 +3665,7 @@ module.exports =
 	      this.filterKey = this.filterKey.toLowerCase();
 	      var visibleRows = sortedRows.filter(function (row) {
 	        return (0, _keys2.default)(row).some(function (key) {
-	          return String(row[key]).toLowerCase().indexOf(_this3.filterKey) > -1;
+	          return String(row[key]).toLowerCase().indexOf(_this2.filterKey) > -1;
 	        });
 	      });
 
@@ -3682,7 +3680,8 @@ module.exports =
 	      this.filterKey = query;
 	    },
 	    edit: function edit(row, rowID) {
-	      this.$emit('editrow', this.$el.id, rowID || this.getRowId(row), row);
+	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
+	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
 	    }
 	  }
 	};

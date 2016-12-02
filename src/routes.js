@@ -43,6 +43,10 @@ export default [{
   path: '/table',
   component: require('./pages/Table')
 }, {
+  name: 'Datagrid',
+  path: '/datagrid',
+  component: require('./pages/Datagrid')
+}, {
   name: 'Subnav',
   path: '/subnav',
   component: require('./pages/Subnav')
