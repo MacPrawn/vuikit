@@ -1,4 +1,5 @@
 import searchField from './searchField'
+import VkTable from '../Table'
 import { orderBy } from 'lodash'
 
 export default {
@@ -57,6 +58,9 @@ export default {
       default: 10
     }
   },
+  components: {
+    VkTable
+  },
   data () {
     return {
       filterKey: '',
@@ -70,7 +74,7 @@ export default {
         <form staticClass="uk-form uk-form-horizontal">
           <div class="uk-grid">
             <div class="uk-width-1-2">
-              <div class="uk-form-label">
+              <div class="uk-form-controls uk-form-controls-text">
                 <h2 class="uk-margin-remove">
                   { this.title }
                   <vk-button
