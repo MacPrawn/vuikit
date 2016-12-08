@@ -3832,10 +3832,7 @@ module.exports =
 	    },
 	    edit: function edit(row, rowID) {
 	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
-	      if (this.editable) {
-	        console.log('datagrid edit', this.$el.id, rowID, row);
-	        this.$emit('editrow', this.$el.id, rowID, row);
-	      }
+	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
 	    },
 	    sort: function sort(order) {
 	      this.sortOrder = order;
