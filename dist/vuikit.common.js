@@ -3722,7 +3722,7 @@ module.exports =
 	            { 'class': 'uk-width-1-2' },
 	            [h(
 	              'div',
-	              { 'class': 'uk-form-controls uk-form-controls-text' },
+	              { 'class': 'uk-form-controls uk-form-controls-text uk-margin-remove' },
 	              [h(
 	                'h2',
 	                { 'class': 'uk-margin-remove' },
@@ -3832,7 +3832,10 @@ module.exports =
 	    },
 	    edit: function edit(row, rowID) {
 	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
-	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
+	      if (this.editable) {
+	        console.log('datagrid edit', this.$el.id, rowID, row);
+	        this.$emit('editrow', this.$el.id, rowID, row);
+	      }
 	    },
 	    sort: function sort(order) {
 	      this.sortOrder = order;
