@@ -70,7 +70,9 @@ export default {
   },
   render (h) {
     return (
-      <div staticClass="nibnut-datagrid">
+      <div staticClass="nibnut-datagrid" class={{
+        'nibnut-datagrid-editable': this.editable
+      }}>
         <form staticClass="uk-form uk-form-horizontal">
           <div class="uk-grid">
             <div class="uk-width-1-2">

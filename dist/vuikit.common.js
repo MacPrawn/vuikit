@@ -3710,7 +3710,9 @@ module.exports =
 
 	    return h(
 	      'div',
-	      { staticClass: 'nibnut-datagrid' },
+	      { staticClass: 'nibnut-datagrid', 'class': {
+	          'nibnut-datagrid-editable': this.editable
+	        } },
 	      [h(
 	        'form',
 	        { staticClass: 'uk-form uk-form-horizontal' },
