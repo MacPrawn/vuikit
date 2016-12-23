@@ -159,7 +159,11 @@ export default {
     },
     deleteRow (row, rowID) {
       if (!rowID && row) rowID = this.$refs.table.getRowId(row)
-      if (this.editable) this.$emit('deleterow', this.$el.id, rowID, row)
+      if (this.editable) {
+        console.log(this.rows.indexOf(row))
+        // delete row here...
+        this.$emit('deleterow', this.$el.id, rowID, row)
+      }
     },
     sort (order) {
       this.sortOrder = order
