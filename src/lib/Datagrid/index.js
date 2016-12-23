@@ -1,5 +1,9 @@
 import searchField from './searchField'
-import VkTable from '../Table'
+import Header from '../Table/Header'
+import Row from '../Table/Row'
+import selectField from '../Table/selectField'
+import { processFields, processSortOrder } from '../Table/helper'
+import { warn } from '../../helpers/util'
 import { orderBy } from 'lodash'
 
 export default {
@@ -58,9 +62,6 @@ export default {
       default: 10
     }
   },
-  components: {
-    VkTable
-  },
   data () {
     return {
       filterKey: '',
@@ -96,16 +97,13 @@ export default {
             </div>
           </div>
         </form>
-        <vk-table ref="table"
-          fields={ this.fields }
-          rows={ this.filteredRows }
-          trackBy={ this.trackBy }
-          selectable={ this.selectable }
-          selection={ this.selection }
-          condensed={ this.condensed }
-          striped={ this.striped }
-          hover={ this.hover }
-          sort-order={ this.sortOrder }
+        <table
+          staticClass="uk-table"
+          class={{
+            'uk-table-striped': this.striped,
+            'uk-table-condensed': this.condensed,
+            'uk-table-hover': this.hover
+          }}
           on-clickRow={ (rowID, row) => {
             this.edit(rowID, row)
           } }
@@ -115,7 +113,16 @@ export default {
           on-sort={ (order) => {
             this.sort(order)
           } }
-        ></vk-table>
+        >
+          <thead>
+            <tr>
+              { this.fieldsDef.map(field => h(Header, { props: { field } })) }
+            </tr>
+          </thead>
+          <tbody>
+            { this.rows.map(row => h(Row, { props: { row } })) }
+          </tbody>
+        </table>
         <vk-pagination ref="pagination" v-show={ this.rows.length > this.perPage } total={ this.rows.length }
           page={ this.page }
           limit={ this.perPage }
@@ -129,8 +136,28 @@ export default {
   },
   created () {
     this.sortOrder[this.fields[0].name] = 'asc'
+    // check for rows id if selectable enabled
+    if (warn && this.selectable) {
+      this.rows.forEach(row => {
+        if (row[this.trackBy] === undefined) {
+          warn("Some of the Table rows have no 'id' set.")
+        }
+      })
+    }
   },
   computed: {
+    isAllSelected () {
+      return this.rows.length && this.rows.every(row => this.isSelected(row))
+    },
+    fieldsDef () {
+      const fields = processFields(this.fields)
+      // add selectable field if
+      // required and no provided
+      if (this.selectable) {
+        fields.unshift(selectField)
+      }
+      return fields
+    },
     filteredRows () {
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
@@ -150,6 +177,15 @@ export default {
     }
   },
   methods: {
+    isSelected (row) {
+      return this.selection[this.getRowId(row)]
+    },
+    getRowId (row) {
+      return row[this.trackBy]
+    },
+    emitSort (field) {
+      this.$emit('sort', processSortOrder(field, this.sortOrder))
+    },
     search (query) {
       this.filterKey = query
     },
@@ -163,7 +199,7 @@ export default {
         for (var loop = 0; loop < this.rows.length; loop++) {
           if (this.$refs.table.getRowId(this.rows[loop]) === rowID) {
             this.rows.splice(loop, 1)
-            this.$refs.table._rows = this.filteredRows
+            this.$refs.table.rows = this.filteredRows
             break
           }
         }
