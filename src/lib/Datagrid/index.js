@@ -109,6 +109,9 @@ export default {
           on-clickRow={ (rowID, row) => {
             this.edit(rowID, row)
           } }
+          on-deleted={ (rowID, row) => {
+            this.deleteRow(rowID, row)
+          } }
           on-sort={ (order) => {
             this.sort(order)
           } }
@@ -153,6 +156,10 @@ export default {
     edit (row, rowID) {
       if (!rowID && row) rowID = this.$refs.table.getRowId(row)
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
+    },
+    deleteRow (row, rowID) {
+      if (!rowID && row) rowID = this.$refs.table.getRowId(row)
+      if (this.editable) this.$emit('deleterow', this.$el.id, rowID, row)
     },
     sort (order) {
       this.sortOrder = order

@@ -3774,6 +3774,9 @@ module.exports =
 	            'clickRow': function clickRow(rowID, row) {
 	              _this.edit(rowID, row);
 	            },
+	            'deleted': function deleted(rowID, row) {
+	              _this.deleteRow(rowID, row);
+	            },
 	            'sort': function sort(order) {
 	              _this.sort(order);
 	            }
@@ -3835,6 +3838,10 @@ module.exports =
 	    edit: function edit(row, rowID) {
 	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
 	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
+	    },
+	    deleteRow: function deleteRow(row, rowID) {
+	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
+	      if (this.editable) this.$emit('deleterow', this.$el.id, rowID, row);
 	    },
 	    sort: function sort(order) {
 	      this.sortOrder = order;
