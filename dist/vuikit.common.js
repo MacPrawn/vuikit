@@ -3926,8 +3926,8 @@ module.exports =
 	    this.$on('deleted', function (rowID, row) {
 	      _this2.deleteRow(rowID, row);
 	    });
-	    this.$on('sort', function (order) {
-	      _this2.sort(order);
+	    this.$on('emitSort', function (field) {
+	      _this2.sort(field);
 	    });
 
 	    this.sortOrder[this.fields[0].name] = 'asc';
@@ -4009,8 +4009,8 @@ module.exports =
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },
-	    sort: function sort(order) {
-	      this.sortOrder = order;
+	    sort: function sort(field) {
+	      this.sortOrder = (0, _helper.processSortOrder)(field, this.sortOrder);
 	    }
 	  }
 	};
