@@ -161,11 +161,9 @@ export default {
       if (!rowID && row) rowID = this.$refs.table.getRowId(row)
       if (this.editable) {
         for (var loop = 0; loop < this.rows.length; loop++) {
-          console.log(this.$refs.table.getRowId(this.rows[loop]), " vs ", rowID)
           if (this.$refs.table.getRowId(this.rows[loop]) === rowID) {
-            console.log("removing row at index ", loop)
             this.rows.splice(loop, 1)
-            console.log(this.rows)
+            console.log(this.filteredRows)
             break
           }
         }
