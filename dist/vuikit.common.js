@@ -3993,16 +3993,15 @@ module.exports =
 	      this.filterKey = query;
 	    },
 	    edit: function edit(row, rowID) {
-	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
+	      if (!rowID && row) rowID = this.getRowId(row);
 	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
 	    },
 	    deleteRow: function deleteRow(row, rowID) {
-	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
+	      if (!rowID && row) rowID = this.getRowId(row);
 	      if (this.editable) {
 	        for (var loop = 0; loop < this.rows.length; loop++) {
-	          if (this.$refs.table.getRowId(this.rows[loop]) === rowID) {
+	          if (this.getRowId(this.rows[loop]) === rowID) {
 	            this.rows.splice(loop, 1);
-	            this.$refs.table.rows = this.filteredRows;
 	            break;
 	          }
 	        }
