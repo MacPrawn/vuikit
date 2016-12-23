@@ -104,13 +104,15 @@ export default {
             'uk-table-condensed': this.condensed,
             'uk-table-hover': this.hover
           }}
-          on-clickRow={ (rowID, row) => {
+          onClickRow={ (rowID, row) => {
+            console.log('click')
             this.edit(rowID, row)
           } }
-          on-deleted={ (rowID, row) => {
+          onDeleted={ (rowID, row) => {
+            console.log('delete')
             this.deleteRow(rowID, row)
           } }
-          on-sort={ (order) => {
+          onSort={ (order) => {
             this.sort(order)
           } }
         >

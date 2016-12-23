@@ -3880,9 +3880,11 @@ module.exports =
 	          },
 	          on: {
 	            'clickRow': function clickRow(rowID, row) {
+	              console.log('click');
 	              _this.edit(rowID, row);
 	            },
 	            'deleted': function deleted(rowID, row) {
+	              console.log('delete');
 	              _this.deleteRow(rowID, row);
 	            },
 	            'sort': function sort(order) {
