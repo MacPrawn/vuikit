@@ -104,17 +104,6 @@ export default {
             'uk-table-condensed': this.condensed,
             'uk-table-hover': this.hover
           }}
-          onClickRow={ (rowID, row) => {
-            console.log('click')
-            this.edit(rowID, row)
-          } }
-          onDeleted={ (rowID, row) => {
-            console.log('delete')
-            this.deleteRow(rowID, row)
-          } }
-          onSort={ (order) => {
-            this.sort(order)
-          } }
         >
           <thead>
             <tr>
@@ -137,6 +126,16 @@ export default {
     )
   },
   created () {
+    this.$on('clickRow', (rowID, row) => {
+      this.edit(rowID, row)
+    })
+    this.$on('deleted', (rowID, row) => {
+      this.deleteRow(rowID, row)
+    })
+    this.$on('sort', (order) => {
+      this.sort(order)
+    })
+
     this.sortOrder[this.fields[0].name] = 'asc'
     // check for rows id if selectable enabled
     if (warn && this.selectable) {

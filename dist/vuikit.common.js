@@ -3877,19 +3877,6 @@ module.exports =
 	            'uk-table-striped': this.striped,
 	            'uk-table-condensed': this.condensed,
 	            'uk-table-hover': this.hover
-	          },
-	          on: {
-	            'clickRow': function clickRow(rowID, row) {
-	              console.log('click');
-	              _this.edit(rowID, row);
-	            },
-	            'deleted': function deleted(rowID, row) {
-	              console.log('delete');
-	              _this.deleteRow(rowID, row);
-	            },
-	            'sort': function sort(order) {
-	              _this.sort(order);
-	            }
 	          }
 	        },
 	        [h(
@@ -3932,6 +3919,16 @@ module.exports =
 	  },
 	  created: function created() {
 	    var _this2 = this;
+
+	    this.$on('clickRow', function (rowID, row) {
+	      _this2.edit(rowID, row);
+	    });
+	    this.$on('deleted', function (rowID, row) {
+	      _this2.deleteRow(rowID, row);
+	    });
+	    this.$on('sort', function (order) {
+	      _this2.sort(order);
+	    });
 
 	    this.sortOrder[this.fields[0].name] = 'asc';
 
