@@ -3844,7 +3844,9 @@ module.exports =
 	      if (this.editable) {
 	        for (var loop = 0; loop < this.rows.length; loop++) {
 	          if (this.$refs.table.getRowId(this.rows[loop]) === rowID) {
+	            console.log("removing row at index ", loop);
 	            this.rows.splice(loop, 1);
+	            console.log(this.rows);
 	            break;
 	          }
 	        }
