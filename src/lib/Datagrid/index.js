@@ -160,8 +160,12 @@ export default {
     deleteRow (row, rowID) {
       if (!rowID && row) rowID = this.$refs.table.getRowId(row)
       if (this.editable) {
-        console.log(this.rows.indexOf(row))
-        // delete row here...
+        for(var loop = 0; loop < this.rows.length; loop++) {
+          if(this.$refs.table.getRowId(this.rows[loop]) == rowID) {
+            this.rows.splice(loop, 1)
+            break;
+          }
+        }
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
