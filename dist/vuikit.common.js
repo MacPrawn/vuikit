@@ -3843,7 +3843,7 @@ module.exports =
 	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
 	      if (this.editable) {
 	        for (var loop = 0; loop < this.rows.length; loop++) {
-	          if (this.$refs.table.getRowId(this.rows[loop]) == rowID) {
+	          if (this.$refs.table.getRowId(this.rows[loop]) === rowID) {
 	            this.rows.splice(loop, 1);
 	            break;
 	          }
