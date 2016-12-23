@@ -163,7 +163,7 @@ export default {
         for (var loop = 0; loop < this.rows.length; loop++) {
           if (this.$refs.table.getRowId(this.rows[loop]) === rowID) {
             this.rows.splice(loop, 1)
-            console.log(this.filteredRows)
+            this.$refs.table._rows = this.filteredRows
             break
           }
         }

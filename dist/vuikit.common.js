@@ -907,6 +907,11 @@ module.exports =
 	        return {};
 	      } }
 	  },
+	  data: function data() {
+	    return {
+	      _rows: this.rows || []
+	    };
+	  },
 	  render: function render(h) {
 	    return h(
 	      'table',
@@ -928,7 +933,7 @@ module.exports =
 	      ), h(
 	        'tbody',
 	        null,
-	        [this.rows.map(function (row) {
+	        [this._rows.map(function (row) {
 	          return h(_Row2.default, { props: { row: row } });
 	        })]
 	      )]
@@ -938,7 +943,7 @@ module.exports =
 	    var _this = this;
 
 	    if (_util.warn && this.selectable) {
-	      this.rows.forEach(function (row) {
+	      this._rows.forEach(function (row) {
 	        if (row[_this.trackBy] === undefined) {
 	          (0, _util.warn)("Some of the Table rows have no 'id' set.");
 	        }
@@ -950,7 +955,7 @@ module.exports =
 	    isAllSelected: function isAllSelected() {
 	      var _this2 = this;
 
-	      return this.rows.length && this.rows.every(function (row) {
+	      return this._rows.length && this._rows.every(function (row) {
 	        return _this2.isSelected(row);
 	      });
 	    },
@@ -3843,11 +3848,9 @@ module.exports =
 	      if (!rowID && row) rowID = this.$refs.table.getRowId(row);
 	      if (this.editable) {
 	        for (var loop = 0; loop < this.rows.length; loop++) {
-	          console.log(this.$refs.table.getRowId(this.rows[loop]), " vs ", rowID);
 	          if (this.$refs.table.getRowId(this.rows[loop]) === rowID) {
-	            console.log("removing row at index ", loop);
 	            this.rows.splice(loop, 1);
-	            console.log(this.rows);
+	            this.$refs.table._rows = this.filteredRows;
 	            break;
 	          }
 	        }
