@@ -130,7 +130,6 @@ export default {
       this.edit(rowID, row)
     })
     this.$on('deleted', (rowID, row) => {
-      console.log('1')
       this.deleteRow(rowID, row)
     })
     this.$on('emitSort', (field) => {
@@ -198,17 +197,15 @@ export default {
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
     },
     deleteRow (row, rowID) {
-      console.log('2')
       if (!rowID && row) rowID = this.getRowId(row)
-      console.log('3')
       if (this.editable) {
-        console.log('4')
         for (var loop = 0; loop < this.rows.length; loop++) {
           if (this.getRowId(this.rows[loop]) === rowID) {
             this.rows.splice(loop, 1)
             break
           }
         }
+        console.log(rowID, row, this.rows)
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
