@@ -3893,7 +3893,7 @@ module.exports =
 	        ), h(
 	          'tbody',
 	          null,
-	          [this.filteredRows().map(function (row) {
+	          [this.filteredRows.map(function (row) {
 	            return h(_Row2.default, { props: { row: row } });
 	          })]
 	        )]
@@ -3965,21 +3965,21 @@ module.exports =
 
 	      var by = (0, _keys2.default)(this.sortOrder)[0];
 	      var dir = this.sortOrder[by];
-	      var sortedRows = (0, _orderBy3.default)(this._rows, [function (item) {
+	      this._rows = (0, _orderBy3.default)(this.rows, [function (item) {
 	        return item[by];
 	      }], dir);
 
 	      this.filterKey = this.filterKey.toLowerCase();
-	      var visibleRows = sortedRows.filter(function (row) {
+	      this._rows = this._rows.filter(function (row) {
 	        return (0, _keys2.default)(row).some(function (key) {
 	          return String(row[key]).toLowerCase().indexOf(_this4.filterKey) > -1;
 	        });
 	      });
 
 	      var startAt = this.perPage * (this.page - 1);
-	      visibleRows = visibleRows.slice(startAt, startAt + this.perPage);
+	      this._rows = this._rows.slice(startAt, startAt + this.perPage);
 
-	      return visibleRows;
+	      return this._rows;
 	    }
 	  },
 	  methods: {

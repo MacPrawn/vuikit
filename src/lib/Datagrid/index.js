@@ -112,7 +112,7 @@ export default {
             </tr>
           </thead>
           <tbody>
-            { this.filteredRows().map(row => h(Row, { props: { row } })) }
+            { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
         <vk-pagination ref="pagination" v-show={ this._rows.length > this.perPage } total={ this._rows.length }
@@ -165,19 +165,19 @@ export default {
     filteredRows () {
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
-      const sortedRows = orderBy(this._rows, [item => item[by]], dir)
+      this._rows = orderBy(this.rows, [item => item[by]], dir)
 
       this.filterKey = this.filterKey.toLowerCase()
-      let visibleRows = sortedRows.filter((row) => {
+      this._rows = this._rows.filter((row) => {
         return Object.keys(row).some((key) => {
           return String(row[key]).toLowerCase().indexOf(this.filterKey) > -1
         })
       })
 
       var startAt = this.perPage * (this.page - 1)
-      visibleRows = visibleRows.slice(startAt, startAt + this.perPage)
+      this._rows = this._rows.slice(startAt, startAt + this.perPage)
 
-      return visibleRows
+      return this._rows
     }
   },
   methods: {
