@@ -4010,11 +4010,13 @@ module.exports =
 	            break;
 	          }
 	        }
-	        console.log('deleteRow - 2', this._rows);
+	        console.log('deleteRow - 2', this, this._rows);
+	        this.emitSort({ 'name': this.sortOrder.name === 'desc' ? 'asc' : 'desc' });
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },
 	    emitSort: function emitSort(field) {
+	      console.log('emitSort - 1', this, this._rows);
 	      this.sortOrder = (0, _helper.processSortOrder)(field, this.sortOrder);
 	    }
 	  }

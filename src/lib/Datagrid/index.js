@@ -150,10 +150,10 @@ export default {
     }
   },
   computed: {
-    isAllSelected: function() {
+    isAllSelected () {
       return this._rows.length && this._rows.every(row => this.isSelected(row))
     },
-    fieldsDef: function() {
+    fieldsDef () {
       const fields = processFields(this.fields)
       // add selectable field if
       // required and no provided
@@ -162,7 +162,7 @@ export default {
       }
       return fields
     },
-    filteredRows: function() {
+    filteredRows () {
       console.log('filteredRows - 1', this._rows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
@@ -208,11 +208,13 @@ export default {
             break
           }
         }
-        console.log('deleteRow - 2', this._rows)
+        console.log('deleteRow - 2', this, this._rows)
+        this.emitSort({'name': (this.sortOrder.name === 'desc' ? 'asc' : 'desc')})
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
     emitSort (field) {
+      console.log('emitSort - 1', this, this._rows)
       this.sortOrder = processSortOrder(field, this.sortOrder)
     }
   }

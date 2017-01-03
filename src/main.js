@@ -18,7 +18,7 @@ const router = new VueRouter({
   linkActiveClass: 'uk-active'
 })
 
-new App({
+window.jean = new App({
   router,
   data: {
     showOffcanvas: false
