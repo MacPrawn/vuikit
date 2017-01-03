@@ -3901,9 +3901,9 @@ module.exports =
 	        'vk-pagination',
 	        { ref: 'pagination', directives: [{
 	            name: 'show',
-	            value: this._rows.length > this.perPage
+	            value: this.rows.length > this.perPage
 	          }],
-	          attrs: { total: this._rows.length,
+	          attrs: { total: this.rows.length,
 	            page: this.page,
 	            limit: this.perPage,
 	            compact: true
@@ -3936,7 +3936,7 @@ module.exports =
 	    this.sortOrder[this.fields[0].name] = 'asc';
 
 	    if (_util.warn && this.selectable) {
-	      this._rows.forEach(function (row) {
+	      this.rows.forEach(function (row) {
 	        if (row[_this2.trackBy] === undefined) {
 	          (0, _util.warn)("Some of the Table rows have no 'id' set.");
 	        }
@@ -3948,7 +3948,7 @@ module.exports =
 	    isAllSelected: function isAllSelected() {
 	      var _this3 = this;
 
-	      return this._rows.length && this._rows.every(function (row) {
+	      return this.rows.length && this.rows.every(function (row) {
 	        return _this3.isSelected(row);
 	      });
 	    },
@@ -3997,16 +3997,16 @@ module.exports =
 	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
 	    },
 	    deleteRow: function deleteRow(rowID, row) {
-	      console.log('0', this._rows.splice);
+	      console.log('0', this.rows.splice);
 	      if (!rowID && row) rowID = this.getRowId(row);
 	      if (this.editable) {
-	        for (var loop = 0; loop < this._rows.length; loop++) {
-	          if (this.getRowId(this._rows[loop]) === rowID) {
-	            this._rows.splice(loop, 1);
+	        for (var loop = 0; loop < this.rows.length; loop++) {
+	          if (this.getRowId(this.rows[loop]) === rowID) {
+	            this.rows.splice(loop, 1);
 	            break;
 	          }
 	        }
-	        console.log('1', this._rows);
+	        console.log('1', this.rows);
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },
