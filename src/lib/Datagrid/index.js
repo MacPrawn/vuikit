@@ -203,6 +203,7 @@ export default {
             break
           }
         }
+        this.$set(this, '_rows', this._rows)
         console.log('1', this._rows)
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
