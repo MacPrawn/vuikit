@@ -111,7 +111,7 @@ export default {
               { this.fieldsDef.map(field => h(Header, { props: { field } })) }
             </tr>
           </thead>
-          <tbody>
+          <tbody name="nibnut-datagrid-rows" is="transition-group">
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
@@ -163,7 +163,6 @@ export default {
       return fields
     },
     filteredRows () {
-      console.log('filteredRows - 1', this.visibleRows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
       var rows = this.visibleRows
@@ -180,7 +179,6 @@ export default {
       var startAt = this.perPage * (this.page - 1)
       rows = rows.slice(startAt, startAt + this.perPage)
 
-      console.log('filteredRows - 2', rows)
       return rows
     }
   },
@@ -199,7 +197,6 @@ export default {
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
     },
     deleteRow (rowID, row) {
-      console.log('deleteRow - 1', this.visibleRows.splice)
       if (!rowID && row) rowID = this.getRowId(row)
       if (this.editable) {
         for (var loop = 0; loop < this.visibleRows.length; loop++) {
@@ -208,9 +205,6 @@ export default {
             break
           }
         }
-        console.log('deleteRow - 2', this, this.visibleRows)
-        // this.emitSort({'name': (this.sortOrder.name === 'desc' ? 'asc' : 'desc')})
-        // force the referesh of computed attribute... Not sure *why* this is necessary, but lost a whole day trying to get it to work without!
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },

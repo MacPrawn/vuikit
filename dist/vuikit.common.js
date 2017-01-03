@@ -3892,7 +3892,9 @@ module.exports =
 	          )]
 	        ), h(
 	          'tbody',
-	          null,
+	          {
+	            attrs: { name: 'nibnut-datagrid-rows', is: 'transition-group' }
+	          },
 	          [this.filteredRows.map(function (row) {
 	            return h(_Row2.default, { props: { row: row } });
 	          })]
@@ -3963,7 +3965,6 @@ module.exports =
 	    filteredRows: function filteredRows() {
 	      var _this4 = this;
 
-	      console.log('filteredRows - 1', this.visibleRows);
 	      var by = (0, _keys2.default)(this.sortOrder)[0];
 	      var dir = this.sortOrder[by];
 	      var rows = this.visibleRows;
@@ -3982,7 +3983,6 @@ module.exports =
 	      var startAt = this.perPage * (this.page - 1);
 	      rows = rows.slice(startAt, startAt + this.perPage);
 
-	      console.log('filteredRows - 2', rows);
 	      return rows;
 	    }
 	  },
@@ -4001,7 +4001,6 @@ module.exports =
 	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
 	    },
 	    deleteRow: function deleteRow(rowID, row) {
-	      console.log('deleteRow - 1', this.visibleRows.splice);
 	      if (!rowID && row) rowID = this.getRowId(row);
 	      if (this.editable) {
 	        for (var loop = 0; loop < this.visibleRows.length; loop++) {
@@ -4010,8 +4009,6 @@ module.exports =
 	            break;
 	          }
 	        }
-	        console.log('deleteRow - 2', this, this.visibleRows);
-
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },
