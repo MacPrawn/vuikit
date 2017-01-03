@@ -195,7 +195,7 @@ export default {
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
     },
     deleteRow (rowID, row) {
-        console.log('0', this._rows.splice)
+      console.log('0', this._rows.splice)
       if (!rowID && row) rowID = this.getRowId(row)
       if (this.editable) {
         for (var loop = 0; loop < this._rows.length; loop++) {
