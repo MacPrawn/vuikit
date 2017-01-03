@@ -150,10 +150,10 @@ export default {
     }
   },
   computed: {
-    isAllSelected () {
+    isAllSelected: function() {
       return this._rows.length && this._rows.every(row => this.isSelected(row))
     },
-    fieldsDef () {
+    fieldsDef: function() {
       const fields = processFields(this.fields)
       // add selectable field if
       // required and no provided
@@ -162,7 +162,7 @@ export default {
       }
       return fields
     },
-    filteredRows () {
+    filteredRows: function() {
       console.log('filteredRows - 1', this._rows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
