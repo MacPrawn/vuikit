@@ -3924,6 +3924,7 @@ module.exports =
 	      _this2.edit(rowID, row);
 	    });
 	    this.$on('deleted', function (rowID, row) {
+	      console.log('1');
 	      _this2.deleteRow(rowID, row);
 	    });
 	    this.$on('emitSort', function (field) {
@@ -3994,8 +3995,11 @@ module.exports =
 	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
 	    },
 	    deleteRow: function deleteRow(row, rowID) {
+	      console.log('2');
 	      if (!rowID && row) rowID = this.getRowId(row);
+	      console.log('3');
 	      if (this.editable) {
+	        console.log('4');
 	        for (var loop = 0; loop < this.rows.length; loop++) {
 	          if (this.getRowId(this.rows[loop]) === rowID) {
 	            this.rows.splice(loop, 1);
