@@ -10,7 +10,7 @@ const Row = {
       class: {
         'uk-active': vm.isSelected(row)
       },
-      key: { vm.getRowId(row) },
+      key: vm.getRowId(row),
       on: {
         click: e => {
           if (e.target.tagName === 'TD') {
