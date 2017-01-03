@@ -210,7 +210,7 @@ export default {
         }
         console.log('deleteRow - 2', this, this._rows)
         // this.emitSort({'name': (this.sortOrder.name === 'desc' ? 'asc' : 'desc')})
-        this.filteredRows
+        this.$recompute('filteredRows') // force the referesh of computed attribute... Not sure *why* this is necessary, but lost a whole day trying to get it to work without!
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },

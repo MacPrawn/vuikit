@@ -4012,7 +4012,7 @@ module.exports =
 	        }
 	        console.log('deleteRow - 2', this, this._rows);
 
-	        this.filteredRows;
+	        this.$recompute('filteredRows');
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },
