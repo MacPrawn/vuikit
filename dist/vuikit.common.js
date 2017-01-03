@@ -3893,7 +3893,7 @@ module.exports =
 	        ), h(
 	          'tbody',
 	          null,
-	          [this.filteredRows.map(function (row) {
+	          [this.filteredRows().map(function (row) {
 	            return h(_Row2.default, { props: { row: row } });
 	          })]
 	        )]
@@ -5461,11 +5461,6 @@ module.exports =
 	        return {};
 	      } }
 	  },
-	  data: function data() {
-	    return {
-	      _rows: []
-	    };
-	  },
 	  render: function render(h) {
 	    return h(
 	      'table',
@@ -5487,7 +5482,7 @@ module.exports =
 	      ), h(
 	        'tbody',
 	        null,
-	        [this._rows.map(function (row) {
+	        [this.rows.map(function (row) {
 	          return h(_Row2.default, { props: { row: row } });
 	        })]
 	      )]
@@ -5496,10 +5491,8 @@ module.exports =
 	  created: function created() {
 	    var _this = this;
 
-	    this._rows = this.rows || [];
-
-	    if (_util.warn && this.selectable && this._rows) {
-	      this._rows.forEach(function (row) {
+	    if (_util.warn && this.selectable) {
+	      this.rows.forEach(function (row) {
 	        if (row[_this.trackBy] === undefined) {
 	          (0, _util.warn)("Some of the Table rows have no 'id' set.");
 	        }
@@ -5511,8 +5504,7 @@ module.exports =
 	    isAllSelected: function isAllSelected() {
 	      var _this2 = this;
 
-	      if (!this._rows) return false;
-	      return this._rows.length && this._rows.every(function (row) {
+	      return this.rows.length && this.rows.every(function (row) {
 	        return _this2.isSelected(row);
 	      });
 	    },

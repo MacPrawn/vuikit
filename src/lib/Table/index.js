@@ -44,11 +44,6 @@ export default {
       default: () => ({}) // field: asc|desc
     }
   },
-  data () {
-    return {
-      _rows: []
-    }
-  },
   render (h) {
     return (
       <table staticClass="uk-table" class={{
@@ -62,17 +57,15 @@ export default {
           </tr>
         </thead>
         <tbody>
-          { this._rows.map(row => h(Row, { props: { row } })) }
+          { this.rows.map(row => h(Row, { props: { row } })) }
         </tbody>
       </table>
     )
   },
   created () {
-    this._rows = this.rows || []
-
     // check for rows id if selectable enabled
-    if (warn && this.selectable && this._rows) {
-      this._rows.forEach(row => {
+    if (warn && this.selectable) {
+      this.rows.forEach(row => {
         if (row[this.trackBy] === undefined) {
           warn("Some of the Table rows have no 'id' set.")
         }
@@ -81,8 +74,7 @@ export default {
   },
   computed: {
     isAllSelected () {
-      if (!this._rows) return false
-      return this._rows.length && this._rows.every(row => this.isSelected(row))
+      return this.rows.length && this.rows.every(row => this.isSelected(row))
     },
     fieldsDef () {
       const fields = processFields(this.fields)
