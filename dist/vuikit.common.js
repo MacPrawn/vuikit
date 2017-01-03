@@ -931,7 +931,9 @@ module.exports =
 	      class: {
 	        'uk-active': vm.isSelected(row)
 	      },
-	      key: vm.getRowId(row),
+	      attrs: {
+	        key: vm.getRowId(row)
+	      },
 	      on: {
 	        click: function click(e) {
 	          if (e.target.tagName === 'TD') {
