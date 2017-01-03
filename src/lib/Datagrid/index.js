@@ -166,7 +166,7 @@ export default {
       console.log('filteredRows - 1', this._rows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
-      var rows = this._rows;
+      var rows = this._rows
 
       rows = orderBy(rows, [item => item[by]], dir)
 
