@@ -163,6 +163,7 @@ export default {
       return fields
     },
     filteredRows () {
+      console.log('2', this._rows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
       const sortedRows = orderBy(this._rows, [item => item[by]], dir)
@@ -203,6 +204,7 @@ export default {
             break
           }
         }
+        console.log('1', this._rows)
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
