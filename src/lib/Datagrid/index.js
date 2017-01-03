@@ -209,7 +209,7 @@ export default {
           }
         }
         console.log('deleteRow - 2', this, this._rows)
-        //this.emitSort({'name': (this.sortOrder.name === 'desc' ? 'asc' : 'desc')})
+        // this.emitSort({'name': (this.sortOrder.name === 'desc' ? 'asc' : 'desc')})
         this.filteredRows
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
