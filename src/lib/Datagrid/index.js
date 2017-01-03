@@ -111,7 +111,7 @@ export default {
             </tr>
           </thead>
           <tbody>
-            { this.rows.map(row => h(Row, { props: { row } })) }
+            { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
         <vk-pagination ref="pagination" v-show={ this.rows.length > this.perPage } total={ this.rows.length }
@@ -162,10 +162,10 @@ export default {
     filteredRows () {
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
-      var sortedRows = orderBy(this.rows, [item => item[by]], dir)
+      const sortedRows = orderBy(this.rows, [item => item[by]], dir)
 
       this.filterKey = this.filterKey.toLowerCase()
-      var visibleRows = sortedRows.filter((row) => {
+      let visibleRows = sortedRows.filter((row) => {
         return Object.keys(row).some((key) => {
           return String(row[key]).toLowerCase().indexOf(this.filterKey) > -1
         })
@@ -184,9 +184,11 @@ export default {
     getRowId (row) {
       return row[this.trackBy]
     },
+    /*
     emitSort (field) {
       this.$emit('sort', processSortOrder(field, this.sortOrder))
     },
+    */
     search (query) {
       this.filterKey = query
     },
@@ -206,7 +208,7 @@ export default {
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
-    sort (field) {
+    emitSort (field) {
       this.sortOrder = processSortOrder(field, this.sortOrder)
     }
   }

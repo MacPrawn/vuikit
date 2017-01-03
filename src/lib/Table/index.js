@@ -69,7 +69,7 @@ export default {
   },
   created () {
     // check for rows id if selectable enabled
-    if (warn && this.selectable) {
+    if (warn && this.selectable && this._rows) {
       this._rows.forEach(row => {
         if (row[this.trackBy] === undefined) {
           warn("Some of the Table rows have no 'id' set.")
@@ -79,6 +79,7 @@ export default {
   },
   computed: {
     isAllSelected () {
+      if (!this._rows) return false
       return this._rows.length && this._rows.every(row => this.isSelected(row))
     },
     fieldsDef () {

@@ -1,6 +1,6 @@
 /*!
  * Vuikit v0.6.2 (https://github.com/vuikit/vuikit)
- * (c) 2016 ZOOlanders
+ * (c) 2017 ZOOlanders
  * Released under the MIT License.
  */
 module.exports =
@@ -3892,7 +3892,7 @@ module.exports =
 	        ), h(
 	          'tbody',
 	          null,
-	          [this.rows.map(function (row) {
+	          [this.filteredRows.map(function (row) {
 	            return h(_Row2.default, { props: { row: row } });
 	          })]
 	        )]
@@ -3986,9 +3986,6 @@ module.exports =
 	    getRowId: function getRowId(row) {
 	      return row[this.trackBy];
 	    },
-	    emitSort: function emitSort(field) {
-	      this.$emit('sort', (0, _helper.processSortOrder)(field, this.sortOrder));
-	    },
 	    search: function search(query) {
 	      this.filterKey = query;
 	    },
@@ -4008,7 +4005,7 @@ module.exports =
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },
-	    sort: function sort(field) {
+	    emitSort: function emitSort(field) {
 	      this.sortOrder = (0, _helper.processSortOrder)(field, this.sortOrder);
 	    }
 	  }
@@ -5494,7 +5491,7 @@ module.exports =
 	  created: function created() {
 	    var _this = this;
 
-	    if (_util.warn && this.selectable) {
+	    if (_util.warn && this.selectable && this._rows) {
 	      this._rows.forEach(function (row) {
 	        if (row[_this.trackBy] === undefined) {
 	          (0, _util.warn)("Some of the Table rows have no 'id' set.");
@@ -5507,6 +5504,7 @@ module.exports =
 	    isAllSelected: function isAllSelected() {
 	      var _this2 = this;
 
+	      if (!this._rows) return false;
 	      return this._rows.length && this._rows.every(function (row) {
 	        return _this2.isSelected(row);
 	      });
