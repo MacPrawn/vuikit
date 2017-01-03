@@ -3812,7 +3812,7 @@ module.exports =
 	  },
 	  data: function data() {
 	    return {
-	      _rows: [],
+	      visibleRows: [],
 	      filterKey: '',
 	      sortOrder: {},
 	      page: 1
@@ -3901,9 +3901,9 @@ module.exports =
 	        'vk-pagination',
 	        { ref: 'pagination', directives: [{
 	            name: 'show',
-	            value: this._rows.length > this.perPage
+	            value: this.visibleRows.length > this.perPage
 	          }],
-	          attrs: { total: this._rows.length,
+	          attrs: { total: this.visibleRows.length,
 	            page: this.page,
 	            limit: this.perPage,
 	            compact: true
@@ -3921,7 +3921,7 @@ module.exports =
 	  created: function created() {
 	    var _this2 = this;
 
-	    this._rows = this.rows || [];
+	    this.visibleRows = this.rows || [];
 
 	    this.$on('clickRow', function (rowID, row) {
 	      _this2.edit(rowID, row);
@@ -3936,7 +3936,7 @@ module.exports =
 	    this.sortOrder[this.fields[0].name] = 'asc';
 
 	    if (_util.warn && this.selectable) {
-	      this._rows.forEach(function (row) {
+	      this.visibleRows.forEach(function (row) {
 	        if (row[_this2.trackBy] === undefined) {
 	          (0, _util.warn)("Some of the Table rows have no 'id' set.");
 	        }
@@ -3948,7 +3948,7 @@ module.exports =
 	    isAllSelected: function isAllSelected() {
 	      var _this3 = this;
 
-	      return this._rows.length && this._rows.every(function (row) {
+	      return this.visibleRows.length && this.visibleRows.every(function (row) {
 	        return _this3.isSelected(row);
 	      });
 	    },
@@ -3963,10 +3963,10 @@ module.exports =
 	    filteredRows: function filteredRows() {
 	      var _this4 = this;
 
-	      console.log('filteredRows - 1', this._rows);
+	      console.log('filteredRows - 1', this.visibleRows);
 	      var by = (0, _keys2.default)(this.sortOrder)[0];
 	      var dir = this.sortOrder[by];
-	      var rows = this._rows;
+	      var rows = this.visibleRows;
 
 	      rows = (0, _orderBy3.default)(rows, [function (item) {
 	        return item[by];
@@ -4001,18 +4001,17 @@ module.exports =
 	      if (this.editable) this.$emit('editrow', this.$el.id, rowID, row);
 	    },
 	    deleteRow: function deleteRow(rowID, row) {
-	      console.log('deleteRow - 1', this._rows.splice);
+	      console.log('deleteRow - 1', this.visibleRows.splice);
 	      if (!rowID && row) rowID = this.getRowId(row);
 	      if (this.editable) {
-	        for (var loop = 0; loop < this._rows.length; loop++) {
-	          if (this.getRowId(this._rows[loop]) === rowID) {
-	            this._rows.splice(loop, 1);
+	        for (var loop = 0; loop < this.visibleRows.length; loop++) {
+	          if (this.getRowId(this.visibleRows[loop]) === rowID) {
+	            this.visibleRows.splice(loop, 1);
 	            break;
 	          }
 	        }
-	        console.log('deleteRow - 2', this, this._rows);
+	        console.log('deleteRow - 2', this, this.visibleRows);
 
-	        this.$recompute('filteredRows');
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },

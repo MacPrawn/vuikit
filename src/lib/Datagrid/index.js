@@ -64,7 +64,7 @@ export default {
   },
   data () {
     return {
-      _rows: [],
+      visibleRows: [],
       filterKey: '',
       sortOrder: {},
       page: 1
@@ -115,7 +115,7 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
-        <vk-pagination ref="pagination" v-show={ this._rows.length > this.perPage } total={ this._rows.length }
+        <vk-pagination ref="pagination" v-show={ this.visibleRows.length > this.perPage } total={ this.visibleRows.length }
           page={ this.page }
           limit={ this.perPage }
           compact
@@ -127,7 +127,7 @@ export default {
     )
   },
   created () {
-    this._rows = this.rows || []
+    this.visibleRows = this.rows || []
 
     this.$on('clickRow', (rowID, row) => {
       this.edit(rowID, row)
@@ -142,7 +142,7 @@ export default {
     this.sortOrder[this.fields[0].name] = 'asc'
     // check for rows id if selectable enabled
     if (warn && this.selectable) {
-      this._rows.forEach(row => {
+      this.visibleRows.forEach(row => {
         if (row[this.trackBy] === undefined) {
           warn("Some of the Table rows have no 'id' set.")
         }
@@ -151,7 +151,7 @@ export default {
   },
   computed: {
     isAllSelected () {
-      return this._rows.length && this._rows.every(row => this.isSelected(row))
+      return this.visibleRows.length && this.visibleRows.every(row => this.isSelected(row))
     },
     fieldsDef () {
       const fields = processFields(this.fields)
@@ -163,10 +163,10 @@ export default {
       return fields
     },
     filteredRows () {
-      console.log('filteredRows - 1', this._rows)
+      console.log('filteredRows - 1', this.visibleRows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
-      var rows = this._rows
+      var rows = this.visibleRows
 
       rows = orderBy(rows, [item => item[by]], dir)
 
@@ -199,18 +199,18 @@ export default {
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
     },
     deleteRow (rowID, row) {
-      console.log('deleteRow - 1', this._rows.splice)
+      console.log('deleteRow - 1', this.visibleRows.splice)
       if (!rowID && row) rowID = this.getRowId(row)
       if (this.editable) {
-        for (var loop = 0; loop < this._rows.length; loop++) {
-          if (this.getRowId(this._rows[loop]) === rowID) {
-            this._rows.splice(loop, 1)
+        for (var loop = 0; loop < this.visibleRows.length; loop++) {
+          if (this.getRowId(this.visibleRows[loop]) === rowID) {
+            this.visibleRows.splice(loop, 1)
             break
           }
         }
-        console.log('deleteRow - 2', this, this._rows)
+        console.log('deleteRow - 2', this, this.visibleRows)
         // this.emitSort({'name': (this.sortOrder.name === 'desc' ? 'asc' : 'desc')})
-        this.$recompute('filteredRows') // force the referesh of computed attribute... Not sure *why* this is necessary, but lost a whole day trying to get it to work without!
+        // force the referesh of computed attribute... Not sure *why* this is necessary, but lost a whole day trying to get it to work without!
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
