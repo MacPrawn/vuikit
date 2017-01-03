@@ -3812,6 +3812,7 @@ module.exports =
 	  },
 	  data: function data() {
 	    return {
+	      _rows: [],
 	      filterKey: '',
 	      sortOrder: {},
 	      page: 1
@@ -3962,7 +3963,6 @@ module.exports =
 	    filteredRows: function filteredRows() {
 	      var _this4 = this;
 
-	      console.log('2', this._rows);
 	      var by = (0, _keys2.default)(this.sortOrder)[0];
 	      var dir = this.sortOrder[by];
 	      var sortedRows = (0, _orderBy3.default)(this._rows, [function (item) {
@@ -4006,7 +4006,6 @@ module.exports =
 	          }
 	        }
 	        console.log('1', this._rows);
-	        this.$forceUpdate();
 	        this.$emit('deleterow', this.$el.id, rowID, row);
 	      }
 	    },
