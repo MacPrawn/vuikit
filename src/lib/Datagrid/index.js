@@ -64,7 +64,7 @@ export default {
   },
   data () {
     return {
-      _rows: this.rows || [],
+      _rows: [],
       filterKey: '',
       sortOrder: {},
       page: 1
@@ -127,6 +127,8 @@ export default {
     )
   },
   created () {
+    this._rows = this.rows || []
+
     this.$on('clickRow', (rowID, row) => {
       this.edit(rowID, row)
     })
@@ -185,11 +187,6 @@ export default {
     getRowId (row) {
       return row[this.trackBy]
     },
-    /*
-    emitSort (field) {
-      this.$emit('sort', processSortOrder(field, this.sortOrder))
-    },
-    */
     search (query) {
       this.filterKey = query
     },

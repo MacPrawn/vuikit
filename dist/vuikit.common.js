@@ -3812,7 +3812,7 @@ module.exports =
 	  },
 	  data: function data() {
 	    return {
-	      _rows: this.rows || [],
+	      _rows: [],
 	      filterKey: '',
 	      sortOrder: {},
 	      page: 1
@@ -3920,6 +3920,8 @@ module.exports =
 	  },
 	  created: function created() {
 	    var _this2 = this;
+
+	    this._rows = this.rows || [];
 
 	    this.$on('clickRow', function (rowID, row) {
 	      _this2.edit(rowID, row);
@@ -5459,7 +5461,7 @@ module.exports =
 	  },
 	  data: function data() {
 	    return {
-	      _rows: this.rows || []
+	      _rows: []
 	    };
 	  },
 	  render: function render(h) {
@@ -5491,6 +5493,8 @@ module.exports =
 	  },
 	  created: function created() {
 	    var _this = this;
+
+	    this._rows = this.rows || [];
 
 	    if (_util.warn && this.selectable && this._rows) {
 	      this._rows.forEach(function (row) {

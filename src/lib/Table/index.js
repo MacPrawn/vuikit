@@ -46,7 +46,7 @@ export default {
   },
   data () {
     return {
-      _rows: this.rows || []
+      _rows: []
     }
   },
   render (h) {
@@ -68,6 +68,8 @@ export default {
     )
   },
   created () {
+    this._rows = this.rows || []
+
     // check for rows id if selectable enabled
     if (warn && this.selectable && this._rows) {
       this._rows.forEach(row => {
