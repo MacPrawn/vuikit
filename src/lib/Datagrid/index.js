@@ -163,9 +163,12 @@ export default {
       return fields
     },
     filteredRows () {
+      console.log('filteredRows - 1', this._rows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
-      let rows = orderBy(this._rows, [item => item[by]], dir)
+      var rows = this._rows;
+
+      rows = orderBy(rows, [item => item[by]], dir)
 
       this.filterKey = this.filterKey.toLowerCase()
       rows = rows.filter((row) => {
@@ -177,6 +180,7 @@ export default {
       var startAt = this.perPage * (this.page - 1)
       rows = rows.slice(startAt, startAt + this.perPage)
 
+      console.log('filteredRows - 2', rows)
       return rows
     }
   },
@@ -195,7 +199,7 @@ export default {
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
     },
     deleteRow (rowID, row) {
-      console.log('0', this._rows.splice)
+      console.log('deleteRow - 1', this._rows.splice)
       if (!rowID && row) rowID = this.getRowId(row)
       if (this.editable) {
         for (var loop = 0; loop < this._rows.length; loop++) {
@@ -204,7 +208,7 @@ export default {
             break
           }
         }
-        console.log('1', this._rows)
+        console.log('deleteRow - 2', this._rows)
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
