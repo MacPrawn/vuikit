@@ -114,7 +114,7 @@ export default {
             { this.filteredRows.map(row => h(Row, { props: { row } })) }
           </tbody>
         </table>
-        <vk-pagination ref="pagination" v-show={ this.rows.length > this.perPage } total={ this.rows.length }
+        <vk-pagination ref="pagination" v-show={ this._rows.length > this.perPage } total={ this._rows.length }
           page={ this.page }
           limit={ this.perPage }
           compact
@@ -126,6 +126,8 @@ export default {
     )
   },
   created () {
+    this._rows = this.rows || []
+
     this.$on('clickRow', (rowID, row) => {
       this.edit(rowID, row)
     })
@@ -139,7 +141,7 @@ export default {
     this.sortOrder[this.fields[0].name] = 'asc'
     // check for rows id if selectable enabled
     if (warn && this.selectable) {
-      this.rows.forEach(row => {
+      this._rows.forEach(row => {
         if (row[this.trackBy] === undefined) {
           warn("Some of the Table rows have no 'id' set.")
         }
@@ -148,7 +150,7 @@ export default {
   },
   computed: {
     isAllSelected () {
-      return this.rows.length && this.rows.every(row => this.isSelected(row))
+      return this._rows.length && this._rows.every(row => this.isSelected(row))
     },
     fieldsDef () {
       const fields = processFields(this.fields)
@@ -160,10 +162,10 @@ export default {
       return fields
     },
     filteredRows () {
-      console.log('2', this.rows)
+      console.log('2', this._rows)
       const by = Object.keys(this.sortOrder)[0]
       const dir = this.sortOrder[by]
-      const sortedRows = orderBy(this.rows, [item => item[by]], dir)
+      const sortedRows = orderBy(this._rows, [item => item[by]], dir)
 
       this.filterKey = this.filterKey.toLowerCase()
       let visibleRows = sortedRows.filter((row) => {
@@ -195,13 +197,14 @@ export default {
     deleteRow (rowID, row) {
       if (!rowID && row) rowID = this.getRowId(row)
       if (this.editable) {
-        for (var loop = 0; loop < this.rows.length; loop++) {
-          if (this.getRowId(this.rows[loop]) === rowID) {
-            this.rows.splice(loop, 1)
+        for (var loop = 0; loop < this._rows.length; loop++) {
+          if (this.getRowId(this._rows[loop]) === rowID) {
+            this._rows.splice(loop, 1)
             break
           }
         }
-        console.log('1', this.rows)
+        console.log('1', this._rows)
+        this.$forceUpdate()
         this.$emit('deleterow', this.$el.id, rowID, row)
       }
     },
