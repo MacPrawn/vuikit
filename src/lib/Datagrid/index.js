@@ -191,11 +191,11 @@ export default {
     search (query) {
       this.filterKey = query
     },
-    edit (row, rowID) {
+    edit (rowID, row) {
       if (!rowID && row) rowID = this.getRowId(row)
       if (this.editable) this.$emit('editrow', this.$el.id, rowID, row)
     },
-    deleteRow (row, rowID) {
+    deleteRow (rowID, row) {
       if (!rowID && row) rowID = this.getRowId(row)
       if (this.editable) {
         for (var loop = 0; loop < this._rows.length; loop++) {
